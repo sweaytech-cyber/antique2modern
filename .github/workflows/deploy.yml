@@ -5,23 +5,19 @@ on:
     branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v4
     
-    - uses: actions/setup-node@v4
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
     
-    - name: Install dependencies
-      working-directory: ./Kimi_Agent_古董二现代网站/app
-      run: npm install
-    
-    - name: Build project
-      working-directory: ./Kimi_Agent_古董二现代网站/app
-      run: npm run build
+    - name: Run build script
+      run: bash build.sh
     
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
