@@ -29,5 +29,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./Kimi_Agent_古董二现代网站/app/dist
-        cname: antique2modern-staging.github.io
+        publish_dir: ./Kimi_Agent_古董二現代網站/app/dist
