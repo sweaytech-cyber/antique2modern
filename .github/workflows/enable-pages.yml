@@ -1,25 +1,26 @@
 name: Enable GitHub Pages
 
 on:
+  workflow_run:
+    workflows: ["Deploy to GitHub Pages"]
+    types:
+      - completed
   push:
     branches: [ main ]
 
 permissions:
   contents: read
   pages: write
+  id-token: write
 
 jobs:
   enable-pages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Enable GitHub Pages site from gh-pages
-        uses: actions/github-script@v6
+      
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            await github.rest.repos.createPagesSite({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              source: { branch: 'gh-pages', path: '/' }
-            });
+          enablement: true
+          token: ${{ secrets.GITHUB_TOKEN }}
