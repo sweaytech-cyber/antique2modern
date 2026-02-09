@@ -7,9 +7,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./Kimi_Agent_古董二现代网站/app
     
     steps:
     - uses: actions/checkout@v4
@@ -19,9 +16,11 @@ jobs:
         node-version: '20'
     
     - name: Install dependencies
+      working-directory: ./Kimi_Agent_古董二现代网站/app
       run: npm install
     
     - name: Build project
+      working-directory: ./Kimi_Agent_古董二现代网站/app
       run: npm run build
     
     - name: Deploy to GitHub Pages
@@ -29,3 +28,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./Kimi_Agent_古董二现代网站/app/dist
+        force_orphan: true
