@@ -23,5 +23,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./Kimi_Agent_古董二现代网站/app/dist
+        publish_dir: ./app-build/dist
         force_orphan: true

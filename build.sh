@@ -1,23 +1,24 @@
 #!/bin/bash
 set -e
 
-echo "Starting build process..."
-echo "Current directory: $(pwd)"
+echo "=== ANTIQUE 2 MODERN DEPLOYMENT BUILD ==="
+echo "Working directory: $(pwd)"
 
-# Navigate to the app directory with Chinese characters
-APP_DIR="Kimi_Agent_古董二现代网站/app"
+# Copy app to root level for GitHub Actions to handle cleanly
+echo "Setting up build environment..."
+cp -r "Kimi_Agent_古董二现代网站/app" ./app-build
 
-echo "App directory: $APP_DIR"
-cd "$APP_DIR"
+cd ./app-build
 
 echo "Installing dependencies..."
-npm install --legacy-peer-deps
+npm install --legacy-peer-deps 2>&1 | tail -5
 
-echo "Building project..."
-npm run build
+echo "Building React app..."
+npm run build 2>&1 | tail -10
 
-echo "Build completed successfully!"
-ls -la dist/
+echo ""
+echo "✓ BUILD SUCCESSFUL"
+echo "Dist folder size: $(du -sh dist/ | cut -f1)"
+ls -lah dist/
 
-cd ../..
-echo "Build artifacts ready for deployment"
+exit 0
