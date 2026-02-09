@@ -3,12 +3,13 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./Kimi_Agent_古董二现代网站/app
     
     steps:
     - uses: actions/checkout@v4
@@ -16,17 +17,15 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: '20'
-        cache: 'npm'
-        cache-dependency-path: '**/package-lock.json'
     
     - name: Install dependencies
-      run: cd "Kimi_Agent_古董二现代网站/app" && npm install
+      run: npm install
     
     - name: Build project
-      run: cd "Kimi_Agent_古董二现代网站/app" && npm run build
+      run: npm run build
     
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./Kimi_Agent_古董二現代網站/app/dist
+        publish_dir: ./Kimi_Agent_古董二现代网站/app/dist
