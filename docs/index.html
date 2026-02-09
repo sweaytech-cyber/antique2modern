@@ -118,6 +118,26 @@
         .animate-delay-3 { animation-delay: 0.3s; }
         .animate-delay-4 { animation-delay: 0.4s; }
 
+        /* Slide-in specific overrides */
+        .slide-in-left { opacity: 0; }
+        .slide-in-right { opacity: 0; }
+
+        .slide-in-left.animate {
+            animation: slideInLeft 0.9s cubic-bezier(.22,.98,.28,.99) forwards;
+        }
+
+        .slide-in-right.animate {
+            animation: slideInRight 0.9s cubic-bezier(.22,.98,.28,.99) forwards;
+        }
+
+        /* small stagger helpers when both slide and delay are used */
+        .slide-in-left.animate.animate-delay-1,
+        .slide-in-right.animate.animate-delay-1 { animation-delay: 0.08s; }
+        .slide-in-left.animate.animate-delay-2,
+        .slide-in-right.animate.animate-delay-2 { animation-delay: 0.18s; }
+        .slide-in-left.animate.animate-delay-3,
+        .slide-in-right.animate.animate-delay-3 { animation-delay: 0.28s; }
+
         /* Navigation */
         nav {
             position: fixed;
@@ -1110,7 +1130,7 @@
         <!-- About Section -->
         <section id="about" class="section-about">
             <div class="about-grid">
-                <div class="about-content">
+                <div class="about-content slide-in-right">
                     <h2>Who We Are</h2>
                     <p class="about-text">
                         Antique 2 Modern is a local estate sale company that helps families and individuals downsize and liquidate their estates. 
@@ -1129,7 +1149,7 @@
                     </div>
                 </div>
                 
-                <div class="about-image">
+                <div class="about-image slide-in-left">
                     <img src="images/a2m_store_2.jpg" alt="Antique 2 Modern showroom">
                 </div>
             </div>
@@ -1142,13 +1162,13 @@
             </div>
             
             <div class="gallery-grid">
-                <div class="gallery-card">
+                <div class="gallery-card slide-in-left">
                     <img src="images/a2m_store_3.jpg" alt="Antique 2 Modern store">
                 </div>
-                <div class="gallery-card">
+                <div class="gallery-card slide-in-right">
                     <img src="images/a2m_store_4.jpg" alt="Antique 2 Modern furniture">
                 </div>
-                <div class="gallery-card">
+                <div class="gallery-card slide-in-left">
                     <img src="images/a2m_store_1.jpg" alt="Antique 2 Modern interior">
                 </div>
             </div>
@@ -1161,7 +1181,7 @@
             </div>
             
             <div class="testimonials-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card slide-in-left">
                     <div class="testimonial-stars">
                         <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1174,7 +1194,7 @@
                     <p class="testimonial-role">Seller from Waukesha</p>
                 </div>
                 
-                <div class="testimonial-card">
+                <div class="testimonial-card slide-in-right">
                     <div class="testimonial-stars">
                         <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1187,7 +1207,7 @@
                     <p class="testimonial-role">Buyer</p>
                 </div>
                 
-                <div class="testimonial-card">
+                <div class="testimonial-card slide-in-left">
                     <div class="testimonial-stars">
                         <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1282,22 +1302,22 @@
             </div>
             
             <div class="faq-grid">
-                <div class="faq-item">
+                <div class="faq-item slide-in-left">
                     <h4>How often does your inventory change?</h4>
                     <p>Our inventory changes weekly as we process new estate acquisitions throughout southeastern Wisconsin. We recommend visiting often as our best pieces sell quickly!</p>
                 </div>
                 
-                <div class="faq-item">
+                <div class="faq-item slide-in-right">
                     <h4>Do you purchase individual items?</h4>
                     <p>Yes! While most of our inventory comes from complete estate liquidations, we do consider individual pieces. Contact us for a free estimate.</p>
                 </div>
                 
-                <div class="faq-item">
+                <div class="faq-item slide-in-left">
                     <h4>What areas do you serve for estate sales?</h4>
                     <p>We serve the greater Milwaukee area including New Berlin, Waukesha, Brookfield, and surrounding communities.</p>
                 </div>
                 
-                <div class="faq-item">
+                <div class="faq-item slide-in-right">
                     <h4>What types of items do you sell?</h4>
                     <p>We carry everything from 1700s-era antiques to contemporary furniture, including art, home décor, lamps, collectibles, and more.</p>
                 </div>
@@ -1307,7 +1327,7 @@
         <!-- Contact Section -->
         <section id="contact" class="section-contact">
             <div class="contact-grid">
-                <div class="contact-content">
+                <div class="contact-content slide-in-left">
                     <h2>Visit Us Today</h2>
                     <p class="contact-text">
                         Stop by our showroom in New Berlin, Wisconsin. Our inventory changes weekly!
@@ -1323,7 +1343,7 @@
                     </div>
                 </div>
                 
-                <div class="contact-info">
+                <div class="contact-info slide-in-right">
                     <div class="contact-item">
                         <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
@@ -1385,7 +1405,7 @@
 
         // Observe elements when page loads
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.about-content, .about-image, .gallery-card, .testimonial-card, .faq-item').forEach(el => {
+            document.querySelectorAll('.about-content, .about-image, .gallery-card, .testimonial-card, .faq-item, .contact-content, .contact-info').forEach(el => {
                 observer.observe(el);
             });
         });
