@@ -1,0 +1,201 @@
+/* App-specific styles */
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F1EA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C69B3C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1B1D21;
+}
+
+/* Selection color */
+::selection {
+  background: #C69B3C;
+  color: white;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #C69B3C;
+  outline-offset: 2px;
+}
+
+/* Image loading placeholder */
+img {
+  background: linear-gradient(135deg, #F4F1EA 0%, #E8E4DA 100%);
+}
+
+/* Button hover transitions */
+button {
+  transition: all 0.3s ease;
+}
+
+/* Card hover lift effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(0,0,0,0.18);
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 1024px) {
+  .section-pinned {
+    height: auto;
+    padding: 80px 0;
+  }
+  
+  .hero-text-block {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    padding: 0 2rem;
+  }
+  
+  .hero-image {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 400px !important;
+    margin-top: 2rem;
+  }
+  
+  .hero-scroll {
+    display: none !important;
+  }
+  
+  .about-headline {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    padding: 0 2rem;
+  }
+  
+  .about-image {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    height: 300px !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-body {
+    position: relative !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-body + div {
+    position: relative !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: auto !important;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    display: block !important;
+    right: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-pinned {
+    height: auto;
+    padding: 60px 0;
+  }
+  
+  .hero-image {
+    height: 300px !important;
+  }
+  
+  .about-image {
+    height: 250px !important;
+  }
+  
+  .about-body + div {
+    display: block !important;
+  }
+  
+  .gallery-card-1,
+  .gallery-card-2,
+  .gallery-card-3 {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  
+  .section-gallery {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-pinned {
+    padding: 40px 0 !important;
+  }
+  
+  .hero-text-block {
+    padding: 1rem !important;
+  }
+  
+  .hero-image {
+    height: 250px !important;
+  }
+  
+  .about-headline {
+    font-size: 28px !important;
+    padding: 0 1rem !important;
+  }
+  
+  .about-image {
+    height: 200px !important;
+    margin: 1rem !important;
+  }
+  
+  .gallery-card-1,
+  .gallery-card-2,
+  .gallery-card-3 {
+    height: 250px !important;
+  }
+}
+
+/* Animation performance */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Prevent text selection during animations */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
