@@ -420,17 +420,12 @@
         <div class="max-w-7xl mx-auto w-full">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8 z-10">
-                    <div class="animate-fade-in-up bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-[#C9A962]/30 shadow-lg">
-                        <h3 class="font-serif text-2xl mb-4 text-[#2C2C2C]">Contact Information</h3>
-                        <div class="space-y-4 text-sm">
-                            <div class="flex items-start gap-3">
-                                <i data-lucide="map-pin" class="w-5 h-5 text-[#C9A962] flex-shrink-0 mt-0.5"></i>
-                                <div>
-                                    <p class="text-gray-700">New Berlin, WI</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="animate-fade-in-up">
+                        <span class="bg-[#2C2C2C] text-[#C9A962] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block border border-[#C9A962]">
+                            #1 Estate Sale Company in Milwaukee
+                        </span>
                     </div>
+
                     
                     <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.9] animate-fade-in-up delay-100">
                         We Buy <span class="italic text-[#C9A962]">Estates.</span>
@@ -767,9 +762,12 @@
 
                     <!-- Card.png display -->
                     <div class="mt-8 reveal delay-100">
-                        <p class="text-sm text-gray-500 mb-3 uppercase tracking-wider">Our Business Card</p>
-                        <div class="rounded-xl overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition-shadow" onclick="openModal()">
-                            <img src="images/card.png" alt="Antique2Modern Business Card" class="w-full max-w-md">
+                        <div class="bg-white rounded-xl shadow-md text-center p-6">
+                            <p class="text-gray-600 mb-4">Have more questions? View our contact card:</p>
+                            <button onclick="openModal()" class="btn-primary px-6 py-3 rounded-full text-white font-medium inline-flex items-center gap-2">
+                                <i data-lucide="credit-card" class="w-4 h-4"></i>
+                                View Business Card
+                            </button>
                         </div>
                     </div>
                 </div>
