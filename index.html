@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antique 2 Modern | #1 Estate Sale Company Milwaukee | We Buy Estates</title>
+    <title>Antique2Modern | #1 Estate Sale Company Milwaukee | We Buy Estates</title>
     <meta name="description" content="Milwaukee's #1 estate sale company. We buy estates, offer buyouts, appraisals & consultations. Serving Wisconsin with professional estate liquidation services.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -315,6 +315,45 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            cursor: pointer;
+            z-index: 101;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -322,10 +361,20 @@
     <!-- Page Loader -->
     <div class="page-loader" id="pageLoader">
         <div class="text-center">
-            <div class="loader-text mb-4">Antique 2 Modern</div>
+            <div class="loader-text mb-4">Antique2Modern</div>
             <div class="w-32 h-0.5 bg-gray-200 mx-auto overflow-hidden rounded-full">
                 <div class="h-full bg-[#C9A962] animate-[slideIn_1.5s_ease-in-out_infinite]"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal for Card.png -->
+    <div id="cardModal" class="modal-overlay" onclick="closeModal()">
+        <div class="modal-close" onclick="closeModal()">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </div>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img src="images/card.png" alt="Contact Card" class="max-w-full max-h-[80vh] rounded-lg shadow-2xl">
         </div>
     </div>
 
@@ -334,7 +383,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <a href="#" class="font-serif text-2xl md:text-3xl font-semibold tracking-tight border-2 border-[#2C2C2C] px-4 py-1 hover:bg-[#2C2C2C] hover:text-[#F5F1E8] transition-all duration-300">
-                    Antique 2 <span class="text-[#C9A962]">Modern</span>
+                    Antique<span class="text-[#C9A962]">2</span>Modern
                 </a>
                 
                 <!-- Desktop Menu -->
@@ -371,16 +420,45 @@
         <div class="max-w-7xl mx-auto w-full">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8 z-10">
-                    <div class="animate-fade-in-up">
-                        <span class="bg-[#2C2C2C] text-[#C9A962] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block border border-[#C9A962]">
-                            #1 Estate Sale Company in Milwaukee
-                        </span>
+                    <div class="animate-fade-in-up bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-[#C9A962]/30 shadow-lg">
+                        <h3 class="font-serif text-2xl mb-4 text-[#2C2C2C]">Contact Information</h3>
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-[#C9A962] flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <p class="font-semibold text-[#2C2C2C]">Location</p>
+                                    <p class="text-gray-600">15310 W National Ave<br>New Berlin, WI 53151<br><span class="text-xs text-gray-500">Menomonee Falls Area</span></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="phone" class="w-5 h-5 text-[#C9A962] flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <p class="font-semibold text-[#2C2C2C]">Phone</p>
+                                    <p class="text-gray-600">(262) 641-8005<br><span class="text-xs text-gray-500">Available 24/7, 365 days a year</span></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="clock" class="w-5 h-5 text-[#C9A962] flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <p class="font-semibold text-[#2C2C2C]">Store Hours</p>
+                                    <p class="text-gray-600">Tuesday - Saturday<br>10:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="mail" class="w-5 h-5 text-[#C9A962] flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <p class="font-semibold text-[#2C2C2C]">Email</p>
+                                    <p class="text-gray-600">Antique2Modern@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
                     <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.9] animate-fade-in-up delay-100">
                         We Buy <span class="italic text-[#C9A962]">Estates.</span>
                     </h1>
                     <p class="text-lg md:text-xl text-gray-600 max-w-lg leading-relaxed animate-fade-in-up delay-200">
-                        As the trusted estate sale company in the Milwaukee area, we help you turn your treasures and antiques into cash. We offer relief to those settling a loved one's estate or during times of transition.
+                        As the trusted #1 estate sale company in the Milwaukee area, Antique2Modern will help you turn your treasure and antiques into cash. We offer relief to those attempting to settle a loved one's estate or during times of transition.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
                         <a href="#contact" class="btn-primary px-8 py-4 rounded-full text-white font-medium text-center inline-flex items-center justify-center gap-2 group">
@@ -391,15 +469,11 @@
                             Our Services
                         </a>
                     </div>
-                    <div class="flex items-center gap-4 text-sm text-gray-500 animate-fade-in-up delay-400">
-                        <span class="uppercase tracking-widest">Serving Milwaukee & Waukesha</span>
-                        <div class="w-12 h-px bg-gray-400"></div>
-                    </div>
                 </div>
                 
                 <div class="relative animate-fade-in-right delay-200">
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl image-hover">
-                        <img src="images/hero_interior.jpg" alt="Antique 2 Modern Store Interior" class="w-full h-[600px] object-cover">
+                        <img src="images/hero_interior.jpg" alt="Antique2Modern Store Interior" class="w-full h-[600px] object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                     <!-- Decorative Elements -->
@@ -419,7 +493,7 @@
             <h2 class="font-serif text-4xl md:text-5xl mb-6">We Buy All Antiques & Collectibles</h2>
             <div class="section-divider"></div>
             <p class="text-lg text-gray-600 leading-relaxed italic">
-                We aren't your typical estate sale/auction company and offer solutions beyond what you'd normally expect. Whether you need assistance sorting through a home's worth of belongings, appraising estates and houses, or selling the home of a loved one, Antique 2 Modern can help you when you need it most. We work closely with clean-up crews, movers, and realtors; once you've reached out, our estate sale company can take care of the rest.
+                We aren't your typical estate sale/auction company and offer solutions beyond what you'd normally expect. Whether you need assistance sorting through a home's worth of belongings, appraising estates and houses, or selling the home of a loved one, Antique2Modern can help you when you need it most. We work closely with clean-up crews, movers, and realtors; once you've reached out, our estate sale company can take care of the rest.
             </p>
         </div>
     </section>
@@ -464,16 +538,17 @@
                     </div>
                 </div>
                 
-                <div class="service-card reveal delay-400 group">
-                    <div class="h-64 overflow-hidden bg-[#2C2C2C] flex items-center justify-center">
-                        <div class="text-center p-6">
+                <div class="service-card reveal delay-400 group cursor-pointer" onclick="openModal()">
+                    <div class="h-64 overflow-hidden bg-[#2C2C2C] flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-[#C9A962]/10"></div>
+                        <div class="text-center p-6 relative z-10">
                             <i data-lucide="message-circle" class="w-16 h-16 text-[#C9A962] mx-auto mb-4"></i>
                             <h3 class="font-serif text-2xl text-white mb-2">Consultations</h3>
                             <p class="text-gray-400 text-sm">Expert guidance through the estate liquidation process.</p>
                         </div>
                     </div>
                     <div class="p-6 text-center bg-white">
-                        <a href="#contact" class="text-[#C9A962] font-medium hover:underline">Schedule Today</a>
+                        <span class="text-[#C9A962] font-medium hover:underline">Schedule Today</span>
                     </div>
                 </div>
             </div>
@@ -487,7 +562,7 @@
                 <div class="order-2 lg:order-1 reveal">
                     <div class="relative">
                         <div class="rounded-2xl overflow-hidden shadow-xl image-hover">
-                            <img src="images/antique_store_interior.jpg" alt="Antique 2 Modern Store" class="w-full h-[500px] object-cover">
+                            <img src="images/antique_store_interior.jpg" alt="Antique2Modern Store" class="w-full h-[500px] object-cover">
                         </div>
                         <div class="absolute -bottom-8 -right-8 bg-[#2C2C2C] text-white p-6 rounded-lg shadow-xl hidden md:block">
                             <p class="font-serif text-3xl italic">Family Owned</p>
@@ -497,7 +572,7 @@
                 </div>
                 
                 <div class="order-1 lg:order-2 space-y-8 reveal">
-                    <h2 class="font-serif text-5xl md:text-6xl">About Our Company</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl">About Antique2Modern</h2>
                     <div class="section-divider !mx-0"></div>
                     <p class="text-lg text-gray-600 leading-relaxed">
                         We are a family owned business located in the Menomonee Falls area right outside of Milwaukee, Wisconsin. This is a fulltime commitment for us, so we are at your service 24 hours a day, 365 days a year.
@@ -509,7 +584,7 @@
                     <div class="bg-[#F5F1E8] p-6 rounded-xl">
                         <h3 class="font-serif text-2xl mb-3">Our History</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            We've lived in the Milwaukee area all our life and I graduated from the University of Wisconsin – Milwaukee with a BS in Business Marketing and a Masters in eCommerce. I worked as a market analyst for a large medical company for 10 years before committing to Antique 2 Modern fulltime.
+                            We've lived in the Milwaukee area all our life and I graduated from the University of Wisconsin – Milwaukee with a BS in Business Marketing and a Masters in eCommerce. I worked as a market analyst for a large medical company for 10 years before committing to Antique2Modern fulltime.
                         </p>
                     </div>
                     
@@ -677,8 +752,7 @@
                             </div>
                             <div>
                                 <h5 class="font-semibold text-lg">Location</h5>
-                                <p class="text-gray-600">15310 W National Ave<br>New Berlin, WI 53151</p>
-                                <p class="text-sm text-gray-500 mt-1">Menomonee Falls Area</p>
+                                <p class="text-gray-600">15310 W National Ave<br>New Berlin, WI 53151<br><span class="text-sm text-gray-500">Menomonee Falls Area</span></p>
                             </div>
                         </div>
                         
@@ -688,8 +762,7 @@
                             </div>
                             <div>
                                 <h5 class="font-semibold text-lg">Phone</h5>
-                                <p class="text-gray-600">(262) 641-8005</p>
-                                <p class="text-sm text-gray-500 mt-1">Available 24/7, 365 days a year</p>
+                                <p class="text-gray-600">(262) 641-8005<br><span class="text-sm text-gray-500">Available 24/7, 365 days a year</span></p>
                             </div>
                         </div>
                         
@@ -711,6 +784,14 @@
                                 <h5 class="font-semibold text-lg">Email</h5>
                                 <p class="text-gray-600">Antique2Modern@gmail.com</p>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Card.png display -->
+                    <div class="mt-8 reveal delay-100">
+                        <p class="text-sm text-gray-500 mb-3 uppercase tracking-wider">Our Business Card</p>
+                        <div class="rounded-xl overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition-shadow" onclick="openModal()">
+                            <img src="images/card.png" alt="Antique2Modern Business Card" class="w-full max-w-md">
                         </div>
                     </div>
                 </div>
@@ -761,6 +842,15 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Card.png in FAQ area too -->
+                    <div class="mt-8 p-6 bg-white rounded-xl shadow-md text-center reveal delay-300">
+                        <p class="text-gray-600 mb-4">Have more questions? View our contact card:</p>
+                        <button onclick="openModal()" class="btn-primary px-6 py-3 rounded-full text-white font-medium inline-flex items-center gap-2">
+                            <i data-lucide="credit-card" class="w-4 h-4"></i>
+                            View Business Card
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -771,7 +861,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-3 gap-12 mb-12">
                 <div>
-                    <h4 class="font-serif text-3xl mb-4">Antique 2 Modern</h4>
+                    <h4 class="font-serif text-3xl mb-4">Antique2Modern</h4>
                     <p class="text-gray-400 mb-6">The #1 estate sale company in the Milwaukee area. We help you turn your treasures into cash with professional, compassionate service.</p>
                     <div class="flex gap-4">
                         <a href="#contact" class="btn-primary px-6 py-3 rounded-full text-sm font-medium inline-flex items-center gap-2">
@@ -806,12 +896,16 @@
                             <i data-lucide="phone" class="w-4 h-4 text-[#C9A962]"></i>
                             (262) 641-8005
                         </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-[#C9A962]"></i>
+                            Antique2Modern@gmail.com
+                        </li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 text-sm">&copy; 2024 Antique 2 Modern. All rights reserved.</p>
+                <p class="text-gray-500 text-sm">&copy; 2024 Antique2Modern. All rights reserved.</p>
                 <div class="flex gap-6 text-sm text-gray-500">
                     <a href="#" class="hover:text-white transition-colors">Privacy</a>
                     <a href="#" class="hover:text-white transition-colors">Terms</a>
@@ -865,6 +959,24 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
             });
+        });
+
+        // Modal Functions
+        function openModal() {
+            document.getElementById('cardModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('cardModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
         });
 
         // Scroll Reveal Animation
