@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antique 2 Modern | Estate Sales & Curated Furniture</title>
+    <title>Antique 2 Modern | #1 Estate Sale Company Milwaukee | We Buy Estates</title>
+    <meta name="description" content="Milwaukee's #1 estate sale company. We buy estates, offer buyouts, appraisals & consultations. Serving Wisconsin with professional estate liquidation services.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -293,6 +294,27 @@
             0%, 100% { opacity: 0.4; }
             50% { opacity: 1; }
         }
+
+        /* Section Divider */
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 1.5rem auto;
+        }
+
+        /* Service Card */
+        .service-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -312,16 +334,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <a href="#" class="font-serif text-2xl md:text-3xl font-semibold tracking-tight border-2 border-[#2C2C2C] px-4 py-1 hover:bg-[#2C2C2C] hover:text-[#F5F1E8] transition-all duration-300">
-                    Antique <span class="text-[#C9A962]">2</span> Modern
+                    Antique 2 <span class="text-[#C9A962]">Modern</span>
                 </a>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#about" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">About</a>
+                    <a href="#services" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">Services</a>
                     <a href="#store" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">Our Store</a>
                     <a href="#testimonials" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">Reviews</a>
-                    <a href="#contact" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">Contact</a>
-                    <a href="#contact" class="btn-primary px-6 py-2 rounded-full text-white text-sm font-medium">Get Estimate</a>
+                    <a href="#contact" class="btn-primary px-6 py-2 rounded-full text-white text-sm font-medium">Free Consultation</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -338,9 +360,10 @@
             <i data-lucide="x" class="w-8 h-8"></i>
         </button>
         <a href="#about" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">About</a>
+        <a href="#services" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">Services</a>
         <a href="#store" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">Our Store</a>
         <a href="#testimonials" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">Reviews</a>
-        <a href="#contact" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">Contact</a>
+        <a href="#contact" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">Free Consultation</a>
     </div>
 
     <!-- Hero Section -->
@@ -348,23 +371,28 @@
         <div class="max-w-7xl mx-auto w-full">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8 z-10">
-                    <p class="text-[#C9A962] text-sm uppercase tracking-[0.3em] font-medium animate-fade-in-up">
-                        Estate Sales & Curated Furniture
-                    </p>
+                    <div class="animate-fade-in-up">
+                        <span class="bg-[#2C2C2C] text-[#C9A962] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block border border-[#C9A962]">
+                            #1 Estate Sale Company in Milwaukee
+                        </span>
+                    </div>
                     <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.9] animate-fade-in-up delay-100">
-                        Find the piece with a <span class="italic text-[#C9A962]">past.</span>
+                        We Buy <span class="italic text-[#C9A962]">Estates.</span>
                     </h1>
                     <p class="text-lg md:text-xl text-gray-600 max-w-lg leading-relaxed animate-fade-in-up delay-200">
-                        A local estate sale company in New Berlin, WI helping families downsize and liquidate estates. Shop our ever-changing inventory of 1700s-era antiques to contemporary furniture.
+                        As the trusted estate sale company in the Milwaukee area, we help you turn your treasures and antiques into cash. We offer relief to those settling a loved one's estate or during times of transition.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
                         <a href="#contact" class="btn-primary px-8 py-4 rounded-full text-white font-medium text-center inline-flex items-center justify-center gap-2 group">
-                            Request an Estate Consultation
+                            Request A Free Consultation
                             <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#services" class="px-8 py-4 rounded-full text-[#2C2C2C] border-2 border-[#2C2C2C] font-medium text-center hover:bg-[#2C2C2C] hover:text-white transition-all">
+                            Our Services
                         </a>
                     </div>
                     <div class="flex items-center gap-4 text-sm text-gray-500 animate-fade-in-up delay-400">
-                        <span class="uppercase tracking-widest">Scroll</span>
+                        <span class="uppercase tracking-widest">Serving Milwaukee & Waukesha</span>
                         <div class="w-12 h-px bg-gray-400"></div>
                     </div>
                 </div>
@@ -385,6 +413,73 @@
         <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#C9A962]/5 to-transparent -z-10"></div>
     </section>
 
+    <!-- Intro Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-white relative">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="font-serif text-4xl md:text-5xl mb-6">We Buy All Antiques & Collectibles</h2>
+            <div class="section-divider"></div>
+            <p class="text-lg text-gray-600 leading-relaxed italic">
+                We aren't your typical estate sale/auction company and offer solutions beyond what you'd normally expect. Whether you need assistance sorting through a home's worth of belongings, appraising estates and houses, or selling the home of a loved one, Antique 2 Modern can help you when you need it most. We work closely with clean-up crews, movers, and realtors; once you've reached out, our estate sale company can take care of the rest.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#F5F1E8]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-serif text-5xl md:text-6xl mb-4">Estate Sale Services</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive solutions for all your estate liquidation needs</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="service-card reveal delay-100 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/a2m_store_1.jpg" alt="Estate Sales" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-serif text-2xl mb-2">Estate Sales</h3>
+                        <p class="text-gray-600 text-sm">Full-service estate liquidation with professional organization and pricing.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card reveal delay-200 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/a2m_store_2.jpg" alt="Buyouts" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-serif text-2xl mb-2">Buyouts</h3>
+                        <p class="text-gray-600 text-sm">Quick cash offers for entire estates or select collections.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card reveal delay-300 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/a2m_store_3.jpg" alt="Appraisals" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-serif text-2xl mb-2">Appraisals</h3>
+                        <p class="text-gray-600 text-sm">Professional valuation services for antiques, art, and collectibles.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card reveal delay-400 group">
+                    <div class="h-64 overflow-hidden bg-[#2C2C2C] flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <i data-lucide="message-circle" class="w-16 h-16 text-[#C9A962] mx-auto mb-4"></i>
+                            <h3 class="font-serif text-2xl text-white mb-2">Consultations</h3>
+                            <p class="text-gray-400 text-sm">Expert guidance through the estate liquidation process.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center bg-white">
+                        <a href="#contact" class="text-[#C9A962] font-medium hover:underline">Schedule Today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 bg-white relative">
         <div class="max-w-7xl mx-auto">
@@ -392,50 +487,53 @@
                 <div class="order-2 lg:order-1 reveal">
                     <div class="relative">
                         <div class="rounded-2xl overflow-hidden shadow-xl image-hover">
-                            <img src="images/antique_store_interior.jpg" alt="Store Interior with Artwork" class="w-full h-[500px] object-cover">
+                            <img src="images/antique_store_interior.jpg" alt="Antique 2 Modern Store" class="w-full h-[500px] object-cover">
                         </div>
                         <div class="absolute -bottom-8 -right-8 bg-[#2C2C2C] text-white p-6 rounded-lg shadow-xl hidden md:block">
-                            <p class="font-serif text-3xl italic">Est. 2015</p>
-                            <p class="text-sm text-gray-400 mt-1">New Berlin, WI</p>
+                            <p class="font-serif text-3xl italic">Family Owned</p>
+                            <p class="text-sm text-gray-400 mt-1">Menomonee Falls, WI</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="order-1 lg:order-2 space-y-8 reveal">
-                    <h2 class="font-serif text-5xl md:text-6xl">Who We Are</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl">About Our Company</h2>
+                    <div class="section-divider !mx-0"></div>
                     <p class="text-lg text-gray-600 leading-relaxed">
-                        Antique 2 Modern is a local estate sale company that helps families and individuals downsize and liquidate their estates. Our store offers gently used furniture and furnishings collected from these estates. Our inventory changes weekly, so customers are encouraged to visit often.
+                        We are a family owned business located in the Menomonee Falls area right outside of Milwaukee, Wisconsin. This is a fulltime commitment for us, so we are at your service 24 hours a day, 365 days a year.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        My wife (Lori) and I have a passion for preserving history and enjoy meeting people and talking about their treasures. Not to mention our genuine love of all things old and antique.
                     </p>
                     
+                    <div class="bg-[#F5F1E8] p-6 rounded-xl">
+                        <h3 class="font-serif text-2xl mb-3">Our History</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            We've lived in the Milwaukee area all our life and I graduated from the University of Wisconsin – Milwaukee with a BS in Business Marketing and a Masters in eCommerce. I worked as a market analyst for a large medical company for 10 years before committing to Antique 2 Modern fulltime.
+                        </p>
+                    </div>
+                    
                     <div class="space-y-4">
-                        <h3 class="font-semibold text-lg">What We Sell:</h3>
+                        <h3 class="font-semibold text-lg">We Offer:</h3>
                         <ul class="space-y-3">
                             <li class="flex items-center gap-3 group">
                                 <span class="w-2 h-2 bg-[#C9A962] rounded-full group-hover:scale-150 transition-transform"></span>
-                                <span class="text-gray-700">1700s-era antiques</span>
+                                <span class="text-gray-700">Milwaukee-area estate buyouts</span>
                             </li>
                             <li class="flex items-center gap-3 group">
                                 <span class="w-2 h-2 bg-[#C9A962] rounded-full group-hover:scale-150 transition-transform"></span>
-                                <span class="text-gray-700">Vintage furniture</span>
+                                <span class="text-gray-700">Estate appraisals & consultations</span>
                             </li>
                             <li class="flex items-center gap-3 group">
                                 <span class="w-2 h-2 bg-[#C9A962] rounded-full group-hover:scale-150 transition-transform"></span>
-                                <span class="text-gray-700">Modern and contemporary furniture</span>
+                                <span class="text-gray-700">Moving services & realtor assistance</span>
                             </li>
                             <li class="flex items-center gap-3 group">
                                 <span class="w-2 h-2 bg-[#C9A962] rounded-full group-hover:scale-150 transition-transform"></span>
-                                <span class="text-gray-700">Artwork and home décor</span>
-                            </li>
-                            <li class="flex items-center gap-3 group">
-                                <span class="w-2 h-2 bg-[#C9A962] rounded-full group-hover:scale-150 transition-transform"></span>
-                                <span class="text-gray-700">Lighting and unique collectibles</span>
+                                <span class="text-gray-700">Complete estate liquidation</span>
                             </li>
                         </ul>
                     </div>
-                    
-                    <a href="#store" class="inline-flex items-center gap-2 text-[#C9A962] font-medium hover:gap-4 transition-all">
-                        Explore Our Collection <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -446,7 +544,8 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 reveal">
                 <h2 class="font-serif text-5xl md:text-6xl mb-4">Our Store</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Step into our ever-changing showroom where history meets style</p>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Visit our showroom to find unique treasures and antiques</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-6">
@@ -483,53 +582,31 @@
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <h2 class="font-serif text-5xl md:text-6xl mb-4">How It Works</h2>
-                <p class="text-gray-600">Simple steps to sell your estate or find your perfect piece</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-8 rounded-2xl bg-[#F5F1E8] hover-lift reveal delay-100">
-                    <div class="w-16 h-16 bg-[#C9A962] rounded-full flex items-center justify-center mx-auto mb-6 text-white">
-                        <i data-lucide="camera" class="w-8 h-8"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl mb-3">1. Send Photos</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Take clear photos and email them to us for initial review</p>
-                </div>
-                
-                <div class="text-center p-8 rounded-2xl bg-[#F5F1E8] hover-lift reveal delay-200">
-                    <div class="w-16 h-16 bg-[#C9A962] rounded-full flex items-center justify-center mx-auto mb-6 text-white">
-                        <i data-lucide="file-text" class="w-8 h-8"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl mb-3">2. Get an Estimate</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">We'll assess and provide a fair offer within 48 hours</p>
-                </div>
-                
-                <div class="text-center p-8 rounded-2xl bg-[#F5F1E8] hover-lift reveal delay-300">
-                    <div class="w-16 h-16 bg-[#C9A962] rounded-full flex items-center justify-center mx-auto mb-6 text-white">
-                        <i data-lucide="truck" class="w-8 h-8"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl mb-3">3. We Pick Up</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">We handle pickup and payment—quick and easy</p>
-                </div>
-            </div>
+    <!-- CTA Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-[#2C2C2C] text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
+            <h2 class="font-serif text-5xl md:text-6xl mb-6">Request A Free Consultation</h2>
+            <div class="w-24 h-1 bg-[#C9A962] mx-auto mb-8"></div>
+            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                We are here to give you options and advice when it's necessary to begin the liquidation process. When you turn to us, you can rest assured that we will take care of everything from start to finish and that everything will be completed with you and your family in mind.
+            </p>
+            <a href="#contact" class="btn-primary px-10 py-5 rounded-full text-white font-medium text-lg inline-flex items-center gap-2 group">
+                Contact Us Today
+                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+            </a>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#2C2C2C] text-white relative overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-        </div>
-        
+    <section id="testimonials" class="py-24 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-16 reveal">
-                <h2 class="font-serif text-5xl md:text-6xl mb-4">What sellers & buyers say</h2>
-                <div class="w-24 h-1 bg-[#C9A962] mx-auto"></div>
+                <h2 class="font-serif text-5xl md:text-6xl mb-4">What Our Clients Say</h2>
+                <div class="section-divider"></div>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
@@ -541,10 +618,10 @@
                         <i data-lucide="star" class="w-5 h-5 text-[#C9A962] fill-[#C9A962] star" style="animation-delay: 0.3s"></i>
                         <i data-lucide="star" class="w-5 h-5 text-[#C9A962] fill-[#C9A962] star" style="animation-delay: 0.4s"></i>
                     </div>
-                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Eric and his team treated my mother's home with respect—and sold nearly everything in three days. Highly recommend for anyone in the Milwaukee area."</p>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Eric and his team treated my mother's home with respect—and bought nearly everything in the estate. If you need to sell your parents' belongings, this is the place to call."</p>
                     <div>
                         <p class="font-semibold text-[#C9A962]">Rachel M.</p>
-                        <p class="text-sm text-gray-500">Seller from Waukesha</p>
+                        <p class="text-sm text-gray-500">Waukesha</p>
                     </div>
                 </div>
                 
@@ -556,10 +633,10 @@
                         <i data-lucide="star" class="w-5 h-5 text-[#C9A962] fill-[#C9A962] star" style="animation-delay: 0.3s"></i>
                         <i data-lucide="star" class="w-5 h-5 text-[#C9A962] fill-[#C9A962] star" style="animation-delay: 0.4s"></i>
                     </div>
-                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Found a beautiful antique dresser at Antique 2 Modern. The piece was exactly as described and fairly priced. Worth the drive from Madison!"</p>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"I didn't know who buys household contents until I found Antique2Modern. They made the downsizing process so easy and gave me a fair price for my furniture."</p>
                     <div>
                         <p class="font-semibold text-[#C9A962]">David L.</p>
-                        <p class="text-sm text-gray-500">Buyer</p>
+                        <p class="text-sm text-gray-500">Milwaukee</p>
                     </div>
                 </div>
                 
@@ -571,85 +648,68 @@
                         <i data-lucide="star" class="w-5 h-5 text-[#C9A962] fill-[#C9A962] star" style="animation-delay: 0.3s"></i>
                         <i data-lucide="star" class="w-5 h-5 text-[#C9A962] fill-[#C9A962] star" style="animation-delay: 0.4s"></i>
                     </div>
-                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Best estate sale company in Wisconsin. They handled my aunt's entire estate professionally and got us great prices."</p>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">"Best estate liquidation company in Wisconsin. They handled my aunt's entire estate professionally and we closed the sale quickly. Highly recommend!"</p>
                     <div>
                         <p class="font-semibold text-[#C9A962]">Susan K.</p>
-                        <p class="text-sm text-gray-500">Seller from Brookfield</p>
+                        <p class="text-sm text-gray-500">Brookfield</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact & FAQ Section -->
+    <!-- Contact Section -->
     <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#F5F1E8]">
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-16">
-                <!-- Contact Form -->
+                <!-- Contact Info -->
                 <div class="reveal">
-                    <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl">
-                        <h3 class="font-serif text-3xl mb-2">Request a Free Estimate</h3>
-                        <p class="text-gray-600 mb-8 text-sm">Have antiques or vintage furniture to sell? Get a free, no-obligation estimate.</p>
-                        
-                        <form id="estimateForm" class="space-y-6">
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-sm font-medium mb-2">First Name</label>
-                                    <input type="text" class="form-input w-full px-4 py-3 rounded-lg bg-gray-50" placeholder="John" required>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium mb-2">Last Name</label>
-                                    <input type="text" class="form-input w-full px-4 py-3 rounded-lg bg-gray-50" placeholder="Doe" required>
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Email Address</label>
-                                <input type="email" class="form-input w-full px-4 py-3 rounded-lg bg-gray-50" placeholder="john@example.com" required>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Phone Number</label>
-                                <input type="tel" class="form-input w-full px-4 py-3 rounded-lg bg-gray-50" placeholder="(262) 555-0123">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Tell us about your items...</label>
-                                <textarea rows="4" class="form-input w-full px-4 py-3 rounded-lg bg-gray-50 resize-none" placeholder="Describe what you're looking to sell..."></textarea>
-                            </div>
-                            <button type="submit" class="btn-primary w-full py-4 rounded-lg text-white font-medium text-lg">
-                                Submit Request
-                            </button>
-                        </form>
-                    </div>
+                    <h3 class="font-serif text-4xl mb-2">Contact Us</h3>
+                    <div class="section-divider !mx-0 mb-8"></div>
+                    <p class="text-gray-600 mb-8">
+                        Ready to discuss your estate? We're available 24/7 to help you through the process. Reach out today for your free consultation.
+                    </p>
                     
-                    <!-- Sell to Us Info -->
-                    <div class="mt-8 bg-white p-8 rounded-2xl shadow-lg reveal delay-100">
-                        <h4 class="font-serif text-2xl mb-4">Sell to Us</h4>
-                        <div class="space-y-4">
-                            <div class="flex gap-4 items-start">
-                                <div class="w-10 h-10 bg-[#C9A962]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="camera" class="w-5 h-5 text-[#C9A962]"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-medium">Send Photos</h5>
-                                    <p class="text-sm text-gray-600">Take clear photos and email them to us</p>
-                                </div>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-[#C9A962] rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
                             </div>
-                            <div class="flex gap-4 items-start">
-                                <div class="w-10 h-10 bg-[#C9A962]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="calculator" class="w-5 h-5 text-[#C9A962]"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-medium">Get an Estimate</h5>
-                                    <p class="text-sm text-gray-600">We'll assess and provide a fair offer within 48 hours</p>
-                                </div>
+                            <div>
+                                <h5 class="font-semibold text-lg">Location</h5>
+                                <p class="text-gray-600">15310 W National Ave<br>New Berlin, WI 53151</p>
+                                <p class="text-sm text-gray-500 mt-1">Menomonee Falls Area</p>
                             </div>
-                            <div class="flex gap-4 items-start">
-                                <div class="w-10 h-10 bg-[#C9A962]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="truck" class="w-5 h-5 text-[#C9A962]"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-medium">We Pick Up</h5>
-                                    <p class="text-sm text-gray-600">We handle pickup and payment—quick and easy</p>
-                                </div>
+                        </div>
+                        
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-[#C9A962] rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-lg">Phone</h5>
+                                <p class="text-gray-600">(262) 641-8005</p>
+                                <p class="text-sm text-gray-500 mt-1">Available 24/7, 365 days a year</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-[#C9A962] rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-lg">Store Hours</h5>
+                                <p class="text-gray-600">Tuesday - Saturday<br>10:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-[#C9A962] rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-lg">Email</h5>
+                                <p class="text-gray-600">Antique2Modern@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -657,69 +717,48 @@
                 
                 <!-- FAQ -->
                 <div class="reveal delay-200">
-                    <div class="text-center lg:text-left mb-8">
-                        <h3 class="font-serif text-4xl mb-2">Customer Care</h3>
-                        <p class="text-gray-600">Frequently asked questions about our services</p>
-                    </div>
+                    <h3 class="font-serif text-4xl mb-2">Common Questions</h3>
+                    <div class="section-divider !mx-0 mb-8"></div>
                     
                     <div class="space-y-4">
                         <div class="faq-item bg-white rounded-xl overflow-hidden shadow-md">
                             <button class="faq-trigger w-full px-6 py-4 flex justify-between items-center text-left font-medium hover:bg-gray-50 transition-colors">
-                                <span>How often does your inventory change?</span>
+                                <span>How do I sell my parents' belongings?</span>
                                 <i data-lucide="chevron-down" class="w-5 h-5 text-[#C9A962] faq-icon"></i>
                             </button>
                             <div class="faq-content px-6">
-                                <p class="pb-4 text-gray-600 text-sm">Our inventory changes weekly as we process new estate acquisitions throughout southeastern Wisconsin. We recommend visiting often as our best pieces move quickly!</p>
+                                <p class="pb-4 text-gray-600 text-sm">Simply contact us with photos of the items. We specialize in helping families sell estate items after a death, offering a respectful and efficient process.</p>
                             </div>
                         </div>
                         
                         <div class="faq-item bg-white rounded-xl overflow-hidden shadow-md">
                             <button class="faq-trigger w-full px-6 py-4 flex justify-between items-center text-left font-medium hover:bg-gray-50 transition-colors">
-                                <span>Do you purchase individual items?</span>
+                                <span>Do you buy entire estates?</span>
                                 <i data-lucide="chevron-down" class="w-5 h-5 text-[#C9A962] faq-icon"></i>
                             </button>
                             <div class="faq-content px-6">
-                                <p class="pb-4 text-gray-600 text-sm">Yes! While most of our inventory comes from complete estate liquidations, we do consider individual pieces. Contact us for a free evaluation.</p>
+                                <p class="pb-4 text-gray-600 text-sm">Yes! We buy estates and full household contents. Whether you have a single antique or an entire house to clear, we are interested.</p>
                             </div>
                         </div>
                         
                         <div class="faq-item bg-white rounded-xl overflow-hidden shadow-md">
                             <button class="faq-trigger w-full px-6 py-4 flex justify-between items-center text-left font-medium hover:bg-gray-50 transition-colors">
-                                <span>What areas do you serve for estates?</span>
+                                <span>What areas do you serve?</span>
                                 <i data-lucide="chevron-down" class="w-5 h-5 text-[#C9A962] faq-icon"></i>
                             </button>
                             <div class="faq-content px-6">
-                                <p class="pb-4 text-gray-600 text-sm">We serve the greater Milwaukee area including New Berlin, Waukesha, Brookfield, and surrounding communities.</p>
+                                <p class="pb-4 text-gray-600 text-sm">We serve the greater Milwaukee area including New Berlin, Waukesha, Brookfield, Menomonee Falls, and surrounding Wisconsin communities.</p>
                             </div>
                         </div>
                         
                         <div class="faq-item bg-white rounded-xl overflow-hidden shadow-md">
                             <button class="faq-trigger w-full px-6 py-4 flex justify-between items-center text-left font-medium hover:bg-gray-50 transition-colors">
-                                <span>What types of items do you sell?</span>
+                                <span>How quickly can you buy my items?</span>
                                 <i data-lucide="chevron-down" class="w-5 h-5 text-[#C9A962] faq-icon"></i>
                             </button>
                             <div class="faq-content px-6">
-                                <p class="pb-4 text-gray-600 text-sm">We carry everything from 1700s-era antiques to contemporary furniture, including art, lighting, collectibles, and more.</p>
+                                <p class="pb-4 text-gray-600 text-sm">We move fast. Once you submit photos, we typically provide an offer within 48 hours. If accepted, we can arrange pickup within days.</p>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact Info Cards -->
-                    <div class="mt-8 grid grid-cols-2 gap-4">
-                        <div class="bg-white p-6 rounded-xl shadow-md text-center hover-lift">
-                            <i data-lucide="map-pin" class="w-6 h-6 text-[#C9A962] mx-auto mb-2"></i>
-                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Address</p>
-                            <p class="text-sm font-medium">15310 W National Ave<br>New Berlin, WI 53151</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-md text-center hover-lift">
-                            <i data-lucide="clock" class="w-6 h-6 text-[#C9A962] mx-auto mb-2"></i>
-                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Hours</p>
-                            <p class="text-sm font-medium">Tue-Sat<br>10am-5pm</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-md text-center hover-lift col-span-2">
-                            <i data-lucide="phone" class="w-6 h-6 text-[#C9A962] mx-auto mb-2"></i>
-                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Phone</p>
-                            <p class="text-sm font-medium">(262) 641-8005</p>
                         </div>
                     </div>
                 </div>
@@ -732,28 +771,23 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-3 gap-12 mb-12">
                 <div>
-                    <h4 class="font-serif text-3xl mb-4">Visit Us Today</h4>
-                    <p class="text-gray-400 mb-6">Step into our showroom in New Berlin, Wisconsin. Our inventory changes weekly!</p>
+                    <h4 class="font-serif text-3xl mb-4">Antique 2 Modern</h4>
+                    <p class="text-gray-400 mb-6">The #1 estate sale company in the Milwaukee area. We help you turn your treasures into cash with professional, compassionate service.</p>
                     <div class="flex gap-4">
                         <a href="#contact" class="btn-primary px-6 py-3 rounded-full text-sm font-medium inline-flex items-center gap-2">
-                            Book a Consultation
-                        </a>
-                    </div>
-                    <div class="mt-4">
-                        <a href="mailto:info@antique2modern.com" class="inline-flex items-center gap-2 text-gray-400 hover:text-[#C9A962] transition-colors text-sm border border-gray-600 px-4 py-2 rounded-full">
-                            <i data-lucide="mail" class="w-4 h-4"></i>
-                            Send an Email
+                            Free Consultation
                         </a>
                     </div>
                 </div>
                 
                 <div>
-                    <h5 class="font-semibold mb-4 text-[#C9A962]">Quick Links</h5>
+                    <h5 class="font-semibold mb-4 text-[#C9A962]">Our Services</h5>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#store" class="hover:text-white transition-colors">Our Store</a></li>
-                        <li><a href="#testimonials" class="hover:text-white transition-colors">Testimonials</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Estate Sales</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Estate Buyouts</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Appraisals</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Consultations</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Moving Services</a></li>
                     </ul>
                 </div>
                 
@@ -766,7 +800,7 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="clock" class="w-4 h-4 text-[#C9A962]"></i>
-                            Tue-Sat, 10am-5pm
+                            Available 24/7, 365 days/year
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="phone" class="w-4 h-4 text-[#C9A962]"></i>
@@ -865,13 +899,6 @@
                     item.classList.add('active');
                 }
             });
-        });
-
-        // Form Submission
-        document.getElementById('estimateForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            showToast('Thank you! We\'ll contact you within 48 hours.');
-            e.target.reset();
         });
 
         // Toast Function
