@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antique Store Gallery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #d8d2c7;
+        color: #2f2f2f;
+    }
+
+    header {
+        background: #e6e1d8;
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid #c9c2b8;
+    }
+
+    header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 42px;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+
+    .subtitle {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
+        color: #5c5c5c;
+    }
+
+    .gold-line {
+        width: 60px;
+        height: 3px;
+        background: #c6a85b;
+        margin: 20px auto 40px auto;
+        border-radius: 2px;
+    }
+
+    .gallery-section {
+        padding: 60px 8%;
+    }
+
+    .gallery-title {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+    .box {
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .box img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .box-content {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .box-content h3 {
+        font-family: 'Playfair Display', serif;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px 0;
+        background: #e6e1d8;
+        margin-top: 60px;
+        font-size: 14px;
+        color: #6a6a6a;
+    }
+
+    /* Responsive */
+    @media(max-width: 1100px){
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media(max-width: 600px){
+        .gallery-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+</style>
+</head>
+<body>
+
+
+
+<section class="gallery-section">
+    <div class="gallery-title">Antique2Modern Collection</div>
+    <div class="gold-line"></div>
+
+    <div class="gallery-grid">
+
+        <!-- 16 Boxes -->
+        <div class="box"><img src="images/am1.jpg"><div class="box-content"><h3>Vintage Furniture</h3></div></div>
+        <div class="box"><img src="images/am2.jpg"><div class="box-content"><h3>Estate Jewelry</h3></div></div>
+        <div class="box"><img src="images/am3.jpg"><div class="box-content"><h3>Collectibles</h3></div></div>
+        <div class="box"><img src="images/am4.jpg"><div class="box-content"><h3>Classic Decor</h3></div></div>
+
+        <div class="box"><img src="images/am5.jpg"><div class="box-content"><h3>Mid-Century</h3></div></div>
+        <div class="box"><img src="images/am6.jpg"><div class="box-content"><h3>Artwork</h3></div></div>
+        <div class="box"><img src="images/am7.jpg"><div class="box-content"><h3>Lighting</h3></div></div>
+        <div class="box"><img src="images/am8.jpg"><div class="box-content"><h3>Rare Finds</h3></div></div>
+
+        <div class="box"><img src="images/am9.jpg"><div class="box-content"><h3>Porcelain</h3></div></div>
+        <div class="box"><img src="images/am10.jpg"><div class="box-content"><h3>Silverware</h3></div></div>
+        <div class="box"><img src="images/am11.jpg"><div class="box-content"><h3>Timepieces</h3></div></div>
+        <div class="box"><img src="images/am12.jpg"><div class="box-content"><h3>Fine China</h3></div></div>
+
+        <div class="box"><img src="images/am13.jpg"><div class="box-content"><h3>Estate Rugs</h3></div></div>
+        <div class="box"><img src="images/am14.jpg"><div class="box-content"><h3>Wood Cabinets</h3></div></div>
+        <div class="box"><img src="images/am15.jpg"><div class="box-content"><h3>Glassware</h3></div></div>
+        <div class="box"><img src="images/am16.jpg"><div class="box-content"><h3>Luxury Pieces</h3></div></div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Antique2Modern | Estate Sale & Antique Specialists
+</footer>
+
+</body>
+</html>
