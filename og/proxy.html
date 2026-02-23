@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OJAS Search</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Title using Caveat */
+    h1 {
+      font-family: 'Caveat', cursive;
+      font-size: 65px;
+      font-weight: 700;
+      color: #ff1a1a;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      line-height: 1.1;
+      text-shadow: 0 0 15px #ff1a1a;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 60%;
+      max-width: 550px;
+      padding: 14px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 2px solid #ff1a1a;
+      background: #111;
+      color: white;
+      outline: none;
+      box-shadow: 0 0 10px #ff1a1a55;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus {
+      box-shadow: 0 0 20px #ff1a1a;
+    }
+
+    input[type="submit"] {
+      padding: 14px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 2px solid #ff1a1a;
+      background: #ff1a1a;
+      color: black;
+      cursor: pointer;
+      font-weight: 600;
+      margin-left: 10px;
+      transition: 0.3s;
+      box-shadow: 0 0 12px #ff1a1a;
+    }
+
+    input[type="submit"]:hover {
+      background: black;
+      color: #ff1a1a;
+      box-shadow: 0 0 18px #ff1a1a;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      margin-top: 25px;
+      border: 2px solid #ff1a1a;
+      border-radius: 10px;
+      background: black;
+      box-shadow: 0 0 25px #ff1a1a55;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="searchForm" onsubmit="return performSearch();">
+    <input type="text" id="query" placeholder="Search..." required>
+    <input type="submit" value="Search">
+  </form>
+
+  <iframe id="searchFrame" src=""></iframe>
+
+  <script>
+    function performSearch() {
+      const query = document.getElementById('query').value;
+      const url = 'https://www.google.com/search?q=' + encodeURIComponent(query) + '&igu=1';
+      document.getElementById('searchFrame').src = url;
+      return false;
+    }
+  </script>
+
+</body>
+</html>

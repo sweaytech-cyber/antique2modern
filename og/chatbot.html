@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OJAS GAMBHEERA ChatBot</title>
+<style>
+/* ====== Body & Header ====== */
+body {margin:0;font-family:Arial,sans-serif;background:#000;color:#f5f5f5;display:flex;flex-direction:column;height:100vh;}
+.header {padding:15px 25px;background:#1a0000;color:#ff3b3b;font-weight:bold;font-size:22px;box-shadow:0 2px 6px rgba(255,0,0,0.3);text-align:center;}
+.container {flex:1;display:flex;overflow:hidden;height:100%;}
+/* ====== Left panel ====== */
+.left-panel {width:280px;background:#111;position:relative;display:flex;align-items:center;justify-content:center;}
+.left-panel img {position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;}
+.left-panel .overlay {
+  position:absolute;
+  top:10px;
+  left:10px;
+  right:10px;
+  color:#ff3b3b;
+  font-size:14px;
+  text-shadow:0 0 8px rgba(255,59,59,0.9);
+  line-height:1.4;
+  background:rgba(0,0,0,0.4);
+  padding:10px;
+  border-radius:8px;
+}
+/* ====== Right panel ====== */
+.right-panel {flex:1;background:#111;color:#f5f5f5;display:flex;flex-direction:column;justify-content:flex-end;position:relative;}
+#messages {padding:15px;overflow:auto;flex:1;display:flex;flex-direction:column;gap:10px;}
+.bubble {max-width:70%;padding:12px 16px;border-radius:14px;line-height:1.4;word-wrap:break-word;}
+.user {align-self:flex-end;background:#ff3b3b;color:#fff;border-top-right-radius:4px;}
+.bot {align-self:flex-start;background:#330000;color:#fff;border-top-left-radius:4px;}
+.meta {font-size:10px;color:#ff6b6b;margin-top:2px;}
+.controls {display:flex;padding:12px;border-top:1px solid #330000;background:#111;}
+input[type="text"] {flex:1;padding:12px;border-radius:10px;border:none;background:#222;color:#fff;}
+button {padding:12px 16px;border:none;border-radius:10px;margin-left:6px;background:#ff3b3b;color:#fff;font-weight:bold;cursor:pointer;}
+button:hover {background:#ff5a5a;}
+.typing {width:14px;height:14px;border:3px solid rgba(255,255,255,0.2);border-top-color:#ff3b3b;border-radius:50%;animation:spin 1s linear infinite;display:inline-block;margin-right:6px;vertical-align:middle;}
+@keyframes spin {to {transform:rotate(360deg);}}
+a.link {color:#ff6b6b;text-decoration:none;font-size:13px;}
+</style>
+</head>
+<body>
+
+<div class="header">OJAS GAMBHEERA</div>
+
+<div class="container">
+  <div class="left-panel">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWcPgI7pBJk2s3cFRY5pCdsrx2Mjq3MmGsBg&s" alt="OJAS GAMBHEERA">
+    <div class="overlay">
+      OJAS GAMBHEERA is a chat‑app where you can explore math, time, facts, and creativity in conversation. Ask your questions and discover answers, formulas, knowledge, and more — this is intelligent chat‑powered interaction.
+    </div>
+  </div>
+
+  <div class="right-panel">
+    <div id="messages"></div>
+    <div class="controls">
+      <input id="userInput" type="text" placeholder="Type your question...">
+      <button id="sendBtn">Send</button>
+      <button id="googleBtn">Google</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ====== DOM Elements ======
+const messagesDiv = document.getElementById("messages");
+const input = document.getElementById("userInput");
+const sendBtn = document.getElementById("sendBtn");
+const googleBtn = document.getElementById("googleBtn");
+
+// ====== Knowledge Base ======
+const KNOWLEDGE = {
+  "bro":"yes bro!",
+  "hello":"Hello!",
+  "hi":"Hi"
+};
+
+// ====== Stopwords for preprocessing ======
+const STOPWORDS = ["what","who","how","when","where","is","a","the","of","does","do","can","please","tell","me","calculate","compute","find","give","show","much","whats"];
+
+// ====== Helper Functions ======
+function preprocessQuery(q){
+  const words = q.toLowerCase().split(/\s+/).filter(w => !STOPWORDS.includes(w));
+  return words.join(" ").trim();
+}
+
+function appendMessage(text, sender, source=null){
+  const bubble = document.createElement("div");
+  bubble.className = "bubble " + sender;
+  bubble.innerHTML = text;
+  messagesDiv.appendChild(bubble);
+  if (source) {
+    const s = document.createElement("div");
+    s.className = "meta";
+    s.innerHTML = "Source: " + source;
+    messagesDiv.appendChild(s);
+  } else {
+    const meta = document.createElement("div");
+    meta.className = "meta";
+    meta.textContent = (sender==="bot" ? "Bot" : "You");
+    messagesDiv.appendChild(meta);
+  }
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+function showTyping(){
+  const d = document.createElement("div");
+  d.id = "__typing";
+  d.className = "bubble bot";
+  d.innerHTML = '<span class="typing"></span> OJAS is thinking...';
+  messagesDiv.appendChild(d);
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+function hideTyping(){
+  const t = document.getElementById("__typing");
+  if(t) t.remove();
+}
+
+// ====== Math Evaluation ======
+function isMathQuery(q){
+  return /[0-9+\-*/().^π]/.test(q) || q.toLowerCase().includes("circumference") || q.toLowerCase().includes("area");
+}
+
+function evalMath(expr){
+  try {
+    expr = expr.replace(/π/g, "Math.PI");
+    if (!/[0-9+\-*/().^Math.PI]/.test(expr)) return null;
+    return new Function("return (" + expr + ");")();
+  } catch(e) {
+    return null;
+  }
+}
+
+function checkSpecialMath(q){
+  q = q.toLowerCase();
+  if (q.includes("circumference of circle") || q.includes("circle circumference")) {
+    const r = q.match(/-?\d+(\.\d+)?/);
+    if (r) return 2 * Math.PI * parseFloat(r[0]);
+    return "Circumference requires radius, e.g. 'circumference of circle 5'";
+  }
+  if (q.includes("area of circle")) {
+    const r = q.match(/-?\d+(\.\d+)?/);
+    if (r) return Math.PI * Math.pow(parseFloat(r[0]),2);
+    return "Area requires radius, e.g. 'area of circle 5'";
+  }
+  return null;
+}
+
+// ====== Wikipedia ======
+async function tryWikipedia(q){
+  try {
+    const res = await fetch("https://en.wikipedia.org/api/rest_v1/page/summary/"+encodeURIComponent(q));
+    if (!res.ok) return false;
+    const data = await res.json();
+    if (data.extract) {
+      let out = data.extract;
+      if (data.content_urls && data.content_urls.desktop && data.content_urls.desktop.page)
+        out += '<div style="margin-top:4px"><a class="link" href="'+data.content_urls.desktop.page+'" target="_blank">Read more</a></div>';
+      appendMessage(out, "bot", "Wikipedia");
+      return true;
+    }
+  } catch(e) {}
+  return false;
+}
+
+// ====== DuckDuckGo ======
+async function tryDDG(q){
+  try {
+    const res = await fetch("https://api.duckduckgo.com/?q="+encodeURIComponent(q)+"&format=json&no_redirect=1");
+    if(!res.ok) return false;
+    const data = await res.json();
+    if(data.Answer){
+      appendMessage(data.Answer, "bot", "DuckDuckGo");
+      return true;
+    }
+    if(data.AbstractText){
+      appendMessage(data.AbstractText+' <a class="link" href="'+data.AbstractURL+'" target="_blank">Source</a>', "bot", "DuckDuckGo");
+      return true;
+    }
+  } catch(e) {}
+  return false;
+}
+
+// ====== Numbers API ======
+async function tryNumbers(q){
+  const n = parseFloat(q.match(/-?\d+(\.\d+)?/)?.[0]);
+  if (isNaN(n)) return false;
+  try {
+    const res = await fetch("http://numbersapi.com/"+n+"/trivia");
+    if (!res.ok) return false;
+    const txt = await res.text();
+    appendMessage(txt, "bot", "Numbers API");
+    return true;
+  } catch(e) {
+    return false;
+  }
+}
+
+// ====== Time & Date ======
+function tryTime(q){
+  const lower = q.toLowerCase();
+  if (lower.includes("time")){
+    appendMessage("Current time: "+new Date().toLocaleTimeString(), "bot", "Local");
+    return true;
+  }
+  if (lower.includes("date") || lower.includes("day")){
+    appendMessage("Today is: "+new Date().toLocaleDateString(), "bot", "Local");
+    return true;
+  }
+  return false;
+}
+
+// ====== Handle Query ======
+async function handleQuery(raw){
+  const q = raw.trim();
+  if (!q) return;
+  appendMessage(q, "user");
+  input.value = "";
+  showTyping();
+
+  const keyword = preprocessQuery(q) || q;
+
+  // 1. Time/Date
+  if (tryTime(q)) { hideTyping(); return; }
+
+  // 2. Local KB
+  const lower = keyword.toLowerCase();
+  if (KNOWLEDGE[lower]){
+    hideTyping();
+    appendMessage(KNOWLEDGE[lower], "bot", "Local KB");
+    return;
+  }
+  for (const k of Object.keys(KNOWLEDGE)){
+    if(lower.includes(k)){
+      hideTyping();
+      appendMessage(KNOWLEDGE[k], "bot", "Local KB");
+      return;
+    }
+  }
+
+  // 3. Math if looks like math
+  if (isMathQuery(q)){
+    const special = checkSpecialMath(q);
+    if (special!==null){
+      hideTyping();
+      appendMessage("<b>"+special+"</b>", "bot", "Math Formula");
+      return;
+    }
+    const mathResult = evalMath(q);
+    if(mathResult!==null){
+      hideTyping();
+      appendMessage("<b>"+mathResult+"</b>", "bot", "Math");
+      return;
+    }
+  }
+
+  // 4. Wikipedia
+  if (await tryWikipedia(keyword)){ hideTyping(); return; }
+
+  // 5. DuckDuckGo
+  if (await tryDDG(keyword)){ hideTyping(); return; }
+
+  // 6. Numbers API
+  if (await tryNumbers(keyword)){ hideTyping(); return; }
+
+  hideTyping();
+  appendMessage("I couldn't find an exact answer. Try rephrasing or click 'Google'.", "bot", "Fallback");
+}
+
+// ====== Events ======
+sendBtn.addEventListener("click", () => handleQuery(input.value));
+input.addEventListener("keydown", e => { if(e.key==="Enter") handleQuery(input.value); });
+googleBtn.addEventListener("click", () => {
+  const q = input.value.trim();
+  window.open("https://www.google.com/search?q="+encodeURIComponent(q), "__blank");
+});
+
+// ====== Greeting ======
+appendMessage("Hi! I'm OJAS GAMBHEERA, Ask Me Anything: ");
+</script>
+
+</body>
+</html>

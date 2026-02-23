@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OJAS GAMBHEERA</title>
+  <base target="_blank">
+
+  <!-- Caveat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #ff0000;
+      font-family: 'Caveat', cursive;
+      overflow-x: hidden;
+    }
+
+    /* Top Nav */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #111;
+      gap: 20px;
+    }
+
+    .top-nav .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff0000;
+    }
+
+    /* NAV LINKS STYLES */
+    .top-nav .links a {
+      margin-right: 20px;
+      color: #ff0000;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border: 2px solid #ff0000; /* red box around nav links */
+      border-radius: 8px;
+      transition: 0.3s all ease;
+    }
+
+    .top-nav .links a:hover {
+      box-shadow: 0 0 15px #ff0000; /* glow effect */
+      color: #fff;
+      border-color: #ff0000;
+    }
+
+    .top-nav .search-box {
+      margin-left: auto;
+      margin-right: 50px;
+    }
+
+    .top-nav .search-box input {
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 5px;
+    }
+
+    .top-nav .search-box button {
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      background-color: #ff0000;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    header {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+    }
+
+    header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+    }
+
+    header h1 {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 52px;
+      color: #ff0000;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px #000;
+      z-index: 3;
+    }
+
+    /* Left Info Box (counter + info) */
+    .header-box {
+      position: absolute;
+      top: 40px;
+      left: 15px;
+      background-color: #111;
+      border-radius: 15px;
+      color: white;
+      padding: 20px;
+      width: 280px;
+      height: auto;
+      text-align: left;
+      box-shadow: 0 0 10px #ff0000;
+      z-index: 10;
+    }
+
+    .header-box .title {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .game-suggestion {
+      margin-top: 15px;
+      font-size: 15px;
+      color: #ffcc00;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .info-link {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .info-link a {
+      color: #ff4d4d;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Right Side Welcome Box */
+    .welcome-box {
+      position: absolute;
+      top: 80px;
+      right: 30px;
+      background-color: #111;
+      border-radius: 15px;
+      color: #fff;
+      padding: 20px;
+      width: 230px;
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.4;
+      box-shadow: 0 0 10px #ff0000;
+      z-index: 10;
+    }
+
+    /* GAME GRID */
+    #game-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 games per row */
+      gap: 25px;
+      padding: 30px;
+    }
+
+    .game-box {
+      text-align: center;
+      background: #111;
+      border: 2px solid #ff0000;
+      border-radius: 10px;
+      padding: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .game-box:hover {
+      transform: scale(1.05);
+      background: #1a0000;
+    }
+
+    .game-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .game-button {
+      width: 90%;
+      padding: 15px;
+      background: #000;
+      color: #ff0000;
+      border: 2px solid #ff0000;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .game-button:hover {
+      background: #ff0000;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Nav -->
+  <div class="top-nav">
+    <div class="logo">OJAS GAMBHEERA</div>
+    <div class="links" style="margin-left:30px;">
+      <a href="index.html" target="_self">Games</a>
+      <!-- CHANGE SOON -->
+      <a href="https://movies-17133141.codehs.me" target="_self">Movies</a>
+      <a href="chatbot.html" target="_self">Chatbot</a>
+      <a href="proxy.html" target="_self">Proxy</a>
+    </div>
+    <div class="search-box">
+      <input type="text" id="gameSearch" placeholder="Search for games...">
+      <button onclick="searchGames()">Search</button>
+    </div>
+  </div>
+  <header>
+    <img src="https://bollywoodmotion.com/wp-content/uploads/2025/09/et00369074-vratsqwzba-landscape1.jpg" alt="OJAS GAMBHEERA Banner">
+    <h1></h1>
+
+    <!-- Left Info / Counter Box -->
+    <div class="header-box">
+      <div class="title">OJAS<br>GAMBHEERA</div>
+
+      <!-- Visitor Counter -->
+      <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=1eae0071dc76202e08c53c6c5b1bb70111d'></script>
+      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1398963/t/0"></script>
+
+      <div class="game-suggestion">&lt;262-556-8978&gt; FOR GAME SUGGESTIONS</div>
+      <div class="info-link"><a href="#">More Info</a></div>
+    </div>
+
+    <!-- Right Welcome Box -->
+ <div class="welcome-box" style="font-weight: 700; font-size: 18px; line-height: 1.6;">
+
+  <strong>DAILY ANNOUNCEMENT:</strong><br>
+  WE’VE OFFICIALLY RELEASED OUR VERY OWN MINECRAFT SERVER! 🎉  
+  
+  <br><br>
+  
+  <strong>SERVER IP:</strong> <strong>OGSMP.EAGLER.HOST</strong>  
+  
+  <br><br>
+  
+  OGSMP OFFERS TOP-TIER PERFORMANCE, SMOOTH GAMEPLAY, AND AN AWESOME COMMUNITY — THE BEST OF THE BEST. JOIN NOW!
+</div>
+
+
+  </header>
+
+ <div id="game-container">
+    <div class="game-box">
+      <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSMb0SgA8igaPt4SQ_jPGqp8Y-d7O7xZRedw&s" alt="Crazy Crash">
+      <button class="game-button" onclick="openGame('crazycrash.html')">CRAZY CRASH</button>
+    </div>
+
+    <div class="game-box">
+      <img class="game-image" src="https://play-lh.googleusercontent.com/3zcz5cJtCVkwUqhzvqCD9OA45Jfx1cUw_HboYsK3YD7iIT5zL_FTO8oL-TmE_LXqCQ=w526-h296-rw" alt="Online City">
+      <button class="game-button" onclick="openGame('onlinecity.html')">ONLINE CITY</button>
+    </div>
+
+    <div class="game-box">
+      <img class="game-image" src="https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg" alt="Poly Track">
+      <button class="game-button" onclick="window.open('https://script.google.com/macros/s/AKfycbzuhv-wKflC3QgCI_d8xsy90ngRlqgKj-qfICMuzhimGuYwWXFI5tPWwwfjrYk-biJu/exec', '_blank')">POLY TRACK</button>
+    </div>
+
+    <div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmy73hHHgqrJSvDJyUYr3niFBHo5oo3JFHCg&s" alt="Death Run">
+  <button class="game-button" onclick="window.open('deathrun.html', '_blank')">DEATH RUN</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://play-lh.googleusercontent.com/SWTpYqsX9RN2YirCDnAjQ8qsbgn4UrHkRRGsjwuASnHMVqssIvWKzq82mP82y_ffBSE" alt="Paper.io">
+  <button class="game-button" onclick="window.open('paperio.html', '_blank')">PAPER IO</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHNunE2x8xxaC9kGR-S9FjMkuiUeX0QXV7cA&s" alt="G+ Game">
+  <button class="game-button" onclick="window.open('stealabrainrot.html', '_blank')">STEAL A BRAINROT</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaOqcTvbSiBEciB0AjKfnUgP2-sdlEE255crSBWxCLmptL9hzXlWHj3XSxEiypxAo9uWac&s=10" alt="FNAF">
+  <button class="game-button" onclick="window.open('fnaf.html', '_blank')">FNAF</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrM3JmfheVZUxQzpn0s-0SDkvUnhZUMGuI97LEjgS9yEnx2cMhRUPCFF5tmO5-cdRZbR_t&s=10" alt="8 Ball Pool">
+  <button class="game-button" onclick="window.open('8ballpool.html', '_blank')">8 BALL POOL</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://play-lh.googleusercontent.com/V1iWDWHH2VwlTcSn5_J1Kouvv0JeVnIIlXCkTiO64gYzwAbyNVkh2qH85dt19B_v4w=w526-h296-rw" alt="Survival Race">
+  <button class="game-button" onclick="window.open('survivalrace.html', '_blank')">SURVIVAL RACE</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://i.ytimg.com/vi/L5vrz-fq9D0/maxresdefault.jpg" alt="Baldis Basics">
+  <button class="game-button" onclick="window.open('baldiesbasics.html', '_blank')">BALDIS BASICS</button>
+</div>
+    
+    <div class="game-box">
+  <img class="game-image" src="https://upload.wikimedia.org/wikipedia/en/b/b6/Minecraft_2024_cover_art.png" alt="Retro Bowl">
+  <button class="game-button" onclick="window.open('retrobowl.html', '_blank')">MINECRAFT 1.8.8</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrzn6hrPoriB0PvjLWbnEYNeRrMhUjjgGYAA&s" alt="Snow Rider">
+  <button class="game-button" onclick="window.open('snowrider.html', '_blank')">SNOW RIDER</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://play-lh.googleusercontent.com/yT_LBq_tyKeIDohKDsqN_Qt18jGIPUYIxY2C-1-E2YA9Qd60uZW08pua17qBmIiDPA=w240-h480-rw" alt="Granny">
+  <button class="game-button" onclick="window.open('granny.html', '_blank')">GRANNY</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs" alt="Slope">
+  <button class="game-button" onclick="window.open('slope.html', '_blank')">SLOPE</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://upload.wikimedia.org/wikipedia/en/b/bf/Retro_Bowl_cover.png" alt="Retro Bowl">
+  <button class="game-button" onclick="window.open('mc.html', '_blank')">RETRO BOWL</button>
+</div>
+
+<!-- Subway Surfers -->
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmos4KeDIDVVSbwcBxhpF2FKYSsXNbavROA&s" alt="Subway Surfers">
+  <button class="game-button" onclick="window.open('subwaysurfers.html', '_blank')">SUBWAY SURFERS</button>
+</div>
+
+<!-- Cookie Clicker -->
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1iqHgjXkjQZWLtYaYP6n4eZ7cHPYE56_i3g&s" alt="Cookie Clicker">
+  <button class="game-button" onclick="window.open('cookieclicker.html', '_blank')">COOKIE CLICKER</button>
+</div>
+
+<!-- Ping Pong -->
+<div class="game-box">
+  <img class="game-image" src="https://tabletennis.h5games.usercontent.goog/v/4eeofbe4nfj1g/html5games/assets/marketingAssets/gameIcons/512x512.png" alt="Ping Pong">
+  <button class="game-button" onclick="window.open('pingpong.html', '_blank')">PING PONG</button>
+</div>
+
+<!-- Baseball -->
+<div class="game-box">
+  <img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Tommy_Milone_gives_up_a_home_run_to_Mike_Trout_on_May_21%2C_2017.jpg" alt="Baseball">
+  <button class="game-button" onclick="window.open('baseball.html', '_blank')">BASEBALL</button>
+</div>
+
+<!-- Basketball -->
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfc-vFDPX6F9JKbihOtghN2oYyJwCxA7WxQ&s" alt="Basketball">
+  <button class="game-button" onclick="window.open('basketball.html', '_blank')">BASKETBALL</button>
+</div>
+
+<!-- Drift Boss -->
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTunZVAxdtSgLi40iQMHWjHNBsXdOuVH61PJA&s" alt="Drift Boss">
+  <button class="game-button" onclick="window.open('driftboss.html', '_blank')">DRIFT BOSS</button>
+</div>
+
+<!-- Indian Truck Simulator -->
+<div class="game-box">
+  <img class="game-image" src="https://play-lh.googleusercontent.com/gsIRdQb2iqwK0JVoE9m4pDaiEiiuUTai2eZkjnhNjuDQ1q0a_huvYqwZ1aO8C7NMmbo" alt="Indian Truck Simulator">
+  <button class="game-button" onclick="window.open('indiantrucksim.html', '_blank')">INDIAN TRUCK</button>
+</div>
+
+<!-- Jet Rush -->
+<div class="game-box">
+  <img class="game-image" src="https://i.ytimg.com/vi/q5ZDWROnt0s/mqdefault.jpg" alt="Jet Rush">
+  <button class="game-button" onclick="window.open('jetrush.html', '_blank')">JET RUSH</button>
+</div>
+
+<!-- Hill Climb -->
+<div class="game-box">
+  <img class="game-image" src="https://store-images.s-microsoft.com/image/apps.27192.9007199266379485.c1ef97c5-cf2f-4dbd-840d-c4c975f1b009.4c147b04-721a-4ac1-b7e9-151ad255f3f3" alt="Hill Climb">
+  <button class="game-button" onclick="window.open('hillclimb.html', '_blank')">HILL CLIMB</button>
+</div>
+
+<!-- Geometry Dash -->
+<div class="game-box">
+  <img class="game-image" src="https://m.media-amazon.com/images/I/61mVIP6Oo1L.png" alt="Geometry Dash">
+  <button class="game-button" onclick="window.open('geometrydash.html', '_blank')">GEOMETRY DASH</button>
+</div>
+
+<!-- Temple Run -->
+<div class="game-box">
+  <img class="game-image" src="https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/49cd11d149a763c01cc6cc117fe57a00/temple-run.png" alt="Temple Run">
+  <button class="game-button" onclick="window.open('templerun.html', '_blank')">TEMPLE RUN</button>
+</div>
+
+<!-- Mountain Bike -->
+<div class="game-box">
+  <img class="game-image" src="https://img.redbull.com/images/c_crop,x_259,y_0,h_5000,w_4000/c_fill,w_800,h_889/q_auto:low,f_auto/redbullcom/2024/2/6/gofjax1y9u9xewzg8kqx/bike-unchained-3" alt="Mountain Bike">
+  <button class="game-button" onclick="window.open('mountainbike.html', '_blank')">MOUNTAIN BIKE</button>
+</div>
+
+<!-- 1v1LOL -->
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwXHTvZUKdHLxQwcyFaD-Y3eI0IWbRqWGFX6Efj7QY2G3LihhMivHWqSO246F1Dg_27OM2vQ&s=10" alt="1v1LOL">
+  <button class="game-button" onclick="window.open('1v1lol.html', '_blank')">1V1.LOL</button>
+</div>
+
+<!-- Funny Shooter -->
+<div class="game-box">
+  <img class="game-image" src="https://m.media-amazon.com/images/I/61hKgo4Kx3L.png" alt="Funny Shooter">
+  <button class="game-button" onclick="window.open('funnyshooter.html', '_blank')">FUNNY SHOOTER</button>
+</div>
+
+<!-- Hole.io -->
+<div class="game-box">
+  <img class="game-image" src="https://www.gbhbl.com/wp-content/uploads/2018/07/Hole.io-Pic-1.png" alt="Hole.io">
+  <button class="game-button" onclick="window.open('holeio.html', '_blank')">HOLE.IO</button>
+</div>
+
+<!-- Google Baseball -->
+<div class="game-box">
+  <img class="game-image" src="https://lh3.googleusercontent.com/VoSayElGWCwozB17drUpZ1lUhHzqd3UEj5o9zlaVu2FhySAjufQRUx5IJqHa_qD2zCpRgj39m7LyVgcu-QjEErM_eQsBZdAkw9k=h200" alt="Google Baseball">
+  <button class="game-button" onclick="window.open('googlebaseball.html', '_blank')">GOOGLE BASEBALL</button>
+</div>
+
+<!-- Jetpack Joyride -->
+<div class="game-box">
+  <img class="game-image" src="https://upload.wikimedia.org/wikipedia/en/9/90/Jetpack_Joyride_iOS.png" alt="Jetpack Joyride">
+  <button class="game-button" onclick="window.open('jetpackjoyride.html', '_blank')">JETPACK JOYRIDE</button>
+</div>
+
+<!-- BitLife -->
+<div class="game-box">
+  <img class="game-image" src="https://play-lh.googleusercontent.com/fUM-UyywXxjC8soxAZdIlxJrlRRXmql8wkE426SHzft4lJycSKVd2jCYQQX1BEG9Xw" alt="BitLife">
+  <button class="game-button" onclick="window.open('bitlife.html', '_blank')">BITLIFE</button>
+</div>
+
+<!-- Escape Road City -->
+<div class="game-box">
+  <img class="game-image" src="https://i.ytimg.com/vi/i5TUiFUDfu0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB07aDZKOj1RtNnBrwhrsQyoOdNKQ" alt="Escape Road City">
+  <button class="game-button" onclick="window.open('escaperoadcity.html', '_blank')">ESCAPE ROAD CITY</button>
+</div>
+
+<!-- Drive Mad -->
+<div class="game-box">
+  <img class="game-image" src="https://play-lh.googleusercontent.com/7l3WAPbei9MXrxnCzImpXi2VxjEBtgDl0htwvTnA-YqpJAuQJPpSiby1oB8LZMgD0IAy" alt="Drive Mad">
+  <button class="game-button" onclick="window.open('drivemad.html', '_blank')">DRIVE MAD</button>
+</div>
+
+<!-- Aquapark.io -->
+<div class="game-box">
+  <img class="game-image" src="https://m.media-amazon.com/images/I/81sVKISRgML.png" alt="Aquapark.io">
+  <button class="game-button" onclick="window.open('aquaparkio.html', '_blank')">AQUAPARK.IO</button>
+</div>
+
+<!-- Slither.io -->
+<div class="game-box">
+  <img class="game-image" src="https://upload.wikimedia.org/wikipedia/en/5/50/Slither.png" alt="Slither.io">
+  <button class="game-button" onclick="window.open('slitherio.html', '_blank')">SLITHER.IO</button>
+</div>
+
+<!-- Pixel Shooter -->
+<div class="game-box">
+  <img class="game-image" src="https://play-lh.googleusercontent.com/oo9vm9LgWONlfjDJMHtO9Zm9taVs1pVnnFB-bfPyNH_U-_bp3QWzh9XBsOABp2h-rQ" alt="Pixel Shooter">
+  <button class="game-button" onclick="window.open('pixelshooter.html', '_blank')">PIXEL SHOOTER</button>
+</div>
+
+<!-- Rooftop Snipers -->
+<div class="game-box">
+  <img class="game-image" src="https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/e8/78/13/e87813f4-016e-8f1f-85e9-901f25807269/pr_source.png/643x0w.jpg">
+  <button class="game-button" onclick="window.open('rooftopsnipers.html', '_blank')">ROOFTOP SNIPERS</button>
+</div>
+
+<!-- Plants vs Zombies -->
+<div class="game-box">
+  <img class="game-image" src="https://upload.wikimedia.org/wikipedia/en/9/9c/PlantsvsZombiesCoverArt.jpg" alt="Plants vs Zombies">
+  <button class="game-button" onclick="window.open('plantsvszombies.html', '_blank')">PLANTS VS ZOMBIES</button>
+</div>
+
+<!-- Brawl Stars -->
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDlytiE178sfY8uXNj7aIesE2rM7gGOwjFCmb9VVEWJ7JAoUDaNYQZxuRG5iFNXAxvJRJAA&s=10" alt="Brawl Stars">
+  <button class="game-button" onclick="window.open('brawlstars.html', '_blank')">BRAWL STARS</button>
+</div>
+
+<!-- FNF Shooter -->
+<div class="game-box">
+  <img class="game-image" src="https://img.itch.zone/aW1hZ2UvMTAzMDk4MC81ODg0NzEyLmpwZw==/original/CJuMjf.jpg" alt="FNF Shooter">
+  <button class="game-button" onclick="window.open('fnfshooter.html', '_blank')">FNF SHOOTER</button>
+</div>
+
+<!-- 2048 -->
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWWm1PCvTv3RGTr1MdMA5-QXDwteF32bQvw&s" alt="2048">
+  <button class="game-button" onclick="window.open('2048.html', '_blank')">ELYTRA COMING</button>
+</div>
+
+<!-- MotoBike -->
+<div class="game-box">
+  <img class="game-image" src="https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/2c6d5a46cdbceada277c870ce1c389ee/moto-x3m.jpg" alt="MotoBike">
+  <button class="game-button" onclick="window.open('motobike.html', '_blank')">MOTOBIKE</button>
+</div>
+
+<!-- Tap Goal -->
+<div class="game-box">
+  <img class="game-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEk0TcvUwygtRNJt13PyJbcLjhn0R66ZgaXA&s" alt="Tap Goal">
+  <button class="game-button" onclick="window.open('tapgoal.html', '_blank')">TAP GOAL</button>
+</div>
+
+<!-- Red vs Blue -->
+<div class="game-box">
+  <img class="game-image" src="https://upload.wikimedia.org/wikipedia/en/8/89/Red_vs._Blue_logo.jpg" alt="Red vs Blue">
+  <button class="game-button" onclick="window.open('redvsblue.html', '_blank')">RED VS BLUE</button>
+</div>
+
+<!-- Stick War -->
+<div class="game-box">
+  <img class="game-image" src="https://play-lh.googleusercontent.com/shnVeqOmQc3RoIVu17SCmYr_Er0Ob4AG322NKHaAUUxuwn8yB3JTwntH07yuInKdMME=w240-h480-rw" alt="Stick War">
+  <button class="game-button" onclick="window.open('stickwar.html', '_blank')">STICK WAR</button>
+</div>
+
+<!-- Stick War -->
+<div class="game-box">
+  <img class="game-image" src="https://m.gjcdn.net/game-screenshot/400/40805142-dfeseevq-v4.webp" alt="Stick War">
+  <button class="game-button" onclick="window.open('driftru.html', '_blank')">DRIFT RU</button>
+</div>
+
+<!-- Football Bros -->
+<div class="game-box">
+  <img class="game-image" src="https://i.ytimg.com/vi/msAcan2xRdE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCP5dURKd5g7s59uct_vQWqWCxY3A" alt="Football Bros">
+  <button class="game-button" onclick="window.open('footballbros.html', '_blank')">FOOTBALL BROS</button>
+</div>
+
+<!-- Grow a Garden -->
+<div class="game-box">
+  <img class="game-image" src="https://c.files.bbci.co.uk/5ea8/live/3fab4f60-4d1c-11f0-8c47-237c2e4015f5.jpg" alt="Grow a Garden">
+  <button class="game-button" onclick="window.open('growagarden.html', '_blank')">GROW A GARDEN</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://cdn.arstechnica.net/wp-content/uploads/2022/10/snowy_sunset.jpg" alt="Grow a Garden">
+  <button class="game-button" onclick="window.open('slowroads.html', '_blank')">SLOW ROADS</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://www.esrb.org/wp-content/uploads/2023/01/V1_ESRB_AmongUs-blog-header-01-1024x740-_1.jpg" alt="Grow a Garden">
+  <button class="game-button" onclick="window.open('amongus.html', '_blank')">AMONG US</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://upload.wikimedia.org/wikipedia/en/2/2d/Angry_Birds_promo_art.png" alt="Grow a Garden">
+  <button class="game-button" onclick="window.open('angrybirds.html', '_blank')">ANGRY BIRDS</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://play-lh.googleusercontent.com/8uN37O8ncKhkSODaZ_FU7WCNs9hZihjMzzntK8E6J_4BidHUieevzbcNwU3kkL-vaYmY=w526-h296-rw" alt="Grow a Garden">
+  <button class="game-button" onclick="window.open('drifthunters.html', '_blank')">DRIFT HUNTERS</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://m.media-amazon.com/images/M/MV5BZjczNjMxYTgtZTMxOS00MTg5LWFiMjYtYzIwMDQ5MTQ3ODU0XkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,0,500,281_.jpg" alt="Grow a Garden">
+  <button class="game-button" onclick="window.open('fnaf2.html', '_blank')">FNAF 2</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://img.itch.zone/aW1hZ2UvMTQwOTY3Lzc0NjIyOS5naWY=/originalm/%2B25IEV.gif" alt="Dank Tomb">
+  <button class="game-button" onclick="window.open('https://movies-17133141.codehs.me/danotumb.html', '_blank')">DANK TOMB</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1806720/header.jpg?t=1731535508" alt="Dead Estate">
+  <button class="game-button" onclick="window.open('deadestate.html', '_blank')">DEAD ESTATE</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://images.rbxcdn.com/5348266ea6c5e67b19d6a814cbbb70f6.jpg" alt="DoBlox">
+  <button class="game-button" onclick="window.open('doblox.html', '_blank')">ROBLOX</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://i.ytimg.com/vi/OiEG8RsGAu8/maxresdefault.jpg" alt="Mr Racer">
+  <button class="game-button" onclick="window.open('https://movies-17133141.codehs.me/mrracer.html', '_blank')">MR RACER</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://i.ytimg.com/vi/hQkxjY_dR7Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBgOZ0gvGc4UW4VtI41kmTbzwaKyg" alt="Retro Highway">
+  <button class="game-button" onclick="window.open('retrohighway.html', '_blank')">RETRO HIGHWAY</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://s3.amazonaws.com/culga-games-images/uploads/images/deepest-sword.jpg" alt="DEEPEST SWORD">
+  <button class="game-button" onclick="window.open('https://pawankalyan-17190869.codehs.me/deadestate.html', '_blank')">DEEPEST SWORD</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://img.itch.zone/aW1nLzEzOTA4MTM5LnBuZw==/original/K74oIu.png" alt="Dead Plate">
+  <button class="game-button" onclick="window.open('https://pawankalyan-17190869.codehs.me/deadplate.html', '_blank')">DEAD PLATE</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://www2.minijuegosgratis.com/v3/games/thumbnails/251554_1.jpg" alt="Deadly Descent">
+  <button class="game-button" onclick="window.open('https://pawankalyan-17190869.codehs.me/deadlydescent.html', '_blank')">DEADLY DESCENT</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://i.ytimg.com/vi/At1VvcrWyEY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBlStRFYZurkz06NEjiResYLrhaPQ" alt="Death Chase">
+  <button class="game-button" onclick="window.open('https://pawankalyan-17190869.codehs.me/deathchase.html', '_blank')">DEATH CHASE</button>
+</div>
+
+<div class="game-box">
+  <img class="game-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Final_Fantasy_XIV_-_Jeuno%2C_The_First_Walk_Alliance_Raid.jpg/330px-Final_Fantasy_XIV_-_Jeuno%2C_The_First_Walk_Alliance_Raid.jpg" alt="Deepest Sword">
+  <button class="game-button" onclick="window.open('https://pawankalyan-17190869.codehs.me/deepestsword.html', '_blank')">DUNGEON RAID</button>
+</div>
+
+
+
+  <script>
+    function openGame(url) {
+      window.open(url, "_blank"); // Games open in new tab
+    }
+
+    function searchGames() {
+      const input = document.getElementById("gameSearch").value.toLowerCase();
+      const games = document.querySelectorAll("#game-container .game-box");
+      games.forEach(game => {
+        const title = game.querySelector(".game-button").textContent.toLowerCase();
+        game.style.display = title.includes(input) ? "" : "none";
+      });
+    }
+  </script>
+</body>
+
+<!-- Pagination and Script -->
+<style>
+  /* Pagination aligns with game container */
+  .pagination {
+    display: flex;
+    justify-content: space-between; /* arrows on sides, page number centered */
+    align-items: center;
+    margin: 30px 30px; /* same as #game-container padding */
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .pagination button {
+    background-color: #111;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .pagination button:hover {
+    background-color: #ff0000;
+    color: #000;
+  }
+
+  .pagination #pageInfo {
+    flex-grow: 1;
+    text-align: center;
+  }
+</style>
+
+<div id="pagination" class="pagination">
+  <button id="prevPage">&laquo; </button>
+  <span id="pageInfo">1 / 2</span>
+  <button id="nextPage"> &raquo;</button>
+</div>
+
+<script>
+  const gamesPerPage = 50; // Updated: 50 games per page
+  const games = Array.from(document.querySelectorAll(".game-box"));
+  const pageInfo = document.getElementById("pageInfo");
+  const prevBtn = document.getElementById("prevPage");
+  const nextBtn = document.getElementById("nextPage");
+
+  let currentPage = 1;
+  const totalPages = Math.ceil(games.length / gamesPerPage);
+
+  function showPage(page) {
+    currentPage = page;
+    const start = (page - 1) * gamesPerPage;
+    const end = start + gamesPerPage;
+    games.forEach((game, index) => {
+      game.style.display = (index >= start && index < end) ? "block" : "none";
+    });
+    pageInfo.textContent = `${currentPage} / ${totalPages}`;
+  }
+
+  prevBtn.addEventListener("click", () => {
+    if (currentPage > 1) showPage(currentPage - 1);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (currentPage < totalPages) showPage(currentPage + 1);
+  });
+
+  // Initialize first page
+  showPage(1);
+</script>
+
+
+</html>
