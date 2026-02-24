@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OJAS GAMBHEERA MOVIES</title>
+  <base target="_blank">
+
+  <!-- Caveat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #ff0000;
+      font-family: 'Caveat', cursive;
+      overflow-x: hidden;
+    }
+
+    /* Top Nav */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #111;
+      gap: 20px;
+    }
+
+    .top-nav .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff0000;
+      letter-spacing: 2px;
+    }
+
+    .top-nav .links a {
+      margin-right: 20px;
+      color: #ff0000;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border: 2px solid #ff0000;
+      border-radius: 8px;
+      transition: 0.3s all ease;
+    }
+
+    .top-nav .links a:hover {
+      box-shadow: 0 0 15px #ff0000;
+      color: #fff;
+      border-color: #ff0000;
+    }
+
+    .top-nav .search-box {
+      margin-left: auto;
+    }
+
+    .top-nav .search-box input {
+      padding: 6px 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 5px;
+    }
+
+    .top-nav .search-box button {
+      padding: 6px 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      background-color: #ff0000;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Movie Grid */
+    #movie-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      justify-items: center;
+    }
+
+    .movie-card {
+      text-align: center;
+    }
+
+    .movie-card a {
+      display: block;
+      width: 110px;
+      height: 160px;
+    }
+
+    .movie-card img {
+      width: 110px;
+      height: 160px;
+      border-radius: 10px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .movie-card img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #ff0000;
+    }
+
+    .movie-title {
+      color: #ff0000;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Nav -->
+  <div class="top-nav">
+    <div class="logo">OJAS GAMBHEERA MOVIES</div>
+    <div class="links" style="margin-left:30px;">
+      <a href="https://ojasgambheera-16424441.codehs.me/index.html" target="_self">Games</a>
+      <a href="https://movies-17133141.codehs.me" target="_self">Movies</a>
+      <a href="https://ojasgambheera-16424441.codehs.me/chatbot.html" target="_self">Chatbot</a>
+      <a href="https://ojasgambheera-16424441.codehs.me/proxy.html" target="_self">Proxy</a>
+    </div>
+    <div class="search-box">
+      <input type="text" id="movieSearch" placeholder="Search for movies...">
+      <button onclick="searchMovies()">Search</button>
+    </div>
+  </div>
+
+  <div id="movie-container">
+
+    <!-- Movie Cards -->
+    <div class="movie-card">
+      <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+        <img src="https://m.media-amazon.com/images/I/91RpwagB7uL._AC_UF1000,1000_QL80_.jpg" alt="Naruto Manga">
+      </a>
+      <div class="movie-title">Naruto Manga</div>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Invincible_movie.jpg/250px-Invincible_movie.jpg" alt="Invincible">
+      </a>
+      <div class="movie-title">Invincible</div>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHiAGeyzF9qvG8IKi_fZw75WJ6v4oLuEPqu1Jedx-RBymYqXbg6SBT3JtAnn5qrlMn8glMKg&s=10" alt="Minecraft Movie">
+      </a>
+      <div class="movie-title">Minecraft Movie</div>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ8zNd0C55lkN8eeiTBi6FqBqMASYakXQycPzMI3Yyp7VOxauNZ9AbHjt0awZvsm8ubQTx-Q&s=10">
+      </a>
+      <div class="movie-title">Spider-Man Into The Spider-Verse</div>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFIA8PwcujdiEBhpGNlZj2ZPd-DhutzxLrAMrJvXsiWzWcFC8rP-zmh2W3UP_qGzH4CSvqw&s=10" alt="Dog Man Movie">
+      </a>
+      <div class="movie-title">Dog Man Movie</div>
+    </div>
+    
+    <div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf2mlR6lAVuaGjMmrl-3HYetH0KfxrHZpFBF2y6TWWTKcQbbax" alt="Jaws">
+  </a>
+  <div class="movie-title">Jaws</div>
+</div>
+
+<div class="movie-card">
+ <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQuQZFDMyz5H4izAKJWkj8lNzCBmzqfnXuZEh8euAo7kksMiaXd" alt="Ant-Man and The Wasp">
+  </a>
+  <div class="movie-title">Ant-Man and The Wasp</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfod2wP5oz64b7In9zDe0B7RUXUlCivXHcDxxrliz96rfGiuaIW442-rx4De-1k_vCtgPv&s=10" alt="We Are Still Here">
+  </a>
+  <div class="movie-title">We Are Still Here</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/I/71oYp0Y7bxL._AC_UF1000,1000_QL80_.jpg" alt="Attack on Titan">
+  </a>
+  <div class="movie-title">Attack on Titan</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm_2FHlcuxXgOKHWzU_ks06DaKDmsn4A-SRlIHowqAESLfdoyK_8EtUwHfghpGvcor5segsQ&s=10" alt="Despicable Me 1">
+  </a>
+  <div class="movie-title">Despicable Me 1</div>
+</div>
+
+<div class="movie-card">
+ <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/M/MV5BZTUzZjc3Y2ItNDlhOC00MmY4LWIxMWQtYTlhZjk4ZGI5YWQ3XkEyXkFqcGc@._V1_.jpg" alt="Good Fellas">
+  </a>
+  <div class="movie-title">Good Fellas</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8VxkWmkS1g6MRz26-9_HUaGHHubgitPR3TLEbcIqIsSxYPXyK48B3QSHgFpN8pgBRdvI&usqp=CAU" alt="Hacksaw Ridge">
+  </a>
+  <div class="movie-title">Hacksaw Ridge</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://lumiere-a.akamaihd.net/v1/images/p_blackpanther_19754_4ac13f07.jpeg" alt="Black Panther">
+  </a>
+  <div class="movie-title">Black Panther</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/I/71DSmm8cDIL._AC_UF1000,1000_QL80_.jpg" alt="The Fast and The Furious">
+  </a>
+  <div class="movie-title">The Fast and The Furious</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://i5.walmartimages.com/seo/Despicable-Me-2-4K-Ultra-HD-Blu-ray_47fd69b9-2393-4b77-9c15-903177c9abd2.33700fe7b93bb5748be85db602005281.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Despicable Me 2">
+  </a>
+  <div class="movie-title">Despicable Me 2</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTbgvZ9al-Q-Ryniq0si-fDT4JSibj8b87bPA1rr-_ukvSh50AZg67ns21LGTBOrUq3UDL&s=10" alt="Daddy Daycare">
+  </a>
+  <div class="movie-title">Daddy Daycare</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVC-97MGeANWTqa24RsupOW45D5QCi3eDGEbn94qNECj0KKADFm8N7_WujtODydq7TVtC3pQ&s=10" alt="Bad Boys">
+  </a>
+  <div class="movie-title">Bad Boys</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyNz_dkQo1lDDSJ3Bjg8quzPe40kV5RzTXo5k2Q8KydPrapoenq3YcrMNpFGB7M4BmT4xBGw&s=10" alt="Ant-Man">
+  </a>
+  <div class="movie-title">Ant-Man</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNZmu_dLMPTwNWTnD6WDINc9Thr3emBHPEaJXjTae1RVxMI6TC-1mmqBbvxUIB0dsi2XC26A&s=10" alt="Ride Along">
+  </a>
+  <div class="movie-title">Ride Along</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDsvr-SCB0PtUxDEev9ai5vUGdeEHBeS95dzkj0aqNaFels5G8aiwY5XdUy4CGMiWk_2jajw&s=10" alt="Everybody Hates Chris">
+  </a>
+  <div class="movie-title">Everybody Hates Chris</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgUvD8WxeFtu6yE517fElj8KF5yPrYrl1P2Yu1V69kEJL1t1JBb_GBYTiXhvsYXRq9QjmOcg&s=10" alt="Kung Fu Panda">
+  </a>
+  <div class="movie-title">Kung Fu Panda</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsvNB8VnWD5xV5zQb3I1Vjq_CO60AVK7R2ut_N1I1bSlr4cMRMMbmx3CeBA3oHxRsZiZ32xw&s=10" alt="Percy Jackson: Sea of Monsters">
+  </a>
+  <div class="movie-title">Percy Jackson: Sea of Monsters</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVKefHiwPRwi_3kW7UWYNpuQjNFCzFMVG-A-KVIovk01YUboR6sOGPglfqnvHF_jrMWwalFg&s=10" alt="Bad Boys 2">
+  </a>
+  <div class="movie-title">Bad Boys 2</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGtOVR-PNEDrjvlXkyUgLWVnWlV2eRF393dRrwbh_JfZ2aWx9CATLC9M8UdpbaJ5CvH-cG&s=10" alt="Scream 4">
+  </a>
+  <div class="movie-title">Scream 4</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn20GHLbCpMDHLOQl4LxTsIeAOG-5854oAkNm7xqWpMXI4F9hCUf7DMktOUJTI6T5KUmFL&s=10" alt="The Dukes of Hazzard">
+  </a>
+  <div class="movie-title">The Dukes of Hazzard</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTylsuAYz-pPG9Cvj4R4sZGnnollN65RyrWuy8vU_J7JA8mf42CPafkCK_I72wdkAOo6xph3w&s=10" alt="Ghostbusters">
+  </a>
+  <div class="movie-title">Ghostbusters</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvwoxXhqmOYjPtwcDZEn8c6VXGBV8ZSVzZ2OZvG5sIA8pshOoVsmXzdwWNm-CS5qVhZdvo&s=10" alt="Kung Fu Panda 2">
+  </a>
+  <div class="movie-title">Kung Fu Panda 2</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKnqljhomUl21gL9DD26rtcKhOozFSaN2Eqqw1OHSYgkHAg2ZS8MKkUzcu7eJZBAT-PE_aZM_PnS5kXer6jn-nsxn4CId_ByVWlijNr2U&s=10" alt="The Matrix">
+  </a>
+  <div class="movie-title">The Matrix</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzc4fpVLgaG1-WZ0r61Osa0X_zK8IuZam1qKdE70ayKqkP3TGSQye_0b7DiRNkf4OBRvmzzQ&s=10" alt="Infinity Train">
+  </a>
+  <div class="movie-title">Infinity Train</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAgWGb9GJJMcx0nE-qajpLdr1No76gO69RPSTjX7yf6thgyLg9LmYOEUmMb4ydLa9KYg7p&s=10" alt="Halloween 2">
+  </a>
+  <div class="movie-title">Halloween 2</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Red_Dragon_movie.jpg?20250805063224" alt="Red Dragon">
+  </a>
+  <div class="movie-title">Red Dragon</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQOLWfh8sArRVNC6CG7qXyXgMnjl0Z44GlCzxrF4ABkYQbeLOoVhn2t10fBG0onYDKJUoZ&s=10" alt="Breaking Bad">
+  </a>
+  <div class="movie-title">Breaking Bad</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnosqSu2AqlIJMCm8JeWL00GcDFPKrXRvOLtoWJq0_ZyJtUqknstFgFdlKqK6ysN-XsLDnzg&s=10" alt="Toy Story">
+  </a>
+  <div class="movie-title">Toy Story</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTq4bSXZABfd63kqazM5QD7N3hkXb1WrjCedwU35Aas_jyxY8Tlm19NuqHXGWUG2wqFNtu&s=10" alt="Alvin and The Chipmunks: The Squeakquel">
+  </a>
+  <div class="movie-title">Alvin and The Chipmunks: The Squeakquel</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTNBazf-8qmhwMbCw3AEkGPAlHcputNqn6DfmOWnGpMJZGWwctKKfLNi6WcjTlbYJ-FXMV&s=10" alt="Donnie Darko">
+  </a>
+  <div class="movie-title">Donnie Darko</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRYzUV4ZfX2H-Q_hl4I0V4byKKou0ZHtrctrlF_QgmGBlEwV8ZJ" alt="The O.C. S1">
+  </a>
+  <div class="movie-title">The O.C. S1</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIUoJc5jt2027XMtSXLcbS1oQ1tXH12KEh8pfgVBtaQfhnV3UPUeVAvcEfw1qhKRlADtREtg&s=10" alt="Jarhead">
+  </a>
+  <div class="movie-title">Jarhead</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY5a4W5Yer0CWGHXdJ8r9WL-LQGm0tXW1I-JNgBx_9Cv2nWCDJeSBTdcglLpYNM7-dUchn&s=10" alt="Titanic">
+  </a>
+  <div class="movie-title">Titanic</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0gAXco6xHQKskTnhjWyhHvLEkTrwrJiZ3B9o2zSG0t1IyjM4Tre6Wn2r8S4MqV3TsB_NK9Q&s=10" alt="Toy Story 2">
+  </a>
+  <div class="movie-title">Toy Story 2</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMe6ogjVZWX8RdPvASf_O-VTwOJ5EL7CCI1kG3TxShSZ1d_slZDvHxPX-7262A-L8arwR4ug&s=10" alt="Alvin and The Chipmunks: Chip Wrecked">
+  </a>
+  <div class="movie-title">Alvin and The Chipmunks: Chip Wrecked</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL2Y1jCWZ5HOCVjlVIKa3jR3ALOeUrD61mARCyAM2U2gv-1O89rurfIJlxVGqOEyuEKAH8OQ&s=10" alt="Seven">
+  </a>
+  <div class="movie-title">Seven</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a8/The_O.C._Season_2_DVD_Cover.jpg" alt="The O.C. S2">
+  </a>
+  <div class="movie-title">The O.C. S2</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX0FcNycV8NNhnKCJv-xUeL5lt7NF8usWOFQ&s" alt="Karate Kid">
+  </a>
+  <div class="movie-title">Karate Kid</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://cdn.movieguide.org/wp-content/uploads/2012/08/toy-story-3%20poster-768x1059.jpg" alt="Toy Story 3">
+  </a>
+  <div class="movie-title">Toy Story 3</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5jv922zQa_aL1pbBNqDMxNOICGeeifzSFM8gKgvym6ctYRpdhgu5mbcWRzq8Yudx8mp2O&s=10" alt="Percy Jackson: The Lightning Thief">
+  </a>
+  <div class="movie-title">Percy Jackson: The Lightning Thief</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV-4vNPSJxr8UAWAI0TNgbMl2g97q9GMT92Q0-yTU7S0yk5Mev5Z4lr4_MXPFI9eQPg-2y&s=10" alt="Pulp Fiction">
+  </a>
+  <div class="movie-title">Pulp Fiction</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://i.ebayimg.com/images/g/h-UAAOSwGOVmheAm/s-l1200.jpg" alt="The O.C. S3">
+  </a>
+  <div class="movie-title">The O.C. S3</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/14/Adventures_of_shark_boy_and_lava_girl_poster.jpg" alt="Sharkboy & Lavagirl">
+  </a>
+  <div class="movie-title">Sharkboy & Lavagirl</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/M/MV5BYjY2NDZhN2EtZmYwNS00NDU2LThiODAtNmY4OWY2ODNmZWRmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Garfield The Movie">
+  </a>
+  <div class="movie-title">Garfield The Movie</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDLHKfu7-Ajo1uKgPrnJl65uiCFKtLySsJYCwObZJ7HG4atJa3-84NczbTsLqHnsiYNBLO&s=10" alt="Toy Story 4">
+  </a>
+  <div class="movie-title">Toy Story 4</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAMQyqgsrOJRbR6b495PkiwPN7KtlO3yx2ABRis8GFnlcNN9zrqUf8c-HkghOTD3Pzx8ie&s=10" alt="The Mechanic">
+  </a>
+  <div class="movie-title">The Mechanic</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQOP8jrQN9Eg96-cAb6AhuS3GItNTFH9V1Stse-0dfWSU4UJ5JfgV33M6HHmcaVTcdG6y3&s=10" alt="The Shining">
+  </a>
+  <div class="movie-title">The Shining</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://images.justwatch.com/poster/180672453/s718/season-4.jpg" alt="The O.C. S4">
+  </a>
+  <div class="movie-title">The O.C. S4</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/I/810ZtibhcCL._AC_UF1000,1000_QL80_.jpg" alt="Diary of A Wimpy Kid: Dog Days">
+  </a>
+  <div class="movie-title">Diary of A Wimpy Kid: Dog Days</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/c2/Hajime_no_Ippo_1.png" alt="IPPO">
+  </a>
+  <div class="movie-title">IPPO</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/I/81TJkO2DYSL._AC_UF1000,1000_QL80_.jpg" alt="Spider-Man: Homecoming">
+  </a>
+  <div class="movie-title">Spider-Man: Homecoming</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVC56mX9EVEHx3xRuaKfkdI_xeSWGxb4YIhA1Zq_JrSJ6kqO2p6PKooVnE3bganc_fvIYE&s=10" alt="Dumb and Dumber">
+  </a>
+  <div class="movie-title">Dumb and Dumber</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSOR3GUvXp6IGUT1GYtyUZRMAcm_xgG5dD0Gb00RbbksTlpJ5og" alt="Deadpool">
+  </a>
+  <div class="movie-title">Deadpool</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhio3TBJF_yUyoXj_yWBns771D_wIm7po-QARy8botjwAEa4N9YbUtB9tzVeB0oyqfWLyS&s=10" alt="Matilda">
+  </a>
+  <div class="movie-title">Matilda</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1n9D4ig6lSgF8Xw9z06iwn_wl-kLF-zY0tj3jMiohgrMlra6hgMfHVuHSRpQYlUmzODA-&s=10" alt="Pirates of the Caribbean: Dead Man’s Chest">
+  </a>
+  <div class="movie-title">Pirates of the Caribbean: Dead Man’s Chest</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiy9vZsPzLtmD7BUSRnwUrEEM3b-wRzgWEndERcCGBTZp-chAmggbfyF_Q0-hHWgOVhjE66w&s=10" alt="Avengers: Infinity War">
+  </a>
+  <div class="movie-title">Avengers: Infinity War</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ5QtW3W0qu0UmdjqeaQ4x0LexcMRhi7wXHxB98w8huhX4c1DIStD9lP2_6CvKUpykWXr_Ow&s=10" alt="Batman v Superman: Dawn of Justice">
+  </a>
+  <div class="movie-title">Batman v Superman: Dawn of Justice</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://i.ebayimg.com/images/g/MyUAAOSwHT1kvuu0/s-l400.jpg" alt="The Super Mario Bros Movie">
+  </a>
+  <div class="movie-title">The Super Mario Bros Movie</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://play-lh.googleusercontent.com/tKPuEsF8OuRCCB8xuX5DARGh7R2AOubRGTzn2MmM8lDiowppmUO3u5Icg4nWJ-cVUqec=w240-h480-rw" alt="Ramona and Beezus">
+  </a>
+  <div class="movie-title">Ramona and Beezus</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4hukbs571MwrsRvhFHpXwOf8xeGaehz_9K0VgeosBZeqg4rHg" alt="Pirates of the Caribbean: Stranger Tides">
+  </a>
+  <div class="movie-title">Pirates of the Caribbean: Stranger Tides</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBV4DwisDoIO-v1M44sNNYtyOM2GSL3q-vijXQyB_VDuZqyop8NgiZQajBO-3oqbbzfuXIcA&s=10" alt="Avengers: End Game">
+  </a>
+  <div class="movie-title">Avengers: End Game</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/I/51Uo25yMXKL._AC_UF1000,1000_QL80_.jpg" alt="Die Hard 2">
+  </a>
+  <div class="movie-title">Die Hard 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Guardians_of_the_Galaxy_Vol._2_poster.jpg" alt="Guardians of The Galaxy Part 2">
+  </a>
+  <div class="movie-title">Guardians of The Galaxy Part 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/I/61IXgp+oSVL._AC_UF1000,1000_QL80_.jpg" alt="Looking For Alaska">
+  </a>
+  <div class="movie-title">Looking For Alaska</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEPVhx0-rusWPB_Lp7KoBNjOPjl9VahGCuCCx7jDq9njajjFgbaPUXmTqPYmZqffzmMAwL&s=10" alt="Judy Moody Movie">
+  </a>
+  <div class="movie-title">Judy Moody Movie</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtY4G-bEf6Dn6wEXTPzj4Pvp8KFInSH1O6nOCZjSMun-mjrslUxt_vpvCbABZiXxEmW8mc4g&s=10" alt="Sonic 3">
+  </a>
+  <div class="movie-title">Sonic 3</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqpFX8UcWK1-IjrNfZzoGpgWrDpjQ8q36Ei4eqT8hsDl9D3eiw0BupIGSPK6A31m15EbT0&s=10" alt="Tomb Raider">
+  </a>
+  <div class="movie-title">Tomb Raider</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWLpFIizYBkShXUyIbFuAH8CcaW3UiuqCtcdeFvSEL4pPZkiZ9DdWrRR7W2oaEJOhfORF6&s=10" alt="Boiler Room">
+  </a>
+  <div class="movie-title">Boiler Room</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwTegnzc_XxJNKek-JGELLNaLT2EDthLVKS0Rg-YWB3IzelyUCxfYSIWZxfjkt5aU2Z0l4&s=10" alt="Star vs. The Forces of Evil">
+  </a>
+  <div class="movie-title">Star vs. The Forces of Evil</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSghI_gwbatTpN9W8UckaQmaM9cjZRfFr-wQ4U0tVkVuBZl8VLwa_PRnsnecaOMKJRV3VMKzQ&s=10" alt="Scream">
+  </a>
+  <div class="movie-title">Scream</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQb2FSBwFKWLZiZER5fPOy2KddP7mqHAK04aHalHX2UyQdQVEz4MeDy5zz3DnN6ZbzP39qhg&s=10" alt="Home Alone">
+  </a>
+  <div class="movie-title">Home Alone</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/M/MV5BMjA5ODc4ODg3NV5BMl5BanBnXkFtZTcwMjA5MjAzMw@@._V1_.jpg" alt="Terminator 3: Rise of The Machines">
+  </a>
+  <div class="movie-title">Terminator 3: Rise of The Machines</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/Thirteen2003Poster.jpg/250px-Thirteen2003Poster.jpg" alt="Thirteen">
+  </a>
+  <div class="movie-title">Thirteen</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnHIzv7eHJO7ds86bsjnZNprwJYyNWbElc6En02MhmmWr2it--9DjsrWwRb-Wc66r065wIIA&s=10" alt="How High">
+  </a>
+  <div class="movie-title">How High</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOTEGTfTzR3-61NSPK1DiefLiVm9rIC_GqdB3_DfvBHm22qvyIl_qEmgmO4_y5Xhe7RiGL&s=10" alt="Dan Vs.">
+  </a>
+  <div class="movie-title">Dan Vs.</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/M/MV5BN2ZlMjIzZjctYzA2My00ZWYyLWI4ZjctMGI2NWYyNzFiZjAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Requiem For A Dream">
+  </a>
+  <div class="movie-title">Requiem For A Dream</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRud3cFzI_P88DIRu2v_DfRc-SCc5_241_2V4CWXTw4C1NzljpvlcDET6syrpoP7opPTIY3&s=10" alt="Ratatouille">
+  </a>
+  <div class="movie-title">Ratatouille</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbybVkpfdxBA_TL_X_Jfao4IjiFgrpbsscBuR4LidNh0WbmBrn" alt="High School Musical 2">
+  </a>
+  <div class="movie-title">High School Musical 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-PmEr7HjiRw8jZPdfOV0ep1rupuihCi_UT2D0Cj9V8eW_NyeU5hCkMTPOLdzeoPHfxWd_qw&s=10" alt="Mid 90s">
+  </a>
+  <div class="movie-title">Mid 90s</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://preview.redd.it/whats-your-opinion-on-prometheus-v0-lok751xu2ftf1.jpeg?width=640&crop=smart&auto=webp&s=ab759fa0d793335bd12ef8293503c5a2a5d48b90" alt="Prometheus">
+  </a>
+  <div class="movie-title">Prometheus</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://www.themoviedb.org/t/p/original/75CyGj7XjM3duSh0ykuX9v4GtMD.jpg" alt="Iron Man">
+  </a>
+  <div class="movie-title">Iron Man</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST5a_bBQejSnWbafqlOoDUtPaBWHwn0U095py4cg0FhZ9AsUSWIOfpwyGJiM4VRboJxxUt&s=10" alt="The Polar Express">
+  </a>
+  <div class="movie-title">The Polar Express</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrmPPRzh_9HM7mjCcTvM1ixjhXEsqjGAWEHiT7XJBv3qZmerSojvqfuiASUHjJsQ0jAtiWDQ&s=10" alt="Bodies Bodies Bodies">
+  </a>
+  <div class="movie-title">Bodies Bodies Bodies</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0zFCa3Zb7uDwHpUpFwoN49oArOYn-mgxCYjzYNfLRvWPFl7tcDeEE-GXJWBGUMdvPtzhi&s=10" alt="Alien vs. Predator">
+  </a>
+  <div class="movie-title">Alien vs. Predator</div>
+</div>
+
+<div class="movie-card">
+ <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYeOjq0_bYN76lK4D2jb0igXpidNgG4jEfh0z1Jn5GjNXnCy-od95G1Nv7qXN9mZ1vKL2aHw&s=10" alt="MST3K: Deadly Bees">
+  </a>
+  <div class="movie-title">MST3K: Deadly Bees</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://lumiere-a.akamaihd.net/v1/images/image_b81e5aed.jpeg" alt="Star Wars: The Last Jedi">
+  </a>
+  <div class="movie-title">Star Wars: The Last Jedi</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzKDOhOKsrp9aPcrtjdZbFkFtltZZfB_Nsq3oSmJVlSz7DFD7dNxsUl15UkYZv0maX96pv&s=10" alt="Wednesday">
+  </a>
+  <div class="movie-title">Wednesday</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa04rRFFLaeVsvslnf2ytuvkJpi0b6Z_xBB1jNt_iNAP0cit43-fd_5H5es7dBKWdYrbaA&s=10" alt="Barber Shop">
+  </a>
+  <div class="movie-title">Barber Shop</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQySZ1eI-Mm1MC_ZX7pvjospoyiKH7iGUHAjNec4TCk9WT9fpuNyO2Kz6lZIyNeqYPV8Iv5&s=10" alt="American Psycho">
+  </a>
+  <div class="movie-title">American Psycho</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTYllHX9VeyyNs5alkjcNqQl2aJsvJc9H-woex46nlu89olP192A4vek-Bf5EANdq5ND8xOA&s=10" alt="The Crazies">
+  </a>
+  <div class="movie-title">The Crazies</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzjHA_vmzMzWJrOaIxq4kiyFH8xRWVZn76ZwmnwNdAfsyINv8uD3tkypHMvJ4CAgxclQl3RQ&s=10" alt="Wall-E">
+  </a>
+  <div class="movie-title">Wall-E</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF_V01dKWYO7PLz_jc74vLqXI53F4sA5HOYc9Hz_Mbw-1nppNW3QGyjPJ8qodvTeU_iwz_jg&s=10" alt="Star Wars: The Force Awakens">
+  </a>
+  <div class="movie-title">Star Wars: The Force Awakens</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxsc3y8f6axKrxHKlFnRaVaByZd9GxgIxdvmurQxJtrby1y05lW1SG0mOnNpwTq90m_pAIjw&s=10" alt="The Dark Knight">
+  </a>
+  <div class="movie-title">The Dark Knight</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/S/pv-target-images/960e6f901ae3251205e7d59716f025252fd39b4bbb35998008a93a61b9f5b37b.jpg" alt="Astroboy">
+  </a>
+  <div class="movie-title">Astroboy</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjNPZINa_L4CLCZcmDduw6T0ODrTfH0o7ir2-6_qWl1_Ar1nOP-qvr4ZvRoGiQxOpt5dCyww&s=10" alt="Black Adam">
+  </a>
+  <div class="movie-title">Black Adam</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsjWEgI9CS1acIRwQvwdMuOLozYDtr5Au2Jrfw4Hzl2d08liFjxjIsRjZ6vZokFBel-c4oxg&s=10" alt="Scarface">
+  </a>
+  <div class="movie-title">Scarface</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR-nhD4r2BN-8ajkk69yfFyh72SWxvs2CatBGUMQEFwyZbSppp8K57RbiKBcq430NWMxm2&s=10" alt="Inside Out 2">
+  </a>
+  <div class="movie-title">Inside Out 2</div>
+</div>
+
+<div class="movie-card">
+ <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRADEMyDneyCzb4WwljBrOkGWu-BX74-t67ZvLZzntw3HPI99t6jZAHySVFAE2JuAMlPSmj&s=10" alt="The Grand Budapest Hotel">
+  </a>
+  <div class="movie-title">The Grand Budapest Hotel</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://play-lh.googleusercontent.com/0vF3S544BR7idckdKIYJR92jf6XeSbq3KcYbXiZyfcBAYQ68PRyruB_vBWTgvC4n380UCg=w240-h480-rw" alt="The Blair Witch Project">
+  </a>
+  <div class="movie-title">The Blair Witch Project</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR716zNxJ-BPymshr6XVTNGcqdvCeHLkfjwP3WJE1HE-17sr5TJu0zN0UyFANIl0IW-VYp2Lg&s=10" alt="Fantastic Beasts The Crimes of Grindelwald">
+  </a>
+  <div class="movie-title">Fantastic Beasts: The Crimes of Grindelwald</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8MJnEndGMowfH1mwZG2kzi2fbHe0qUfPXZGRt6RxPTv2h-qYq0kLFK3Azw8dLSeXS_r6a&s=10" alt="Minions: The Rise of Gru">
+  </a>
+  <div class="movie-title">Minions: The Rise of Gru</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcRna1-i56LijJgj1UC0nkudZpi0FBNJYPZFEx_Md6FWTN5HhWZjnpE04XyevQrXqogR" alt="Final Destination">
+  </a>
+  <div class="movie-title">Final Destination</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX2q5n3N0MEsdRnUy44WM1sxy-R44S8dXu-mmceQyMVDbOd-9qMbKkv-arS726F685U1TI&s=10" alt="Puss In Boots: The Last Wish">
+  </a>
+  <div class="movie-title">Puss In Boots: The Last Wish</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5agDoSWFxgMhBlk04VdLCsCfrc2gGaHPH4eFi6lnh47qt8s6f6BM95z76MGu-TXcrAlEk&s=10" alt="The Simpsons Movie">
+  </a>
+  <div class="movie-title">The Simpsons Movie</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/M/MV5BNzAzMmY3OWMtNDgyMS00Y2U4LTlmM2UtY2YwMmM0MDI5ODJmXkEyXkFqcGc@._V1_.jpg" alt="Blade">
+  </a>
+  <div class="movie-title">Blade</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT74EGGBJUPQBTlRRVFTgGyn-tCyfD1r3f1sad3ZKl6-w1Gkm8X05jzwUgt4yYFzjF6iTWy&s=10" alt="Mega Mind">
+  </a>
+  <div class="movie-title">Mega Mind</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT_0gAAm2TxfWxgi1ImxxvCN-id3L0keL1TV30Cqxa1RN-WUOBnX5pDXrSMqLet_euKuhD&s=10" alt="REC 4 Apocalypse">
+  </a>
+  <div class="movie-title">REC 4 Apocalypse</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://m.media-amazon.com/images/M/MV5BYjFjZTAxZTItYjhjZS00MzNkLTk0NDYtYWMxYTQxNTE3YTQxXkEyXkFqcGc@._V1_.jpg" alt="The Boondocks">
+  </a>
+  <div class="movie-title">The Boondocks</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStjDfhgjjvGtzT4b-iH9s8h-Ht-sNmmGwbFeb0nmtL2OpqIsTCjT_7u-NbV1iP7HnulOMe&s=10" alt="Captain Underpants Movie">
+  </a>
+  <div class="movie-title">Captain Underpants Movie</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWKX4UNB78BiKFCstzcis6QzsnplLeStcZ1NiVVqVXANIxkNh89G1J0LgYJfzhWdubM47Y&s=10" alt="Wreck-it Ralph">
+  </a>
+  <div class="movie-title">Wreck-it Ralph</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaRxOGBKrK1qo8QdYwEgJM0KpWb4lTge4K8XniXzls8x91m63vjv1g4L15OXbir-it-aB-&s=10" alt="Hotel Transylvania">
+  </a>
+  <div class="movie-title">Hotel Transylvania</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Inside_Out_%282015_film%29_poster.jpg" alt="Inside Out">
+  </a>
+  <div class="movie-title">Inside Out</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/91/The_Garfield_Movie_2024_poster.jpg/250px-The_Garfield_Movie_2024_poster.jpg" alt="Garfield Movie Animated">
+  </a>
+  <div class="movie-title">Garfield Movie Animated</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLq1jG-xoe4TucZq58sisnl1KzUzZc_MchBeVlXlZ633F3H93t8Bu5Fr0Cfu3vWPInlW7c&s=10" alt="Thor: The Dark World">
+  </a>
+  <div class="movie-title">Thor: The Dark World</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqFyJjFJVO_y5MMNNR9-h9R4D4DHlVccVKc2_wEYfFoShXv9QLJRmybor4HaZEVmcXKp868A&s=10" alt="Venom">
+  </a>
+  <div class="movie-title">Venom</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JAR7ClwadiepmEcw_xgxxSqbtlOZJEnCFAadKRJtaxWrz5rXv1vSfX3NFPq5QIy08u9HKw&s=10" alt="Moana">
+  </a>
+  <div class="movie-title">Moana</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgBEzsB9XxjeyFinMz_AdpIMzRMAFO_0ajvbSbOzHXGpxiamVayw0niCc54hcPEx1RJeMfIQ&s=10" alt="The Lorax">
+  </a>
+  <div class="movie-title">The Lorax</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://i.guim.co.uk/img/media/978bb76aaf05d05513f35f26c73ea61ad28b7f60/0_614_2628_1577/master/2628.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=0617fd285bbed119999eafa2ffb03e55" alt="Avengers">
+  </a>
+  <div class="movie-title">Avengers</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF3NaHZWXf0MPVJ_5zcheR2GMdRgDjEtKruKBFsrqJNBe4Y5bEnf42p1i0TXkzvphrVs7pXQ&s=10" alt="Venom: Let There Be Carnage">
+  </a>
+  <div class="movie-title">Venom: Let There Be Carnage</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvt3N47aI1t0SBrX2d0ex3D2OK2SWlqOBKIH6uL2sDlEHv6wn4_iQQukhlZ54UClg5g7pB&s=10" alt="Sonic The Hedgehog 2">
+  </a>
+  <div class="movie-title">Sonic The Hedgehog 2</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_M4BqsHpQBUNaTHFXjamNL5WvFXB_PLqPhC0HCb3uiicaIgBlPsSc0BQD0CwiVR4KNd54&s=10" alt="Zootopia">
+  </a>
+  <div class="movie-title">Zootopia</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/3c/Chris_Hemsworth_as_Thor.jpg" alt="Thor">
+  </a>
+  <div class="movie-title">Thor</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://upload.wikimedia.org/wikipedia/en/f/ff/Avengers_Age_of_Ultron_poster.jpg" alt="Avengers: Age of Ultron">
+  </a>
+  <div class="movie-title">Avengers: Age of Ultron</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShHNj7f80EhqeCCA4kKhj2KwKUwOEsO0W3Op20NKHg4wcrHmLNnfUMTyc2IL2IfFnrnNMR0A&s=10" alt="Venom: The Last Dance">
+  </a>
+  <div class="movie-title">Venom: The Last Dance</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe_cl8aZhgGnr_4rv24PBJq_txTU-B8ZqVua9kJi1wFXxymOnfve7C47gHjSKgwV4uISbe&s=10" alt="Transformers One">
+  </a>
+  <div class="movie-title">Transformers One</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8paDq9qlCQm0mXSphJr4U0FZ6rFVJC4z7uUZYopiGKicTuy83PlgFApT_6Ot_mzuCTf8t&s=10" alt="The Incredibles">
+  </a>
+  <div class="movie-title">The Incredibles</div>
+</div>
+
+<div class="movie-card">
+   <a href="https://docs.google.com/spreadsheets/d/1tz1ioXgULtBqBk-OZsivEn0O7A2ld6sX-_xPj6Vrw6s/edit?gid=0#gid=0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSQX_39GAE9caPnge5G42RUfLm5l5nmHdH195y4aeg0i2eFOrS8j2iA71NBpKu2Vt50lNI&s=10" alt="The Last of Us">
+  </a>
+  <div class="movie-title">The Last of Us</div>
+</div>
+
+
+   
+  </div>
+
+  <script>
+    function searchMovies() {
+      const input = document.getElementById("movieSearch").value.toLowerCase();
+      const movies = document.querySelectorAll("#movie-container .movie-card");
+      movies.forEach(movie => {
+        const title = movie.querySelector(".movie-title").textContent.toLowerCase();
+        movie.style.display = title.includes(input) ? "" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
