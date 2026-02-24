@@ -15,25 +15,59 @@
         color: #2f2f2f;
     }
 
-    header {
+    /* ---------- TOP NAV ---------- */
+
+    .top-nav {
         background: #e6e1d8;
-        padding: 20px 0;
+        padding: 14px 0;
         text-align: center;
         border-bottom: 1px solid #c9c2b8;
     }
 
-    header h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: 42px;
-        margin: 0;
+    .top-nav a {
+        margin: 0 28px;
+        text-decoration: none;
+        color: #444;
+        font-weight: 500;
         letter-spacing: 1px;
+        font-size: 14px;
     }
 
-    .subtitle {
+    .top-nav a:hover {
+        color: #c6a85b;
+    }
+
+    /* ---------- GALLERY TITLE WITH SIDE LINKS ---------- */
+
+    .gallery-section {
+        padding: 60px 8%;
+    }
+
+    .title-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .side-links a {
+        text-decoration: none;
+        color: #444;
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .side-links a:hover {
+        color: #c6a85b;
+    }
+
+    .gallery-title {
         text-align: center;
-        margin-top: 10px;
-        font-size: 18px;
-        color: #5c5c5c;
+        font-family: 'Playfair Display', serif;
+        font-size: 36px;
+        flex: 1;
     }
 
     .gold-line {
@@ -44,16 +78,7 @@
         border-radius: 2px;
     }
 
-    .gallery-section {
-        padding: 60px 8%;
-    }
-
-    .gallery-title {
-        text-align: center;
-        font-family: 'Playfair Display', serif;
-        font-size: 36px;
-        margin-bottom: 10px;
-    }
+    /* ---------- GRID ---------- */
 
     .gallery-grid {
         display: grid;
@@ -101,10 +126,18 @@
         color: #6a6a6a;
     }
 
-    /* Responsive */
+    /* ---------- RESPONSIVE ---------- */
+
     @media(max-width: 1100px){
         .gallery-grid {
             grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media(max-width: 700px){
+        .title-row {
+            flex-direction: column;
+            gap: 10px;
         }
     }
 
@@ -113,20 +146,46 @@
             grid-template-columns: repeat(1, 1fr);
         }
     }
-
 </style>
 </head>
 <body>
 
+<!-- ---------- TOP NAV ---------- -->
 
+<div class="top-nav">
+    <a href="home.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="store.html">OUR STORE</a>
+    <a href="reviews.html">REVIEWS</a>
+</div>
+
+<!-- ---------- GALLERY ---------- -->
 
 <section class="gallery-section">
-    <div class="gallery-title">Antique2Modern Collection</div>
+
+    <div class="title-row">
+
+        <!-- LEFT QUICK LINKS -->
+        <div class="side-links">
+            <a href="about.html">About</a>
+            <a href="store.html">Store</a>
+        </div>
+
+        <!-- MAIN TITLE -->
+        <div class="gallery-title">Antique2Modern Collection</div>
+
+        <!-- RIGHT QUICK LINKS -->
+        <div class="side-links">
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+
     <div class="gold-line"></div>
 
     <div class="gallery-grid">
 
-        <!-- 16 Boxes -->
         <div class="box"><img src="images/am1.jpg"><div class="box-content"><h3>Vintage Furniture</h3></div></div>
         <div class="box"><img src="images/am2.jpg"><div class="box-content"><h3>Christmas</h3></div></div>
         <div class="box"><img src="images/am3.jpg"><div class="box-content"><h3>Collectibles</h3></div></div>
