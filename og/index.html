@@ -101,12 +101,34 @@
       background: rgba(168, 244, 255, 0.95);
     }
 
+    .top-nav .cta-button {
+      margin-left: 24px;
+      padding: 12px 22px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+      color: #e8f7ff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      transition: all 0.25s ease;
+    }
+
+    .top-nav .cta-button:hover {
+      background: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 12px 28px rgba(168, 244, 255, 0.18);
+    }
+
     header {
       position: relative;
       text-align: center;
       width: 100%;
-      min-height: 520px;
+      min-height: 620px;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 30px;
     }
 
     header img {
@@ -118,32 +140,81 @@
     }
 
     header h1 {
-      position: absolute;
-      top: 38%;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 4rem;
-      color: #e8f7ff;
+      font-size: 4.5rem;
+      color: #ffffff;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      line-height: 1.02;
+      max-width: 980px;
+      margin: 0 auto 18px;
+      text-shadow: 0 0 35px rgba(255, 255, 255, 0.18);
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      margin: 0 auto;
+      color: rgba(235, 247, 255, 0.86);
+      font-size: 1.25rem;
+      line-height: 1.8;
+      letter-spacing: 0.01em;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .hero-button {
+      padding: 16px 30px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
       font-weight: 700;
-      letter-spacing: 2px;
-      text-shadow: 0 0 30px rgba(168, 244, 255, 0.4);
-      z-index: 3;
-      max-width: 90%;
+      letter-spacing: 0.12em;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-transform: uppercase;
+      min-width: 240px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-button:hover {
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-2px);
+    }
+
+    .hero-panel {
+      position: relative;
+      z-index: 2;
+      width: min(1200px, 100%);
+      padding: 64px 42px;
+      border-radius: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(7, 18, 36, 0.78);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(135deg, rgba(102, 204, 255, 0.12), transparent 35%);
+      border-radius: 32px;
     }
 
     .header-box {
-      position: absolute;
-      top: 30px;
-      left: 20px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(16px);
-      border-radius: 24px;
-      color: #eef9ff;
-      padding: 22px;
-      width: 300px;
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
-      z-index: 10;
+      display: none;
+    }
+
+    .welcome-box {
+      display: none;
     }
 
     .header-box .title {
@@ -264,21 +335,17 @@
       <input type="text" id="gameSearch" placeholder="Search for games...">
       <button onclick="searchGames()">Search</button>
     </div>
+    <button class="cta-button" onclick="window.scrollTo({ top: document.getElementById('game-container').offsetTop - 80, behavior: 'smooth' })">GET STARTED FOR FREE</button>
   </div>
   <header>
     <img src="https://pspk.id/wp-content/uploads/2023/03/Cover_Beranda@3x-scaled-1-1024x576.webp" alt="Glass Games Banner">
-    <h1>Play smoothed, glass-style games in one place</h1>
-
-    <!-- Left Info / Counter Box -->
-    <div class="header-box">
-      <div class="title">GLASS<br>GAMES</div>
-
-      <!-- Visitor Counter -->
-      <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=1eae0071dc76202e08c53c6c5b1bb70111d'></script>
-      <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1398963/t/0"></script>
-
-      <div class="game-suggestion">SEARCH, DISCOVER, AND PLAY YOUR FAVORITE GAMES</div>
-      <div class="info-link"><a href="#">New games added weekly</a></div>
+    <div class="hero-panel">
+      <h1>Not a tool. A hire.</h1>
+      <div class="hero-copy">Glass Games is the polished arcade landing page built with sleek glass UI, fast search, and playable game cards. Discover your next favorite game in one seamless view.</div>
+      <div class="hero-actions">
+        <button class="hero-button" onclick="window.scrollTo({ top: document.getElementById('game-container').offsetTop - 80, behavior: 'smooth' })">Browse Games</button>
+        <button class="hero-button" onclick="document.getElementById('gameSearch').focus()">Search Now</button>
+      </div>
     </div>
 
   </header>
