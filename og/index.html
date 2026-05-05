@@ -684,97 +684,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OJAS Search</title>
+  <title>GAMES.OG Search</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    :root {
+      --bg-color: #181714;
+      --text-main: #FFFFFF;
+      --text-muted: #8E8D8A;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --input-bg: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background: #0d0d0d;
-      color: white;
-      font-family: 'Poppins', sans-serif;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .search-container {
+      width: 100%;
+      max-width: 700px;
       text-align: center;
-      padding: 20px;
     }
 
     h1 {
-      font-family: 'Caveat', cursive;
-      font-size: 65px;
-      font-weight: 700;
-      color: #ff1a1a;
-      margin-top: 20px;
-      margin-bottom: 30px;
-      line-height: 1.1;
-      text-shadow: 0 0 15px #ff1a1a;
+      font-size: 3rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
     }
 
     form {
-      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     input[type="text"] {
-      width: 60%;
-      max-width: 550px;
-      padding: 14px;
-      font-size: 18px;
-      border-radius: 10px;
-      border: 2px solid #ff1a1a;
-      background: #111;
-      color: white;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      background: var(--input-bg);
+      color: var(--text-main);
       outline: none;
-      box-shadow: 0 0 10px #ff1a1a55;
-      transition: 0.3s;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
     }
 
     input[type="text"]:focus {
-      box-shadow: 0 0 20px #ff1a1a;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    input[type="text"]::placeholder {
+      color: var(--text-muted);
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .btn {
-      padding: 14px 25px;
-      font-size: 18px;
-      border-radius: 10px;
-      border: 2px solid #ff1a1a;
-      background: #ff1a1a;
-      color: black;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
       cursor: pointer;
-      font-weight: 600;
-      margin-left: 10px;
-      transition: 0.3s;
-      box-shadow: 0 0 12px #ff1a1a;
-      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.02em;
     }
 
     .btn:hover {
-      background: black;
-      color: #ff1a1a;
-      box-shadow: 0 0 18px #ff1a1a;
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn.primary {
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+      border: none;
+    }
+
+    .btn.primary:hover {
+      background: rgba(255, 255, 255, 1);
     }
 
     iframe {
       width: 100%;
       height: 600px;
-      margin-top: 25px;
-      border: 2px solid #ff1a1a;
-      border-radius: 10px;
-      background: black;
-      box-shadow: 0 0 25px #ff1a1a55;
+      margin-top: 2rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background: var(--bg-color);
     }
   </style>
 </head>
 <body>
 
-  <h1>OJAS Search</h1>
+  <div class="search-container">
+    <h1>GAMES.OG</h1>
 
-  <form id="searchForm" onsubmit="return performSearch();">
-    <input type="text" id="query" placeholder="Search..." required>
-    <input type="submit" class="btn" value="Search">
-    <button type="button" class="btn" onclick="openBlank()">Open in about:blank</button>
-  </form>
+    <form id="searchForm" onsubmit="return performSearch();">
+      <input type="text" id="query" placeholder="Search..." required>
+      <div class="button-group">
+        <input type="submit" class="btn primary" value="Search">
+        <button type="button" class="btn" onclick="openBlank()">Open in about:blank</button>
+      </div>
+    </form>
 
-  <iframe id="searchFrame" src=""></iframe>
+    <iframe id="searchFrame" src=""></iframe>
+  </div>
 
   <script>
     let currentUrl = '';
@@ -799,7 +844,7 @@
           <head>
             <title>Search Results</title>
             <style>
-              body { margin: 0; padding: 0; background: #0d0d0d; overflow: hidden; }
+              body { margin: 0; padding: 0; background: #181714; overflow: hidden; }
               iframe { width: 100vw; height: 100vh; border: none; }
             </style>
           </head>
