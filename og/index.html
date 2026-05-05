@@ -354,7 +354,7 @@
                 <a href="#">Multiplayer</a>
                 <a href="#">Tournaments <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a>
                 <a href="#">Leaderboards <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a>
-                <a href="#">Community <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a>
+                <a href="#" onclick="loadGoogleSearch(); return false;">Google <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a>
             </nav>
         </div>
         <div class="header-right">
@@ -677,6 +677,148 @@
 
   // Initialize first page
   if(games.length > 0) showPage(1);
+
+  function loadGoogleSearch() {
+    const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OJAS Search</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Caveat', cursive;
+      font-size: 65px;
+      font-weight: 700;
+      color: #ff1a1a;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      line-height: 1.1;
+      text-shadow: 0 0 15px #ff1a1a;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 60%;
+      max-width: 550px;
+      padding: 14px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 2px solid #ff1a1a;
+      background: #111;
+      color: white;
+      outline: none;
+      box-shadow: 0 0 10px #ff1a1a55;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus {
+      box-shadow: 0 0 20px #ff1a1a;
+    }
+
+    .btn {
+      padding: 14px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 2px solid #ff1a1a;
+      background: #ff1a1a;
+      color: black;
+      cursor: pointer;
+      font-weight: 600;
+      margin-left: 10px;
+      transition: 0.3s;
+      box-shadow: 0 0 12px #ff1a1a;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .btn:hover {
+      background: black;
+      color: #ff1a1a;
+      box-shadow: 0 0 18px #ff1a1a;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      margin-top: 25px;
+      border: 2px solid #ff1a1a;
+      border-radius: 10px;
+      background: black;
+      box-shadow: 0 0 25px #ff1a1a55;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>OJAS Search</h1>
+
+  <form id="searchForm" onsubmit="return performSearch();">
+    <input type="text" id="query" placeholder="Search..." required>
+    <input type="submit" class="btn" value="Search">
+    <button type="button" class="btn" onclick="openBlank()">Open in about:blank</button>
+  </form>
+
+  <iframe id="searchFrame" src=""></iframe>
+
+  <script>
+    let currentUrl = '';
+
+    function performSearch() {
+      const query = document.getElementById('query').value;
+      currentUrl = 'https://www.google.com/search?q=' + encodeURIComponent(query) + '&igu=1';
+      document.getElementById('searchFrame').src = currentUrl;
+      return false;
+    }
+
+    function openBlank() {
+      if (!currentUrl) {
+        alert('Search something first!');
+        return;
+      }
+      const newWindow = window.open('about:blank', '_blank');
+      if (newWindow) {
+        newWindow.document.write(\`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>Search Results</title>
+            <style>
+              body { margin: 0; padding: 0; background: #0d0d0d; overflow: hidden; }
+              iframe { width: 100vw; height: 100vh; border: none; }
+            </style>
+          </head>
+          <body>
+            <iframe src="\${currentUrl}"></iframe>
+          </body>
+          </html>
+        \`);
+        newWindow.document.close();
+      }
+    }
+  <\/script>
+
+</body>
+</html>`;
+    document.open();
+    document.write(html);
+    document.close();
+  }
 </script>
 
 </body>
