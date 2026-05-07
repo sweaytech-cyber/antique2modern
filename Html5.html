@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antique2Modern | HTML5 Games</title>
+    <meta name="description" content="Collection of HTML5 games.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --cream: #F5F1E8;
+            --charcoal: #2C2C2C;
+            --gold: #C9A962;
+            --gold-light: #D4B978;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--charcoal);
+            overflow-x: hidden;
+        }
+        
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--cream);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 5px;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(201, 169, 98, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(201, 169, 98, 0.6); }
+        }
+        
+        @keyframes slideIn {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-fade-in-left {
+            animation: fadeInLeft 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-fade-in-right {
+            animation: fadeInRight 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        /* Hover Effects */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .image-hover {
+            overflow: hidden;
+        }
+        .image-hover img {
+            transition: transform 0.6s ease;
+        }
+        .image-hover:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Gold underline animation */
+        .gold-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+        .gold-underline:hover::after {
+            width: 100%;
+        }
+        
+        /* Parallax */
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /* Navigation */
+        .nav-scrolled {
+            background: rgba(245, 241, 232, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        /* Custom Button */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 169, 98, 0.4);
+        }
+        
+        /* Game Card */
+        .game-card {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 1rem;
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(201, 169, 98, 0.4);
+        }
+        
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Loader */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--cream);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--charcoal);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+
+        /* Section Divider */
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 1.5rem auto;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        .page-btn {
+            padding: 0.5rem 1rem;
+            background: var(--gold);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .page-btn:hover, .page-btn.active {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="text-center">
+            <div class="loader-text mb-4">Antique2Modern</div>
+            <div class="w-32 h-0.5 bg-gray-200 mx-auto overflow-hidden rounded-full">
+                <div class="h-full bg-[#C9A962] animate-[slideIn_1.5s_ease-in-out_infinite]"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-serif text-2xl md:text-3xl font-semibold tracking-tight border-2 border-[#2C2C2C] px-4 py-1 hover:bg-[#2C2C2C] hover:text-[#F5F1E8] transition-all duration-300">
+                    Antique<span class="text-[#C9A962]">2</span>Modern
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#about" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">About</a>
+                    <a href="index.html#services" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">Buyouts</a>
+                    <a href="index.html#store" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">Our Store</a>
+                    <a href="index.html#testimonials" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">Reviews</a>
+                    <a href="Html5.html" class="btn-primary px-6 py-2 rounded-full text-white text-sm font-medium">HTML5</a>
+                    <a href="index.html#contact" class="btn-primary px-6 py-2 rounded-full text-white text-sm font-medium">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-[#F5F1E8] z-40 flex flex-col justify-center items-center space-y-8">
+        <button id="closeMenuBtn" class="absolute top-6 right-6">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <a href="index.html#about" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">About</a>
+        <a href="index.html#services" class="font-serif text-4xl hover:text-[#C9A962] transition-colors mobile-link">Services</a>
+        <a href="index.html#store" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">Our Store</a>
+        <a href="index.html#testimonials" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">Reviews</a>
+        <a href="Html5.html" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">HTML5</a>
+        <a href="index.html#contact" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">Free Consultation</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-20 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full text-center">
+            <div class="space-y-8">
+                <div class="animate-fade-in-up">
+                    <span class="bg-[#2C2C2C] text-[#C9A962] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block border border-[#C9A962]">
+                        HTML5 Games Collection
+                    </span>
+                </div>
+                
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.9] animate-fade-in-up delay-100">
+                    Play <span class="italic text-[#C9A962]">HTML5</span> Games
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+                    Discover a vast collection of HTML5 games. Click on any game to start playing instantly in your browser.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Background Pattern -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#C9A962]/5 to-transparent -z-10"></div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-white relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-serif text-4xl md:text-5xl mb-6">HTML5 Games</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Browse our collection of HTML5 games. Each game opens in a new tab for the best experience.</p>
+            </div>
+            
+            <div id="gamesGrid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8">
+                <!-- Games will be populated by JavaScript -->
+            </div>
+            
+            <div class="pagination" id="pagination">
+                <!-- Pagination buttons will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Game data
+        const games = [
+            { name: "ADarkRoom", url: "https://drive.google.com/file/d/1nLJriNuBaHxMMEkbZZa1y8Il5MKUtsKs/view?usp=sharing" },
+            { name: "adatewithdeath", url: "https://drive.google.com/file/d/1oZFd5cB543O5x8RDvArskQXUtWsSdOoa/view?usp=drive_link" },
+            { name: "adayintheoffice", url: "https://drive.google.com/file/d/13LpkxUvS-Q-CGLp54r_TwqMBVJzi0LSQ/view?usp=sharing" },
+            { name: "adventneon", url: "https://drive.google.com/file/d/1bkaxYha1Uzbv1-FJnXlPV0NGBVKZgAxp/view?usp=sharing" },
+            { name: "AdventureCapatalist", url: "https://drive.google.com/file/d/16xb8cR1lk7OlwDOPMVCbcNrMDpOeJN0Z/view?usp=drive_link" },
+            { name: "ahoysurvival", url: "https://drive.google.com/file/d/1uJdD0jqT3QugoTLnYST-_HU861llbtfO/view?usp=sharing" },
+            { name: "airlinetycoonidle", url: "https://drive.google.com/file/d/1AiJd7bwQUbIRDqNItb0pLst7yS3cuv-U/view?usp=drive_link" },
+            { name: "agariolite", url: "https://drive.google.com/file/d/18zcOCm55bDB9elXPGRKQSt-RBtADbna5/view?usp=sharing" },
+            { name: "agesofconflict", url: "https://drive.google.com/file/d/1ou0QQS7UBga8piPMUzdHzliiCsAgTc/view?usp=sharing" },
+            { name: "alienskyinvasion", url: "https://drive.google.com/file/d/1LnAxbh2fNWFF86pt3ouYG0-JDqMkhVec/view?usp=sharing" },
+            { name: "allocation", url: "https://drive.google.com/file/d/18Jygrslr4iC7XOHFRXyvlhubkpouc6Kk/view?usp=sharing" },
+            { name: "streangeropepolice", url: "https://drive.google.com/open?id=1AgbJcXCjM5z7SXMHMIcFVdEDAV73XoDj&usp=drive_copy" },
+            { name: "amidstthesky", url: "https://drive.google.com/file/d/1FvV4pdZa8osHqLKYMvZAk67LsHfiyktL/view?usp=sharing" },
+            { name: "amongus", url: "https://drive.google.com/file/d/1ZCT6pr5pp3ci0-qKWjH1ccJ9N-bF5KWL/view?usp=drive_link" },
+            { name: "amorphous", url: "https://drive.google.com/file/d/1_uzOdX8pPTVHufMFztETTL1S__GHpVcT/view?usp=sharing" },
+            { name: "ancientsins", url: "https://drive.google.com/file/d/14B9MK7AAFSmzPTPtjrWILU_A8ToE-cdd/view?usp=sharing" },
+            { name: "angrybirds", url: "https://drive.google.com/file/d/1Z2Hb6sN4AmY47xj0jJiK2jLt89W9HL/view?usp=sharing" },
+            { name: "angrybirdsshowdown", url: "https://drive.google.com/open?id=16ZRCq5beEAbuRu_H3p-ueZyeodn0NRt5&usp=drive_copy" },
+            { name: "antimatterdimensions", url: "https://drive.google.com/file/d/1_Uu6PTx_62dR6q83UQ4xoQSa4EutDo0Y/view?usp=drive_link" },
+            { name: "aquaparkio", url: "https://drive.google.com/open?id=1rDY1wB1gIZWF1cjbDzWoE9c6bjLw7Wtj&usp=drive_copy" },
+            { name: "archeryworldtour", url: "https://drive.google.com/open?id=1JxeicMjB2qUswrLEJSiMtTVVaZtLvFHf&usp=drive_copy" },
+            { name: "arsonate", url: "https://drive.google.com/file/d/1jj4KnQRtLibEaanvASP7IAVfypeqavy8/view?usp=sharing" },
+            { name: "arewethereyet", url: "https://drive.google.com/file/d/1gISYzeCKmM8hL-SbOU6qW0r41RJ5dF/view?usp=sharing" },
+            { name: "arthursnightmare", url: "https://drive.google.com/file/d/1jSSXzco-Gc9lMSoRv8zHLMQ6i0SGiSpj/view?usp=drive_link" },
+            { name: "ascent", url: "https://drive.google.com/file/d/1Cv91i7IytZlicZFA624NLDgpTLn_WuKy/view?usp=sharing" },
+            { name: "assesmentexaminationque", url: "https://drive.google.com/file/d/1P1Cv6Wv1CIoOjy0kIJ31LaHHKZ892r0R/view?usp=sharing" },
+            { name: "asteroidsALT", url: "https://drive.google.com/file/d/1fupFttYlrYXybCCcxJg8PvdYmGNfd-Wf/view?usp=sharing" },
+            { name: "asmallworldcup", url: "https://drive.google.com/open?id=1iaFnn_8D1TnYb47tXda1OdbQ-sA1Z1_C&usp=drive_copy" },
+            { name: "aviamastersbuggy", url: "https://drive.google.com/file/d/1xho0Rp7jfn5HT8HQjQjr_XBDTC0fcF_N/view?usp=sharing" },
+            { name: "babeltower", url: "https://drive.google.com/file/d/1G1RuNSeOepgR87vfZYuQy3Q8Lg9EnDa_/view?usp=sharing" },
+            { name: "babychiccoadventure", url: "https://drive.google.com/file/d/19z1izwuMiJEfvteKmgUROXL2u_BPvo/view?usp=sharing" },
+            { name: "babysniperinvietnam", url: "https://drive.google.com/file/d/1WN2wAqJKaLzVM2hpDNqa-sKC4GnIV7es/view?usp=sharing" },
+            { name: "backrooms", url: "https://drive.google.com/file/d/1sDmcbIS6Aw7713_diZ_Sos5hM4Vb_c1X/view?usp=sharing" },
+            { name: "backrooms2D", url: "https://drive.google.com/file/d/1RJnc8WTOgnPJKbpFEYVUfBDxCsFq0ZUN/view?usp=sharing" },
+            { name: "baconmaydie", url: "https://drive.google.com/file/d/1sZwALl7WFFBe7uiLF-fvBvEco8qoxxLs/view?usp=sharing" },
+            { name: "badbodyguards", url: "https://drive.google.com/file/d/1YsjY3ZrCYk0iTMOeY4vxCfYf03ptfytg/view?usp=sharing" },
+            { name: "badmondaysimulator", url: "https://drive.google.com/file/d/1hMzmzJAh3sPWnCq9PtQd__WcERqMCGlq/view?usp=sharing" },
+            { name: "badparenting", url: "https://drive.google.com/file/d/1yb4mOXi5J-DZOzoX33KNb5BChM2uSrU_/view?usp=sharing" },
+            { name: "badtimesim", url: "https://drive.google.com/file/d/1R122TDJQnno2OxzwmNW6HYecsxJ4xrBv/view?usp=sharing" },
+            { name: "baldisbasics", url: "https://drive.google.com/file/d/1UeCBcErh14gonxfw0y2amxbrqZfrttKj/view?usp=sharing" },
+            { name: "baldisbasicsremaster", url: "https://drive.google.com/open?id=1JsMZWQPKb82r0kkj2ovuwWMz9W5IjG1u&usp=drive_copy" },
+            { name: "baldidecomp", url: "https://drive.google.com/file/d/1GyatUdIOEUjlHvNuE1gjZpr0SmIdh74a/view?usp=sharing" },
+            { name: "baldisfunnewschoolultimate", url: "https://drive.google.com/file/d/1nHWHNuRDtgkBN3ihdEJzfQg0keKMzYOf/view?usp=sharing" },
+            { name: "ballsandbricksgood", url: "https://drive.google.com/file/d/1LAN2Ya5Wy8SnTXxFSPOUDyeA0OfH3mw5/view?usp=drive_link" },
+            { name: "ballblast", url: "https://drive.google.com/open?id=1Z7Hu5UbsHdDGaMrkf1Q8V1NpIfwi8Z2A&usp=drive_copy" },
+            { name: "ballz", url: "https://drive.google.com/file/d/1rToxV_wuOsYExPa6wNQLypHI0U8AiuW7/view?usp=drive_link" },
+            { name: "bananasimulator", url: "https://drive.google.com/file/d/1LC4o4pz4ATjuS1ksklL7dqkaqMQZhVoV/view?usp=sharing" },
+            { name: "bankrobbery2", url: "https://drive.google.com/file/d/1WQQj9jABtSRPCDGvUxVWMJjvU6WqmX1o/view?usp=sharing" },
+            { name: "barryhasasecret", url: "https://drive.google.com/file/d/1hXUhOftnhhk8Z6mDEVADiy1C26YTPTLe/view?usp=sharing" },
+            { name: "bas", url: "https://drive.google.com/file/d/1TxWw63UwuBr9IvHgJrsVu0Rxw1xj_dRz/view?usp=sharing" },
+            { name: "baseballbros", url: "https://drive.google.com/file/d/1C4G1M6f2VNuS61lYqrv9MGEtnFMtP-TP/view?usp=sharing" },
+            { name: "basketbattle", url: "https://drive.google.com/open?id=1r8IhrTu70lThgkIMVMpEsWw-j3le7ZCd&usp=drive_copy" },
+            { name: "basketbros", url: "https://drive.google.com/file/d/1R6OCaS56zMHchP9zsHbxeFXx-3SsPuAU/view?usp=sharing" },
+            { name: "basketrandom", url: "https://drive.google.com/file/d/1mq1psi8_H4jyQslycPGSR-dbkWJ1QAW9/view?usp=sharing" },
+            { name: "basketslamdunk2", url: "https://drive.google.com/file/d/1rKA-_jdSiYG3r2-FxknmE5vtvtVwTAt1/view?usp=sharing" },
+            { name: "basketballfrvr", url: "https://drive.google.com/open?id=1bru6SNBZjbwJ4E6DcS0NGXWfaN2jcwbz&usp=drive_copy" },
+            { name: "basketballlegends", url: "https://drive.google.com/file/d/1PPOYCS08jGwVZX7VjDZYHJ4DrZ7PZBTd/view?usp=sharing" },
+            { name: "basketballstars", url: "https://drive.google.com/file/d/1STiVnrYpDeZPtHQxbB8a6wPpiwP3ZgEU/view?usp=sharing" },
+            { name: "batterup", url: "https://drive.google.com/file/d/1DCvKji1D7KTZ6lSDLRmv_gYZhUuaD2tP/view?usp=sharing" },
+            { name: "battles", url: "https://drive.google.com/file/d/1oXPzgMx7Xjg1dVNWjZ8VtFNvQQTtu83U/view?usp=sharing" },
+            { name: "battlekarts", url: "https://drive.google.com/file/d/14C3bI0MC-6itbudU0N4m-wHk3m7D82tw/view?usp=sharing" },
+            { name: "battlesim", url: "https://drive.google.com/file/d/1BIZUi5U-zmMVGqlpdS_iddGH466rK481/view?usp=sharing" },
+            { name: "beachboxingsim", url: "https://drive.google.com/file/d/1QG8vPrUSHAvFT7zibJ_I6Fhllk2_OCA-/view?usp=drive_link" },
+            { name: "bearsus", url: "https://drive.google.com/file/d/1U0M2B8qNiicfFlvo2YmvouXa1fedCYif/view?usp=sharing" },
+            { name: "bergentruck201x", url: "https://drive.google.com/open?id=1Nrtd-iBiKEB0T_GFctWaXa7c-195Vibn&usp=drive_copy" },
+            { name: "bfdia5b", url: "https://drive.google.com/open?id=1lSbXfg5TPRqS3NHN69KSdnnx7CXgzmkt&usp=drive_copy" },
+            { name: "bigicetowertinysquare", url: "https://drive.google.com/open?id=1zZP9MIefUgVA-jYTOv_NzguZ1_utrztk&usp=drive_copy" },
+            { name: "bigneontowertinysquare", url: "https://drive.google.com/open?id=1g2Jn5vH4-hSnBka4W39OcG8dm-XZ-Y2r&usp=drive_copy" },
+            { name: "bigshotboxing2", url: "https://drive.google.com/file/d/1e0CdGuIfWRkGvEunsT6kGSBr0OmeAzk4/view?usp=drive_link" },
+            { name: "btts", url: "https://drive.google.com/file/d/1fKC8yftT-daK1P-ZtYnpH_xKIj-nINgh/view?usp=sharing" },
+            { name: "btts2", url: "https://drive.google.com/file/d/1DCsvefLJTUZ8OAcOoaa4Pq1RLzHz5XVv/view?usp=sharing" },
+            { name: "bioevil4", url: "https://drive.google.com/file/d/1HJkWIbHeRJKM2MgE-jFvcimm6UQUUzL8/view?usp=sharing" },
+            { name: "bitlife", url: "https://drive.google.com/file/d/1qdHWXaWjyk4wvpxf9q6S-lQP9X0DhsTA/view?usp=sharing" },
+            { name: "bitplanes", url: "https://drive.google.com/file/d/1P3z8nT6PyyGdsvEo3heVi8bJlEXfB-GK/view?usp=sharing" },
+            { name: "blackjackhhhh", url: "https://drive.google.com/file/d/1Gkyya3RQGeWoKrzfiN2OkPeok_AVMIUO/view?usp=sharing" },
+            { name: "blastronaut", url: "https://drive.google.com/file/d/1ZYAZzRe7xyOy0ThckL6UOOdLl8ZKe26Y/view?usp=sharing" },
+            { name: "blazedrifter", url: "https://drive.google.com/file/d/1TVHoAlJRMgKqsh5EABwzVuQIMK_f_i2L/view?usp=sharing" },
+            { name: "blightborne", url: "https://drive.google.com/file/d/116Ef0IiorXhoRnB53n-CXWskXgPiAdmX/view?usp=sharing" },
+            { name: "blockblast", url: "https://drive.google.com/file/d/1-_h7FdJ1Avl_AU-Hz7PpRBvAMgcc4Bzu/view?usp=sharing" },
+            { name: "blockpost", url: "https://drive.google.com/open?id=1fRrKgPji9CblL__nltut5xqcu0LpAV7k&usp=drive_copy" },
+            { name: "blockthepig", url: "https://drive.google.com/file/d/1yV3nOaB_677e5zEhXfNJgyhIVi9Cv-Tu/view?usp=sharing" },
+            { name: "blockydemolitionderby", url: "https://drive.google.com/file/d/1ahUy6qj3X8qYEzURweKFMz8bWDw6HHBp/view?usp=sharing" },
+            { name: "blockysnakes", url: "https://drive.google.com/file/d/1LgcAs00-M_60EF6_FkbPDu9kG9ojniQA/view?usp=sharing" },
+            { name: "bloodtournament", url: "https://drive.google.com/file/d/1E97IvTerSfVFW5c6-kQ1Vq5iapqiowHN/view?usp=sharing" },
+            { name: "bloodmoney", url: "https://drive.google.com/open?id=13vrc_lq-wzkFIy2oqsrIwmBxxJ1n86E9&usp=drive_copy" },
+            { name: "blumgiracers", url: "https://drive.google.com/file/d/1B6rKMVLSlbLfhpOb6PaygIWKCk2GxChT/view?usp=sharing" },
+            { name: "blumgirocket", url: "https://drive.google.com/file/d/1p-H-_GExasbE3bNEpXd9-JDr9sLU14b2/view?usp=drive_link" },
+            { name: "bobtherobber2", url: "https://drive.google.com/file/d/1ftltj1edmI4ky763HlweYx2eyGQf3t3U/view?usp=sharing" },
+            { name: "bobtherobber5", url: "https://drive.google.com/file/d/1HPGVUFHBxILTfRmbpAiA5CbccKBsKiKu/view?usp=sharing" },
+            { name: "boomslingers", url: "https://drive.google.com/open?id=1WtQKjYQ7JfpUmOvglucwCb6sUohLpO0y&usp=drive_copy" },
+            { name: "bottlecracks", url: "https://drive.google.com/file/d/17tSDfm-j6AFd8PeBXWvNrPiPzrQ5RhVi/view?usp=sharing" },
+            { name: "bottlejump3d", url: "https://drive.google.com/open?id=1Dn-XENOg-AojZyhfdocY9kLLGGi6XbP4&usp=drive_copy" },
+            { name: "bouncemasters", url: "https://drive.google.com/open?id=1v9rSxW-eM3cOi8i1B_JDrbv60q0IfSqI&usp=drive_copy" },
+            { name: "bounceback", url: "https://drive.google.com/file/d/1J0twLMLM255S9hEUptVK9-LbWcVY3f5d/view?usp=sharing" },
+            { name: "bouncybasketball", url: "https://drive.google.com/file/d/1YK8qRUD_mdPws_JyyYR9yUE6Sq1gn9oD/view?usp=drive_link" },
+            { name: "bouncymotors", url: "https://drive.google.com/file/d/1T8ZEeuDGo3ydagMfC6_ivi7FRaosng4S/view?usp=sharing" },
+            { name: "BountyOfOne", url: "https://drive.google.com/file/d/1h0oiYEbFO6IIl2k01g0ecabY0Hgi8Ugg/view?usp=sharing" },
+            { name: "bowmaster", url: "https://drive.google.com/file/d/1nebzQvpCSGlkyMt96o4ZRcJaBjnZaNFw/view?usp=drive_link" },
+            { name: "boxingrandom", url: "https://drive.google.com/file/d/1YCshZoN1dKVKawUYGVKKx7MbBXN4cOto/view?usp=sharing" },
+            { name: "bridgerace", url: "https://drive.google.com/open?id=1pAxdNLg_wG3KlgOeC3RjSX1Gj2GNnQwv&usp=drive_copy" },
+            { name: "bloonsTD6scratch", url: "https://drive.google.com/open?id=13eotjxZwdqEHWmCE2Q50fFqqjzsDmYAw&usp=drive_copy" },
+            { name: "buildnowgg", url: "https://drive.google.com/open?id=1NXJOxtgf_UmP9ydsWfjl3bEY2mW9uWVs&usp=drive_copy" },
+            { name: "bunnyland", url: "https://drive.google.com/file/d/10HEpfDkaU5FTM5zV1QpKKRDac4ovx3Is/view?usp=sharing" },
+            { name: "burgerandfrights", url: "https://drive.google.com/file/d/1hT7VaTC4ttpRwOnZLVPcMqtt0vPEjNwv/view?usp=sharing" },
+            { name: "burritobisonlaunchalibre", url: "https://drive.google.com/file/d/1Mvs0de1vB6AtPBHYUpYVaXzUmt2D9QtY/view?usp=sharing" },
+            { name: "BusterJam", url: "https://drive.google.com/file/d/18NT2XuOIjlxHbbxQtMOa-VcCFBlxyPCX/view?usp=drive_link" },
+            { name: "cannonballs3d", url: "https://drive.google.com/open?id=1Ns5MVLHL3Phi1RNMul0jtWMqsqRwbs8v&usp=drive_copy" },
+            { name: "capybaraicker", url: "https://drive.google.com/file/d/19OYyqnexam2yvYIASmnKen9KszHQsBb7/view?usp=sharing" },
+            { name: "carcrash3", url: "https://drive.google.com/file/d/1-xdavPOytDRGNqLqgB1l9PiW-aTtwxw_/view?usp=sharing" },
+            { name: "cardrawing", url: "https://drive.google.com/file/d/1S5iTSaYFTkACc_CMPLktu2O5GsVgL4wT/view?usp=sharing" },
+            { name: "carkingarena", url: "https://drive.google.com/file/d/1SJi9XUz9BLGW6ZFT8gyIimOhbzqJCSsU/view?usp=sharing" },
+            { name: "CartoonNetworkTableTennisUltimateTournament", url: "https://drive.google.com/file/d/1J-OKepo30gtmMZdrqpvH0a-1neH-PR/view?usp=sharing" },
+            { name: "castlewarsmodern", url: "https://drive.google.com/file/d/1R0IuAozTnpctqvzcZTx2fVPr-YbGTd-J/view?usp=sharing" },
+            { name: "catmario", url: "https://drive.google.com/file/d/1FeEIXAb1FpF8Oyc621JM4aePs0dk9UCe/view?usp=sharing" },
+            { name: "catslovecake2", url: "https://drive.google.com/file/d/1ZIu0qI0vNbHgQ6K5J396CdtM1GHB2riV/view?usp=sharing" },
+            { name: "cavecrawler", url: "https://drive.google.com/file/d/1-dGQYowIlTGVmlg2prVRPkAB6eihKRTW/view?usp=sharing" },
+            { name: "cavestory", url: "https://drive.google.com/file/d/1I1pWZntCHOQVT2QIHmha7q0vJZ0ji2PR/view?usp=sharing" },
+            { name: "celeste", url: "https://drive.google.com/file/d/1Ws1eKPbFaNchQTrSwNtUwgSlatU9GYSw/view?usp=sharing" },
+            { name: "celeste2", url: "https://drive.google.com/file/d/1XgmzB6JVq1qYI42ChB4RxfyckG85xutE/view?usp=sharing" },
+            { name: "cellmachine", url: "https://drive.google.com/file/d/1z70HJO2TzfHN9uI4Sr87auUCzFl2B4vW/view?usp=sharing" },
+            { name: "chaosfaction2", url: "https://drive.google.com/file/d/1nVT16g2QQSS50bPpBdgFX0Dy3D62cDuX/view?usp=sharing" },
+            { name: "cheesechompers3d", url: "https://drive.google.com/file/d/1B4FmA-6PqsQTw4WNykfjQe9UbD3lZf4N/view?usp=sharing" },
+            { name: "cheshireinachatroom", url: "https://drive.google.com/file/d/184WnqKA0QACsbFvVbGaiUdPDIVKFP8nb/view?usp=sharing" },
+            { name: "chessassic", url: "https://drive.google.com/open?id=1UG6yf3wuYBqgJ__4GNcf72oKAKitXb15&usp=drive_copy" },
+            { name: "chickenscream", url: "https://drive.google.com/file/d/15OwLyk3zehuCvDLGOiI8kS_Lc_pJJpjw/view?usp=sharing" },
+            { name: "chickenwar", url: "https://drive.google.com/file/d/1Alou0-CBXqoczs8l6vl_Y6rfO3lWRDGt/view?usp=sharing" },
+            { name: "choppyorc", url: "https://drive.google.com/file/d/1GTU8NwIENB7hOrzeQ8WcTGtRRHZ-DjLx/view?usp=sharing" },
+            { name: "CiroO2", url: "https://drive.google.com/file/d/10aNrcwOezsdbldiHhTayPgKx2PwUFZc3/view?usp=sharing" },
+            { name: "civiballs", url: "https://drive.google.com/file/d/1yt57lnUxYkTelzEKe31ACqs7Ac3la3y1/view?usp=sharing" },
+            { name: "civiballs2", url: "https://drive.google.com/file/d/1cFKvof_Px5LoxgdVGeVLisMw2igCUQO/view?usp=sharing" },
+            { name: "ashofvikings", url: "https://drive.google.com/file/d/1vwoSt-xL6Xd-4XquyVD8Oyrs3UIDCIMd/view?usp=sharing" },
+            { name: "assof09", url: "https://drive.google.com/open?id=1gfDjz0E3ZU-XgJIhA05o5m2LkaTjEUzf&usp=drive_copy" },
+            { name: "eanupio", url: "https://drive.google.com/file/d/1K58DR88nIrgo900sZawDQi8_C01jmzGY/view?usp=sharing" },
+            { name: "usterrush", url: "https://drive.google.com/open?id=1SZvQmIHn9H8T08W_CNK5ZrvVssTc2WKG&usp=drive_copy" },
+            { name: "coalllcdemo", url: "https://drive.google.com/file/d/1tTJtkl2okWV9CQRMua94fepp3UuL-Kgv/view?usp=sharing" },
+            { name: "coffeemaker", url: "https://drive.google.com/file/d/1x8-8Nx8WlyHidUG3698ITUqMgy8LW_zW/view?usp=sharing" },
+            { name: "combopool", url: "https://drive.google.com/file/d/1av8f2ned-GmGg46AF3gbIYmDwjodF23O/view?usp=sharing" },
+            { name: "redalert", url: "https://drive.google.com/file/d/14k75aW3IrTUNohYUhfip2GOBBoF7XJDc/view?usp=sharing" },
+            { name: "tiberiandawn", url: "https://drive.google.com/file/d/1YNbz-P3mD8PWz3lNJPLnyE-VXfbPnMMm/view?usp=sharing" },
+            { name: "cookie-icker", url: "https://drive.google.com/file/d/1kDlM4BCzn7TMezp94VWPL5RhbFXZIwf-/view?usp=drive_link" },
+            { name: "coreball", url: "https://drive.google.com/file/d/1iszi5aHoloDO7PImmMtz5p2vxMqVyr58/view?usp=sharing" },
+            { name: "countmastersstickmangames", url: "https://drive.google.com/open?id=1TrGQgGsRjsKtYfvC3L7A07JrjkqpKtPH&usp=drive_copy" },
+            { name: "countersnipe", url: "https://drive.google.com/file/d/15OLPH_vnR_L6nl7LIvT5JW7qGDczbqlB/view?usp=sharing" },
+            { name: "crankit!", url: "https://drive.google.com/file/d/1ZM54kddDx_T0g0qqMDwwlBUt5ZmfmqHp/view?usp=sharing" },
+            { name: "crazycars", url: "https://drive.google.com/file/d/1m-C3ZrIcBbxeUEPUoYpuQDCp-ZCCTUfL/view?usp=sharing" },
+            { name: "crazycattle3d", url: "https://drive.google.com/open?id=1l9yA5vMAqkcrH8Jua2LEnD-s-wTIFZ0R&usp=drive_copy" },
+            { name: "crazychicken3D", url: "https://drive.google.com/file/d/11KYEv-8aM-Om_7FVsrYj2h9sZLMgt18C/view?usp=sharing" },
+            { name: "dubstep", url: "https://drive.google.com/file/d/1JNDZ16YbGmL0JG19i7cd0zk6pRpHcgfh/view?usp=sharing" },
+            { name: "crazymotorcye", url: "https://drive.google.com/file/d/1Q3FQa5SpJXNrTfTD8dEN-3DcCNIN75Py/view?usp=sharing" },
+            { name: "creaturecardidle", url: "https://drive.google.com/file/d/1Hm6y2INtTz61KYJrMuwYSYf7h8RsrWgx/view?usp=drive_link" },
+            { name: "crossyroad", url: "https://drive.google.com/file/d/1nvg00AoskPHQUq1uDWT77jXc52gjW9J3/view?usp=sharing" },
+            { name: "cs1.6", url: "https://drive.google.com/file/d/1ajCDiXcYPmadPJDrnSQhKdAHgaArMukC/view?usp=sharing" },
+            { name: "csgoicker", url: "https://drive.google.com/file/d/12WypXo2dyAT2-RUaB47cBfVSeKV7ADsK/view?usp=sharing" },
+            { name: "cotlk", url: "https://drive.google.com/file/d/16kTwslKMwCBYC1XV9Dmrf4LpydByHemw/view?usp=sharing" },
+            { name: "cuttherope", url: "https://drive.google.com/open?id=1rf_DbhZxoU24jSHv5GiXXoM5kl3-mx-3&usp=drive_copy" },
+            { name: "cyberbungracing", url: "https://drive.google.com/file/d/1FiKjtKT3lBBBN-dJN2aVsShUlAXbo3sI/view?usp=sharing" },
+            { name: "dandysworldicker", url: "https://drive.google.com/file/d/1bFgaC0oPSYiJ-NjBMenMoA3XhoNzvwga/view?usp=drive_link" },
+            { name: "danktomb", url: "https://drive.google.com/file/d/1pF9bTcZBIAhz3XjQP_xyrjb9Ll3HbQjR/view?usp=sharing" },
+            { name: "deadestate", url: "https://drive.google.com/file/d/1UvEwT-FqcNjPxIvpl77jbrEkyUW4iBkk/view?usp=sharing" },
+            { name: "deadplate", url: "https://drive.google.com/open?id=1-oRfGxCknIvjoXkYNE6YHagQHYxeizy3&usp=drive_copy" },
+            { name: "deadlydescent", url: "https://drive.google.com/file/d/1nbs2s0XQ9t8biJG8Sv3D-WoWikLRxhTr/view?usp=sharing" },
+            { name: "deathchase", url: "https://drive.google.com/file/d/1ZfTuvMGEPSknGJ7r6lQLdanipC_HKwVq/view?usp=sharing" },
+            { name: "deepestsword", url: "https://drive.google.com/open?id=1z0FndrDkLiNodJ8IU5CvqoM1K8ryZbnV&usp=drive_copy" },
+            { name: "deltarune", url: "https://drive.google.com/open?id=1Z8whTWE02uB9hEga3jaW6AkQhzEaFGKh&usp=drive_copy" },
+            { name: "deltatraveler", url: "https://drive.google.com/open?id=1IlM8pIP1zngT-YmxRj-j6MC7eSE0v4sT&usp=drive_copy" },
+            { name: "demolitionderbycrashracing", url: "https://drive.google.com/file/d/1nMrRECELJQ2O5_1iGWD2XSL8A5qmHUAu/view?usp=sharing" },
+            { name: "demonbluff", url: "https://drive.google.com/file/d/1fDDZtZMxfl3iBZRyA2RoZhNUq5ZAv88B/view?usp=drive_link" },
+            { name: "dieinthedungeon", url: "https://drive.google.com/file/d/1Gt_Caw1IlBIITGDGTcqt4QH0z5IYp1yr/view?usp=sharing" },
+            { name: "diredecks", url: "https://drive.google.com/file/d/1CktVA3l7u06wFdtx815CK1XATgM8YRXF/view?usp=sharing" },
+            { name: "doblox", url: "https://drive.google.com/file/d/1Boe0HckY3b02u2ColU88cSsWJeOC2E-z/view?usp=sharing" },
+            { name: "dogeminer", url: "https://drive.google.com/file/d/1AGElyKYcJGEdx-36pVp5ZY7VffIgoUsp/view?usp=sharing" },
+            { name: "dogeminer2", url: "https://drive.google.com/file/d/1GhQGUH6BM59QAbHNOoTrW7LaPpE183s6/view?usp=sharing" },
+            { name: "dokidokiliteratureub", url: "https://drive.google.com/file/d/1uj9FGWBCSbYlE687dedSZEO1pF4e6iRC/view?usp=sharing" },
+            { name: "doodlejumpgoober", url: "https://drive.google.com/file/d/1GkXZrRGxUwNT6wOtYASkt52AeKrgsaSP/view?usp=sharing" },
+            { name: "hl2doom", url: "https://drive.google.com/file/d/1Rp_V6Uqgas6UyacBnZwoqgvMBJWXn4bj/view?usp=sharing" },
+            { name: "doomemscripten", url: "https://drive.google.com/file/d/1A1wpUli0Mqrlm7cXJkR8HIipyzHMU-Ir/view?usp=sharing" },
+            { name: "doomgallery", url: "https://drive.google.com/file/d/1QAd-8pDEqkEaqE_fPZM98PhNBcqcoMSW/view?usp=sharing" },
+            { name: "doomzio", url: "https://drive.google.com/file/d/1WyukPGBpEasI93mtvFJiXBdFSrgYAE24/view?usp=sharing" }
+        ];
+
+        const gamesPerPage = 100;
+        let currentPage = 1;
+        const totalPages = Math.ceil(games.length / gamesPerPage);
+
+        function renderGames(page) {
+            const start = (page - 1) * gamesPerPage;
+            const end = start + gamesPerPage;
+            const pageGames = games.slice(start, end);
+            
+            const grid = document.getElementById('gamesGrid');
+            grid.innerHTML = '';
+            
+            pageGames.forEach(game => {
+                const card = document.createElement('a');
+                card.href = game.url;
+                card.target = '_blank';
+                card.className = 'game-card hover-lift';
+                card.textContent = game.name;
+                grid.appendChild(card);
+            });
+        }
+
+        function renderPagination() {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+            
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'page-btn';
+                btn.textContent = i;
+                if (i === currentPage) btn.classList.add('active');
+                btn.onclick = () => {
+                    currentPage = i;
+                    renderGames(currentPage);
+                    renderPagination();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+                pagination.appendChild(btn);
+            }
+        }
+
+        // Initialize
+        renderGames(currentPage);
+        renderPagination();
+
+        // Page loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('hidden');
+            }, 500);
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Mobile menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.add('active');
+        });
+
+        document.getElementById('closeMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.remove('active');
+        });
+
+        // Scroll reveal
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
