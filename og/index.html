@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,8 @@
             --bg-color: #181714;
             --text-main: #FFFFFF;
             --text-muted: #8E8D8A;
-            --border-color: rgba(255, 255, 255, 0.08); /* Faint border */
+            --border-color: rgba(255, 255, 255, 0.08);
+            /* Faint border */
         }
 
         * {
@@ -62,7 +64,8 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        .header-left, .header-right {
+        .header-left,
+        .header-right {
             display: flex;
             align-items: center;
         }
@@ -81,7 +84,8 @@
         .logo-icon {
             width: 20px;
             height: 20px;
-            color: #bf98ee; /* Slight purple tint as seen in screenshot */
+            color: #bf98ee;
+            /* Slight purple tint as seen in screenshot */
         }
 
         nav {
@@ -108,7 +112,7 @@
         nav a:hover {
             background-color: #f0f0f0;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .dropdown-icon {
@@ -170,14 +174,14 @@
             font-size: 0.8rem;
             margin-bottom: 2.5rem;
             color: #E0E0E0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .pill-icons {
             display: flex;
             align-items: center;
         }
-        
+
         .pill-icons .icon-circle {
             width: 18px;
             height: 18px;
@@ -189,8 +193,13 @@
             border: 1px solid #252422;
         }
 
-        .icon-slack { background-color: #4A154B; }
-        .icon-teams { background-color: #464EB8; }
+        .icon-slack {
+            background-color: #4A154B;
+        }
+
+        .icon-teams {
+            background-color: #464EB8;
+        }
 
         h1 {
             font-size: 5.5rem;
@@ -272,8 +281,14 @@
             gap: 1rem;
         }
 
-        .logo-section-container.left { flex: 3; }
-        .logo-section-container.right { flex: 1; margin-left: 3rem; }
+        .logo-section-container.left {
+            flex: 3;
+        }
+
+        .logo-section-container.right {
+            flex: 1;
+            margin-left: 3rem;
+        }
 
         .logo-section-container h3 {
             font-size: 0.7rem;
@@ -291,7 +306,7 @@
         }
 
         .logo-box {
-            border: 1px dashed rgba(255,255,255,0.15);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
             border-radius: 4px;
             background: rgba(255, 255, 255, 0.03);
             padding: 1.5rem;
@@ -301,7 +316,7 @@
             height: 70px;
             flex: 1;
         }
-        
+
         .logo-img-placeholder {
             color: #a0a0a0;
             font-weight: 500;
@@ -312,18 +327,60 @@
         }
 
         /* Customizing specific logo placeholders */
-        .logo-meta { font-family: 'Inter', sans-serif; font-weight: 500; }
-        .logo-oxford { font-family: 'Times New Roman', serif; font-size: 0.8rem; text-align: left; line-height: 1.1; }
-        .logo-oxford-icon { width: 16px; height: 16px; border: 1px solid #a0a0a0; border-radius: 50%; display: inline-block; }
-        .logo-google { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: -0.5px; }
-        .logo-tesla { font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; }
-        .logo-amazon { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.2rem; }
-        
-        .logo-nfdg { font-family: 'Inter', sans-serif; font-weight: 500; }
-        .logo-bek { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.2rem; letter-spacing: -1px; }
+        .logo-meta {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
 
+        .logo-oxford {
+            font-family: 'Times New Roman', serif;
+            font-size: 0.8rem;
+            text-align: left;
+            line-height: 1.1;
+        }
+
+        .logo-oxford-icon {
+            width: 16px;
+            height: 16px;
+            border: 1px solid #a0a0a0;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .logo-google {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-tesla {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .logo-amazon {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .logo-nfdg {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+
+        .logo-bek {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            letter-spacing: -1px;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Topography Background -->
@@ -334,7 +391,7 @@
                 <path d="M-100,50 Q200,100 400,300 T1100,200"></path>
                 <path d="M-100,100 Q200,150 400,350 T1100,250"></path>
                 <path d="M-100,150 Q200,200 400,400 T1100,300"></path>
-                
+
                 <!-- Inner lines forming topological curves -->
                 <path d="M100,600 C200,400 400,100 800,50"></path>
                 <path d="M50,600 C150,450 400,150 850,100"></path>
@@ -349,8 +406,9 @@
     <!-- Header -->
     <header>
         <div class="header-left">
-            <a href="#" class="logo-container">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <rect x="3" y="3" width="18" height="18" rx="4"></rect>
                     <path d="M3 12h18"></path>
                     <path d="M12 3v18"></path>
@@ -358,35 +416,47 @@
                 games.og
             </a>
             <nav>
-                <a href="Html5.html">Html 5 <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a>
-                <a href="#">IDE </a>
-                <a href="#">Contact <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a>
-                <a href="#" onclick="loadGoogleSearch(); return false;">Google <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a>
+                <a href="Html5.html">Html 5 <svg class="dropdown-icon" viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6"></path>
+                    </svg></a>
+                <a href="IDE.html">IDE </a>
+                <a href="contact.html">Contact <svg class="dropdown-icon" viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6"></path>
+                    </svg></a>
+                <a href="#" onclick="loadGoogleSearch(); return false;">Google <svg class="dropdown-icon"
+                        viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6"></path>
+                    </svg></a>
             </nav>
         </div>
         <div class="header-right">
-            <a href="#" class="btn-primary">GET PLAYING FOR FREE</a>
+            <a href="#games" class="btn-primary">GET PLAYING FOR FREE</a>
         </div>
     </header>
 
     <!-- Main Hero -->
     <main>
         <h1>GAMES.OG</h1>
-        <div class="visitor-counter" style="margin: 2rem auto 3rem; text-align: center; font-size: 0.95rem; color: #fff; opacity: 0.95;">
-            <a href="https://free-hit-counters.net/" style="color: #fff; text-decoration: underline;">https://free-hit-counters.net/</a>
+        <div class="visitor-counter"
+            style="margin: 2rem auto 3rem; text-align: center; font-size: 0.95rem; color: #fff; opacity: 0.95;">
+            <a href="https://free-hit-counters.net/"
+                style="color: #fff; text-decoration: underline;">https://free-hit-counters.net/</a>
             <br>
-            <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=42c0b61af61844a2875c9af787909fd9c56a3835'></script>
-            <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1544167/t/11"></script>
+            <script type='text/javascript'
+                src='https://www.freevisitorcounters.com/auth.php?id=42c0b61af61844a2875c9af787909fd9c56a3835'></script>
+            <script type="text/javascript"
+                src="https://www.freevisitorcounters.com/en/home/counter/1544167/t/11"></script>
         </div>
 
         <div class="cta-container">
-            <a href="#" class="btn-primary btn-large">
+            <a href="#games" class="btn-primary btn-large">
                 GET PLAYING FOR FREE
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"></path>
                 </svg>
             </a>
-            
+
             <div class="trust-badges">
                 <div class="trust-badge">
                     <span style="font-size: 1.1rem; line-height: 1;">🎟️</span>
@@ -404,277 +474,579 @@
         </div>
     </main>
 
-    <div class="footer-section" style="max-width: 1300px; margin: 0 auto; padding: 0 4rem 4rem;">
+    <div id="games" class="footer-section" style="max-width: 1300px; margin: 0 auto; padding: 0 4rem 4rem;">
         <div class="logo-section-container w-full" style="width: 100%;">
-            <div class="logos" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; width: 100%; padding-top: 1rem;">
-                <a href="crazycrash.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSMb0SgA8igaPt4SQ_jPGqp8Y-d7O7xZRedw&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSMb0SgA8igaPt4SQ_jPGqp8Y-d7O7xZRedw&s\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSMb0SgA8igaPt4SQ_jPGqp8Y-d7O7xZRedw&s\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">CRAZY CRASH</div>
+            <div class="logos"
+                style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; width: 100%; padding-top: 1rem;">
+                <a href="crazycrash.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSMb0SgA8igaPt4SQ_jPGqp8Y-d7O7xZRedw&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSMb0SgA8igaPt4SQ_jPGqp8Y-d7O7xZRedw&s\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSMb0SgA8igaPt4SQ_jPGqp8Y-d7O7xZRedw&s\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        CRAZY CRASH</div>
                 </a>
-                <a href="onlinecity.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/3zcz5cJtCVkwUqhzvqCD9OA45Jfx1cUw_HboYsK3YD7iIT5zL_FTO8oL-TmE_LXqCQ=w526-h296-rw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/3zcz5cJtCVkwUqhzvqCD9OA45Jfx1cUw_HboYsK3YD7iIT5zL_FTO8oL-TmE_LXqCQ=w526-h296-rw\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/3zcz5cJtCVkwUqhzvqCD9OA45Jfx1cUw_HboYsK3YD7iIT5zL_FTO8oL-TmE_LXqCQ=w526-h296-rw\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">ONLINE CITY</div>
+                <a href="onlinecity.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/3zcz5cJtCVkwUqhzvqCD9OA45Jfx1cUw_HboYsK3YD7iIT5zL_FTO8oL-TmE_LXqCQ=w526-h296-rw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/3zcz5cJtCVkwUqhzvqCD9OA45Jfx1cUw_HboYsK3YD7iIT5zL_FTO8oL-TmE_LXqCQ=w526-h296-rw\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/3zcz5cJtCVkwUqhzvqCD9OA45Jfx1cUw_HboYsK3YD7iIT5zL_FTO8oL-TmE_LXqCQ=w526-h296-rw\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        ONLINE CITY</div>
                 </a>
-                <a href="https://script.google.com/macros/s/AKfycbzuhv-wKflC3QgCI_d8xsy90ngRlqgKj-qfICMuzhimGuYwWXFI5tPWwwfjrYk-biJu/exec" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">POLY TRACK</div>
+                <a href="https://script.google.com/macros/s/AKfycbzuhv-wKflC3QgCI_d8xsy90ngRlqgKj-qfICMuzhimGuYwWXFI5tPWwwfjrYk-biJu/exec"
+                    class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        POLY TRACK</div>
                 </a>
-                <a href="deathrun.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmy73hHHgqrJSvDJyUYr3niFBHo5oo3JFHCg&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmy73hHHgqrJSvDJyUYr3niFBHo5oo3JFHCg&s\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmy73hHHgqrJSvDJyUYr3niFBHo5oo3JFHCg&s\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">DEATH RUN</div>
+                <a href="deathrun.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmy73hHHgqrJSvDJyUYr3niFBHo5oo3JFHCg&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmy73hHHgqrJSvDJyUYr3niFBHo5oo3JFHCg&s\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmy73hHHgqrJSvDJyUYr3niFBHo5oo3JFHCg&s\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        DEATH RUN</div>
                 </a>
-                <a href="paperio.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/SWTpYqsX9RN2YirCDnAjQ8qsbgn4UrHkRRGsjwuASnHMVqssIvWKzq82mP82y_ffBSE'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/SWTpYqsX9RN2YirCDnAjQ8qsbgn4UrHkRRGsjwuASnHMVqssIvWKzq82mP82y_ffBSE\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/SWTpYqsX9RN2YirCDnAjQ8qsbgn4UrHkRRGsjwuASnHMVqssIvWKzq82mP82y_ffBSE\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">PAPER IO</div>
+                <a href="paperio.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/SWTpYqsX9RN2YirCDnAjQ8qsbgn4UrHkRRGsjwuASnHMVqssIvWKzq82mP82y_ffBSE'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/SWTpYqsX9RN2YirCDnAjQ8qsbgn4UrHkRRGsjwuASnHMVqssIvWKzq82mP82y_ffBSE\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/SWTpYqsX9RN2YirCDnAjQ8qsbgn4UrHkRRGsjwuASnHMVqssIvWKzq82mP82y_ffBSE\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        PAPER IO</div>
                 </a>
-                <a href="stealabrainrot.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHNunE2x8xxaC9kGR-S9FjMkuiUeX0QXV7cA&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHNunE2x8xxaC9kGR-S9FjMkuiUeX0QXV7cA&s\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHNunE2x8xxaC9kGR-S9FjMkuiUeX0QXV7cA&s\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">STEAL A BRAINROT</div>
+                <a href="stealabrainrot.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHNunE2x8xxaC9kGR-S9FjMkuiUeX0QXV7cA&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHNunE2x8xxaC9kGR-S9FjMkuiUeX0QXV7cA&s\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHNunE2x8xxaC9kGR-S9FjMkuiUeX0QXV7cA&s\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        STEAL A BRAINROT</div>
                 </a>
-                <a href="fnaf.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaOqcTvbSiBEciB0AjKfnUgP2-sdlEE255crSBWxCLmptL9hzXlWHj3XSxEiypxAo9uWac&s=10'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaOqcTvbSiBEciB0AjKfnUgP2-sdlEE255crSBWxCLmptL9hzXlWHj3XSxEiypxAo9uWac&s=10\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaOqcTvbSiBEciB0AjKfnUgP2-sdlEE255crSBWxCLmptL9hzXlWHj3XSxEiypxAo9uWac&s=10\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">FNAF</div>
+                <a href="fnaf.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaOqcTvbSiBEciB0AjKfnUgP2-sdlEE255crSBWxCLmptL9hzXlWHj3XSxEiypxAo9uWac&s=10'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaOqcTvbSiBEciB0AjKfnUgP2-sdlEE255crSBWxCLmptL9hzXlWHj3XSxEiypxAo9uWac&s=10\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaOqcTvbSiBEciB0AjKfnUgP2-sdlEE255crSBWxCLmptL9hzXlWHj3XSxEiypxAo9uWac&s=10\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        FNAF</div>
                 </a>
-                <a href="8ballpool.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrM3JmfheVZUxQzpn0s-0SDkvUnhZUMGuI97LEjgS9yEnx2cMhRUPCFF5tmO5-cdRZbR_t&s=10'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrM3JmfheVZUxQzpn0s-0SDkvUnhZUMGuI97LEjgS9yEnx2cMhRUPCFF5tmO5-cdRZbR_t&s=10\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrM3JmfheVZUxQzpn0s-0SDkvUnhZUMGuI97LEjgS9yEnx2cMhRUPCFF5tmO5-cdRZbR_t&s=10\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">8 BALL POOL</div>
+                <a href="8ballpool.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrM3JmfheVZUxQzpn0s-0SDkvUnhZUMGuI97LEjgS9yEnx2cMhRUPCFF5tmO5-cdRZbR_t&s=10'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrM3JmfheVZUxQzpn0s-0SDkvUnhZUMGuI97LEjgS9yEnx2cMhRUPCFF5tmO5-cdRZbR_t&s=10\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrM3JmfheVZUxQzpn0s-0SDkvUnhZUMGuI97LEjgS9yEnx2cMhRUPCFF5tmO5-cdRZbR_t&s=10\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        8 BALL POOL</div>
                 </a>
-                <a href="survivalrace.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/V1iWDWHH2VwlTcSn5_J1Kouvv0JeVnIIlXCkTiO64gYzwAbyNVkh2qH85dt19B_v4w=w526-h296-rw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/V1iWDWHH2VwlTcSn5_J1Kouvv0JeVnIIlXCkTiO64gYzwAbyNVkh2qH85dt19B_v4w=w526-h296-rw\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/V1iWDWHH2VwlTcSn5_J1Kouvv0JeVnIIlXCkTiO64gYzwAbyNVkh2qH85dt19B_v4w=w526-h296-rw\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">SURVIVAL RACE</div>
+                <a href="survivalrace.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/V1iWDWHH2VwlTcSn5_J1Kouvv0JeVnIIlXCkTiO64gYzwAbyNVkh2qH85dt19B_v4w=w526-h296-rw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/V1iWDWHH2VwlTcSn5_J1Kouvv0JeVnIIlXCkTiO64gYzwAbyNVkh2qH85dt19B_v4w=w526-h296-rw\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/V1iWDWHH2VwlTcSn5_J1Kouvv0JeVnIIlXCkTiO64gYzwAbyNVkh2qH85dt19B_v4w=w526-h296-rw\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        SURVIVAL RACE</div>
                 </a>
-                <a href="baldiesbasics.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/L5vrz-fq9D0/maxresdefault.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/L5vrz-fq9D0/maxresdefault.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/L5vrz-fq9D0/maxresdefault.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">BALDIS BASICS</div>
+                <a href="baldiesbasics.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/L5vrz-fq9D0/maxresdefault.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/L5vrz-fq9D0/maxresdefault.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/L5vrz-fq9D0/maxresdefault.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        BALDIS BASICS</div>
                 </a>
-                <a href="retrobowl.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">MINECRAFT 1.8.8</div>
+                <a href="retrobowl.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        MINECRAFT 1.8.8</div>
                 </a>
-                <a href="snowrider.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrzn6hrPoriB0PvjLWbnEYNeRrMhUjjgGYAA&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrzn6hrPoriB0PvjLWbnEYNeRrMhUjjgGYAA&s\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrzn6hrPoriB0PvjLWbnEYNeRrMhUjjgGYAA&s\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">SNOW RIDER</div>
+                <a href="snowrider.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrzn6hrPoriB0PvjLWbnEYNeRrMhUjjgGYAA&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrzn6hrPoriB0PvjLWbnEYNeRrMhUjjgGYAA&s\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrzn6hrPoriB0PvjLWbnEYNeRrMhUjjgGYAA&s\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        SNOW RIDER</div>
                 </a>
-                <a href="granny.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/yT_LBq_tyKeIDohKDsqN_Qt18jGIPUYIxY2C-1-E2YA9Qd60uZW08pua17qBmIiDPA=w240-h480-rw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/yT_LBq_tyKeIDohKDsqN_Qt18jGIPUYIxY2C-1-E2YA9Qd60uZW08pua17qBmIiDPA=w240-h480-rw\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/yT_LBq_tyKeIDohKDsqN_Qt18jGIPUYIxY2C-1-E2YA9Qd60uZW08pua17qBmIiDPA=w240-h480-rw\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">GRANNY</div>
+                <a href="granny.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/yT_LBq_tyKeIDohKDsqN_Qt18jGIPUYIxY2C-1-E2YA9Qd60uZW08pua17qBmIiDPA=w240-h480-rw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/yT_LBq_tyKeIDohKDsqN_Qt18jGIPUYIxY2C-1-E2YA9Qd60uZW08pua17qBmIiDPA=w240-h480-rw\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/yT_LBq_tyKeIDohKDsqN_Qt18jGIPUYIxY2C-1-E2YA9Qd60uZW08pua17qBmIiDPA=w240-h480-rw\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        GRANNY</div>
                 </a>
-                <a href="slope.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">SLOPE</div>
+                <a href="slope.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        SLOPE</div>
                 </a>
-                <a href="mc.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/b/bf/Retro_Bowl_cover.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/b/bf/Retro_Bowl_cover.png\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/b/bf/Retro_Bowl_cover.png\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">RETRO BOWL</div>
+                <a href="mc.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/b/bf/Retro_Bowl_cover.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/b/bf/Retro_Bowl_cover.png\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/b/bf/Retro_Bowl_cover.png\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        RETRO BOWL</div>
                 </a>
-                <a href="subwaysurfers.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmos4KeDIDVVSbwcBxhpF2FKYSsXNbavROA&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmos4KeDIDVVSbwcBxhpF2FKYSsXNbavROA&s\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmos4KeDIDVVSbwcBxhpF2FKYSsXNbavROA&s\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">SUBWAY SURFERS</div>
+                <a href="subwaysurfers.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmos4KeDIDVVSbwcBxhpF2FKYSsXNbavROA&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmos4KeDIDVVSbwcBxhpF2FKYSsXNbavROA&s\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmos4KeDIDVVSbwcBxhpF2FKYSsXNbavROA&s\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        SUBWAY SURFERS</div>
                 </a>
-                <a href="cookieclicker.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1iqHgjXkjQZWLtYaYP6n4eZ7cHPYE56_i3g&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1iqHgjXkjQZWLtYaYP6n4eZ7cHPYE56_i3g&s\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1iqHgjXkjQZWLtYaYP6n4eZ7cHPYE56_i3g&s\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">COOKIE CLICKER</div>
+                <a href="cookieclicker.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1iqHgjXkjQZWLtYaYP6n4eZ7cHPYE56_i3g&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1iqHgjXkjQZWLtYaYP6n4eZ7cHPYE56_i3g&s\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1iqHgjXkjQZWLtYaYP6n4eZ7cHPYE56_i3g&s\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        COOKIE CLICKER</div>
                 </a>
-                <a href="pingpong.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://tabletennis.h5games.usercontent.goog/v/4eeofbe4nfj1g/html5games/assets/marketingAssets/gameIcons/512x512.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://tabletennis.h5games.usercontent.goog/v/4eeofbe4nfj1g/html5games/assets/marketingAssets/gameIcons/512x512.png\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://tabletennis.h5games.usercontent.goog/v/4eeofbe4nfj1g/html5games/assets/marketingAssets/gameIcons/512x512.png\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">PING PONG</div>
+                <a href="pingpong.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://tabletennis.h5games.usercontent.goog/v/4eeofbe4nfj1g/html5games/assets/marketingAssets/gameIcons/512x512.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://tabletennis.h5games.usercontent.goog/v/4eeofbe4nfj1g/html5games/assets/marketingAssets/gameIcons/512x512.png\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://tabletennis.h5games.usercontent.goog/v/4eeofbe4nfj1g/html5games/assets/marketingAssets/gameIcons/512x512.png\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        PING PONG</div>
                 </a>
-                <a href="baseball.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/commons/e/e7/Tommy_Milone_gives_up_a_home_run_to_Mike_Trout_on_May_21%2C_2017.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/commons/e/e7/Tommy_Milone_gives_up_a_home_run_to_Mike_Trout_on_May_21%2C_2017.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/commons/e/e7/Tommy_Milone_gives_up_a_home_run_to_Mike_Trout_on_May_21%2C_2017.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">BASEBALL</div>
+                <a href="baseball.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/commons/e/e7/Tommy_Milone_gives_up_a_home_run_to_Mike_Trout_on_May_21%2C_2017.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/commons/e/e7/Tommy_Milone_gives_up_a_home_run_to_Mike_Trout_on_May_21%2C_2017.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/commons/e/e7/Tommy_Milone_gives_up_a_home_run_to_Mike_Trout_on_May_21%2C_2017.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        BASEBALL</div>
                 </a>
-                <a href="basketball.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfc-vFDPX6F9JKbihOtghN2oYyJwCxA7WxQ&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfc-vFDPX6F9JKbihOtghN2oYyJwCxA7WxQ&s\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfc-vFDPX6F9JKbihOtghN2oYyJwCxA7WxQ&s\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">BASKETBALL</div>
+                <a href="basketball.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfc-vFDPX6F9JKbihOtghN2oYyJwCxA7WxQ&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfc-vFDPX6F9JKbihOtghN2oYyJwCxA7WxQ&s\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfc-vFDPX6F9JKbihOtghN2oYyJwCxA7WxQ&s\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        BASKETBALL</div>
                 </a>
-                <a href="driftboss.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTunZVAxdtSgLi40iQMHWjHNBsXdOuVH61PJA&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTunZVAxdtSgLi40iQMHWjHNBsXdOuVH61PJA&s\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTunZVAxdtSgLi40iQMHWjHNBsXdOuVH61PJA&s\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">DRIFT BOSS</div>
+                <a href="driftboss.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTunZVAxdtSgLi40iQMHWjHNBsXdOuVH61PJA&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTunZVAxdtSgLi40iQMHWjHNBsXdOuVH61PJA&s\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTunZVAxdtSgLi40iQMHWjHNBsXdOuVH61PJA&s\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        DRIFT BOSS</div>
                 </a>
-                <a href="indiantrucksim.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/gsIRdQb2iqwK0JVoE9m4pDaiEiiuUTai2eZkjnhNjuDQ1q0a_huvYqwZ1aO8C7NMmbo'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/gsIRdQb2iqwK0JVoE9m4pDaiEiiuUTai2eZkjnhNjuDQ1q0a_huvYqwZ1aO8C7NMmbo\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/gsIRdQb2iqwK0JVoE9m4pDaiEiiuUTai2eZkjnhNjuDQ1q0a_huvYqwZ1aO8C7NMmbo\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">INDIAN TRUCK</div>
+                <a href="indiantrucksim.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/gsIRdQb2iqwK0JVoE9m4pDaiEiiuUTai2eZkjnhNjuDQ1q0a_huvYqwZ1aO8C7NMmbo'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/gsIRdQb2iqwK0JVoE9m4pDaiEiiuUTai2eZkjnhNjuDQ1q0a_huvYqwZ1aO8C7NMmbo\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/gsIRdQb2iqwK0JVoE9m4pDaiEiiuUTai2eZkjnhNjuDQ1q0a_huvYqwZ1aO8C7NMmbo\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        INDIAN TRUCK</div>
                 </a>
-                <a href="jetrush.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/q5ZDWROnt0s/mqdefault.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/q5ZDWROnt0s/mqdefault.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/q5ZDWROnt0s/mqdefault.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">JET RUSH</div>
+                <a href="jetrush.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/q5ZDWROnt0s/mqdefault.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/q5ZDWROnt0s/mqdefault.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/q5ZDWROnt0s/mqdefault.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        JET RUSH</div>
                 </a>
-                <a href="hillclimb.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://store-images.s-microsoft.com/image/apps.27192.9007199266379485.c1ef97c5-cf2f-4dbd-840d-c4c975f1b009.4c147b04-721a-4ac1-b7e9-151ad255f3f3'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://store-images.s-microsoft.com/image/apps.27192.9007199266379485.c1ef97c5-cf2f-4dbd-840d-c4c975f1b009.4c147b04-721a-4ac1-b7e9-151ad255f3f3\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://store-images.s-microsoft.com/image/apps.27192.9007199266379485.c1ef97c5-cf2f-4dbd-840d-c4c975f1b009.4c147b04-721a-4ac1-b7e9-151ad255f3f3\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">HILL CLIMB</div>
+                <a href="hillclimb.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://store-images.s-microsoft.com/image/apps.27192.9007199266379485.c1ef97c5-cf2f-4dbd-840d-c4c975f1b009.4c147b04-721a-4ac1-b7e9-151ad255f3f3'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://store-images.s-microsoft.com/image/apps.27192.9007199266379485.c1ef97c5-cf2f-4dbd-840d-c4c975f1b009.4c147b04-721a-4ac1-b7e9-151ad255f3f3\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://store-images.s-microsoft.com/image/apps.27192.9007199266379485.c1ef97c5-cf2f-4dbd-840d-c4c975f1b009.4c147b04-721a-4ac1-b7e9-151ad255f3f3\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        HILL CLIMB</div>
                 </a>
-                <a href="geometrydash.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.media-amazon.com/images/I/61mVIP6Oo1L.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://m.media-amazon.com/images/I/61mVIP6Oo1L.png\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://m.media-amazon.com/images/I/61mVIP6Oo1L.png\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">GEOMETRY DASH</div>
+                <a href="geometrydash.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.media-amazon.com/images/I/61mVIP6Oo1L.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://m.media-amazon.com/images/I/61mVIP6Oo1L.png\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://m.media-amazon.com/images/I/61mVIP6Oo1L.png\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        GEOMETRY DASH</div>
                 </a>
-                <a href="templerun.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/49cd11d149a763c01cc6cc117fe57a00/temple-run.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/49cd11d149a763c01cc6cc117fe57a00/temple-run.png\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/49cd11d149a763c01cc6cc117fe57a00/temple-run.png\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">TEMPLE RUN</div>
+                <a href="templerun.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/49cd11d149a763c01cc6cc117fe57a00/temple-run.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/49cd11d149a763c01cc6cc117fe57a00/temple-run.png\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/49cd11d149a763c01cc6cc117fe57a00/temple-run.png\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        TEMPLE RUN</div>
                 </a>
-                <a href="mountainbike.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.redbull.com/images/c_crop,x_259,y_0,h_5000,w_4000/c_fill,w_800,h_889/q_auto:low,f_auto/redbullcom/2024/2/6/gofjax1y9u9xewzg8kqx/bike-unchained-3'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://img.redbull.com/images/c_crop,x_259,y_0,h_5000,w_4000/c_fill,w_800,h_889/q_auto:low,f_auto/redbullcom/2024/2/6/gofjax1y9u9xewzg8kqx/bike-unchained-3\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://img.redbull.com/images/c_crop,x_259,y_0,h_5000,w_4000/c_fill,w_800,h_889/q_auto:low,f_auto/redbullcom/2024/2/6/gofjax1y9u9xewzg8kqx/bike-unchained-3\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">MOUNTAIN BIKE</div>
+                <a href="mountainbike.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.redbull.com/images/c_crop,x_259,y_0,h_5000,w_4000/c_fill,w_800,h_889/q_auto:low,f_auto/redbullcom/2024/2/6/gofjax1y9u9xewzg8kqx/bike-unchained-3'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://img.redbull.com/images/c_crop,x_259,y_0,h_5000,w_4000/c_fill,w_800,h_889/q_auto:low,f_auto/redbullcom/2024/2/6/gofjax1y9u9xewzg8kqx/bike-unchained-3\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://img.redbull.com/images/c_crop,x_259,y_0,h_5000,w_4000/c_fill,w_800,h_889/q_auto:low,f_auto/redbullcom/2024/2/6/gofjax1y9u9xewzg8kqx/bike-unchained-3\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        MOUNTAIN BIKE</div>
                 </a>
-                <a href="1v1lol.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwXHTvZUKdHLxQwcyFaD-Y3eI0IWbRqWGFX6Efj7QY2G3LihhMivHWqSO246F1Dg_27OM2vQ&s=10'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwXHTvZUKdHLxQwcyFaD-Y3eI0IWbRqWGFX6Efj7QY2G3LihhMivHWqSO246F1Dg_27OM2vQ&s=10\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwXHTvZUKdHLxQwcyFaD-Y3eI0IWbRqWGFX6Efj7QY2G3LihhMivHWqSO246F1Dg_27OM2vQ&s=10\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">1V1.LOL</div>
+                <a href="1v1lol.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwXHTvZUKdHLxQwcyFaD-Y3eI0IWbRqWGFX6Efj7QY2G3LihhMivHWqSO246F1Dg_27OM2vQ&s=10'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwXHTvZUKdHLxQwcyFaD-Y3eI0IWbRqWGFX6Efj7QY2G3LihhMivHWqSO246F1Dg_27OM2vQ&s=10\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwXHTvZUKdHLxQwcyFaD-Y3eI0IWbRqWGFX6Efj7QY2G3LihhMivHWqSO246F1Dg_27OM2vQ&s=10\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        1V1.LOL</div>
                 </a>
-                <a href="funnyshooter.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.media-amazon.com/images/I/61hKgo4Kx3L.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://m.media-amazon.com/images/I/61hKgo4Kx3L.png\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://m.media-amazon.com/images/I/61hKgo4Kx3L.png\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">FUNNY SHOOTER</div>
+                <a href="funnyshooter.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.media-amazon.com/images/I/61hKgo4Kx3L.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://m.media-amazon.com/images/I/61hKgo4Kx3L.png\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://m.media-amazon.com/images/I/61hKgo4Kx3L.png\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        FUNNY SHOOTER</div>
                 </a>
-                <a href="holeio.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.gbhbl.com/wp-content/uploads/2018/07/Hole.io-Pic-1.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://www.gbhbl.com/wp-content/uploads/2018/07/Hole.io-Pic-1.png\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://www.gbhbl.com/wp-content/uploads/2018/07/Hole.io-Pic-1.png\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">HOLE.IO</div>
+                <a href="holeio.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.gbhbl.com/wp-content/uploads/2018/07/Hole.io-Pic-1.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://www.gbhbl.com/wp-content/uploads/2018/07/Hole.io-Pic-1.png\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://www.gbhbl.com/wp-content/uploads/2018/07/Hole.io-Pic-1.png\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        HOLE.IO</div>
                 </a>
-                <a href="googlebaseball.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://lh3.googleusercontent.com/VoSayElGWCwozB17drUpZ1lUhHzqd3UEj5o9zlaVu2FhySAjufQRUx5IJqHa_qD2zCpRgj39m7LyVgcu-QjEErM_eQsBZdAkw9k=h200'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://lh3.googleusercontent.com/VoSayElGWCwozB17drUpZ1lUhHzqd3UEj5o9zlaVu2FhySAjufQRUx5IJqHa_qD2zCpRgj39m7LyVgcu-QjEErM_eQsBZdAkw9k=h200\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://lh3.googleusercontent.com/VoSayElGWCwozB17drUpZ1lUhHzqd3UEj5o9zlaVu2FhySAjufQRUx5IJqHa_qD2zCpRgj39m7LyVgcu-QjEErM_eQsBZdAkw9k=h200\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">GOOGLE BASEBALL</div>
+                <a href="googlebaseball.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://lh3.googleusercontent.com/VoSayElGWCwozB17drUpZ1lUhHzqd3UEj5o9zlaVu2FhySAjufQRUx5IJqHa_qD2zCpRgj39m7LyVgcu-QjEErM_eQsBZdAkw9k=h200'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://lh3.googleusercontent.com/VoSayElGWCwozB17drUpZ1lUhHzqd3UEj5o9zlaVu2FhySAjufQRUx5IJqHa_qD2zCpRgj39m7LyVgcu-QjEErM_eQsBZdAkw9k=h200\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://lh3.googleusercontent.com/VoSayElGWCwozB17drUpZ1lUhHzqd3UEj5o9zlaVu2FhySAjufQRUx5IJqHa_qD2zCpRgj39m7LyVgcu-QjEErM_eQsBZdAkw9k=h200\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        GOOGLE BASEBALL</div>
                 </a>
-                <a href="jetpackjoyride.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/9/90/Jetpack_Joyride_iOS.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/9/90/Jetpack_Joyride_iOS.png\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/9/90/Jetpack_Joyride_iOS.png\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">JETPACK JOYRIDE</div>
+                <a href="jetpackjoyride.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/9/90/Jetpack_Joyride_iOS.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/9/90/Jetpack_Joyride_iOS.png\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/9/90/Jetpack_Joyride_iOS.png\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        JETPACK JOYRIDE</div>
                 </a>
-                <a href="bitlife.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/fUM-UyywXxjC8soxAZdIlxJrlRRXmql8wkE426SHzft4lJycSKVd2jCYQQX1BEG9Xw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/fUM-UyywXxjC8soxAZdIlxJrlRRXmql8wkE426SHzft4lJycSKVd2jCYQQX1BEG9Xw\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/fUM-UyywXxjC8soxAZdIlxJrlRRXmql8wkE426SHzft4lJycSKVd2jCYQQX1BEG9Xw\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">BITLIFE</div>
+                <a href="bitlife.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/fUM-UyywXxjC8soxAZdIlxJrlRRXmql8wkE426SHzft4lJycSKVd2jCYQQX1BEG9Xw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/fUM-UyywXxjC8soxAZdIlxJrlRRXmql8wkE426SHzft4lJycSKVd2jCYQQX1BEG9Xw\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/fUM-UyywXxjC8soxAZdIlxJrlRRXmql8wkE426SHzft4lJycSKVd2jCYQQX1BEG9Xw\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        BITLIFE</div>
                 </a>
-                <a href="escaperoadcity.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/i5TUiFUDfu0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB07aDZKOj1RtNnBrwhrsQyoOdNKQ'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/i5TUiFUDfu0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB07aDZKOj1RtNnBrwhrsQyoOdNKQ\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/i5TUiFUDfu0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB07aDZKOj1RtNnBrwhrsQyoOdNKQ\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">ESCAPE ROAD CITY</div>
+                <a href="escaperoadcity.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/i5TUiFUDfu0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB07aDZKOj1RtNnBrwhrsQyoOdNKQ'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/i5TUiFUDfu0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB07aDZKOj1RtNnBrwhrsQyoOdNKQ\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/i5TUiFUDfu0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB07aDZKOj1RtNnBrwhrsQyoOdNKQ\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        ESCAPE ROAD CITY</div>
                 </a>
-                <a href="drivemad.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/7l3WAPbei9MXrxnCzImpXi2VxjEBtgDl0htwvTnA-YqpJAuQJPpSiby1oB8LZMgD0IAy'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/7l3WAPbei9MXrxnCzImpXi2VxjEBtgDl0htwvTnA-YqpJAuQJPpSiby1oB8LZMgD0IAy\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/7l3WAPbei9MXrxnCzImpXi2VxjEBtgDl0htwvTnA-YqpJAuQJPpSiby1oB8LZMgD0IAy\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">DRIVE MAD</div>
+                <a href="drivemad.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/7l3WAPbei9MXrxnCzImpXi2VxjEBtgDl0htwvTnA-YqpJAuQJPpSiby1oB8LZMgD0IAy'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/7l3WAPbei9MXrxnCzImpXi2VxjEBtgDl0htwvTnA-YqpJAuQJPpSiby1oB8LZMgD0IAy\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/7l3WAPbei9MXrxnCzImpXi2VxjEBtgDl0htwvTnA-YqpJAuQJPpSiby1oB8LZMgD0IAy\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        DRIVE MAD</div>
                 </a>
-                <a href="aquaparkio.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.media-amazon.com/images/I/81sVKISRgML.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://m.media-amazon.com/images/I/81sVKISRgML.png\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://m.media-amazon.com/images/I/81sVKISRgML.png\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">AQUAPARK.IO</div>
+                <a href="aquaparkio.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.media-amazon.com/images/I/81sVKISRgML.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://m.media-amazon.com/images/I/81sVKISRgML.png\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://m.media-amazon.com/images/I/81sVKISRgML.png\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        AQUAPARK.IO</div>
                 </a>
-                <a href="slitherio.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/5/50/Slither.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/5/50/Slither.png\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/5/50/Slither.png\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">SLITHER.IO</div>
+                <a href="slitherio.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/5/50/Slither.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/5/50/Slither.png\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/5/50/Slither.png\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        SLITHER.IO</div>
                 </a>
-                <a href="pixelshooter.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/oo9vm9LgWONlfjDJMHtO9Zm9taVs1pVnnFB-bfPyNH_U-_bp3QWzh9XBsOABp2h-rQ'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/oo9vm9LgWONlfjDJMHtO9Zm9taVs1pVnnFB-bfPyNH_U-_bp3QWzh9XBsOABp2h-rQ\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/oo9vm9LgWONlfjDJMHtO9Zm9taVs1pVnnFB-bfPyNH_U-_bp3QWzh9XBsOABp2h-rQ\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">PIXEL SHOOTER</div>
+                <a href="pixelshooter.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/oo9vm9LgWONlfjDJMHtO9Zm9taVs1pVnnFB-bfPyNH_U-_bp3QWzh9XBsOABp2h-rQ'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/oo9vm9LgWONlfjDJMHtO9Zm9taVs1pVnnFB-bfPyNH_U-_bp3QWzh9XBsOABp2h-rQ\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/oo9vm9LgWONlfjDJMHtO9Zm9taVs1pVnnFB-bfPyNH_U-_bp3QWzh9XBsOABp2h-rQ\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        PIXEL SHOOTER</div>
                 </a>
-                <a href="rooftopsnipers.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/e8/78/13/e87813f4-016e-8f1f-85e9-901f25807269/pr_source.png/643x0w.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/e8/78/13/e87813f4-016e-8f1f-85e9-901f25807269/pr_source.png/643x0w.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/e8/78/13/e87813f4-016e-8f1f-85e9-901f25807269/pr_source.png/643x0w.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">ROOFTOP SNIPERS</div>
+                <a href="rooftopsnipers.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/e8/78/13/e87813f4-016e-8f1f-85e9-901f25807269/pr_source.png/643x0w.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/e8/78/13/e87813f4-016e-8f1f-85e9-901f25807269/pr_source.png/643x0w.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/e8/78/13/e87813f4-016e-8f1f-85e9-901f25807269/pr_source.png/643x0w.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        ROOFTOP SNIPERS</div>
                 </a>
-                <a href="plantsvszombies.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/9/9c/PlantsvsZombiesCoverArt.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/9/9c/PlantsvsZombiesCoverArt.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/9/9c/PlantsvsZombiesCoverArt.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">PLANTS VS ZOMBIES</div>
+                <a href="plantsvszombies.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/9/9c/PlantsvsZombiesCoverArt.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/9/9c/PlantsvsZombiesCoverArt.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/9/9c/PlantsvsZombiesCoverArt.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        PLANTS VS ZOMBIES</div>
                 </a>
-                <a href="brawlstars.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDlytiE178sfY8uXNj7aIesE2rM7gGOwjFCmb9VVEWJ7JAoUDaNYQZxuRG5iFNXAxvJRJAA&s=10'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDlytiE178sfY8uXNj7aIesE2rM7gGOwjFCmb9VVEWJ7JAoUDaNYQZxuRG5iFNXAxvJRJAA&s=10\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDlytiE178sfY8uXNj7aIesE2rM7gGOwjFCmb9VVEWJ7JAoUDaNYQZxuRG5iFNXAxvJRJAA&s=10\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">BRAWL STARS</div>
+                <a href="brawlstars.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDlytiE178sfY8uXNj7aIesE2rM7gGOwjFCmb9VVEWJ7JAoUDaNYQZxuRG5iFNXAxvJRJAA&s=10'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDlytiE178sfY8uXNj7aIesE2rM7gGOwjFCmb9VVEWJ7JAoUDaNYQZxuRG5iFNXAxvJRJAA&s=10\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDlytiE178sfY8uXNj7aIesE2rM7gGOwjFCmb9VVEWJ7JAoUDaNYQZxuRG5iFNXAxvJRJAA&s=10\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        BRAWL STARS</div>
                 </a>
-                <a href="fnfshooter.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.itch.zone/aW1hZ2UvMTAzMDk4MC81ODg0NzEyLmpwZw==/original/CJuMjf.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://img.itch.zone/aW1hZ2UvMTAzMDk4MC81ODg0NzEyLmpwZw==/original/CJuMjf.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://img.itch.zone/aW1hZ2UvMTAzMDk4MC81ODg0NzEyLmpwZw==/original/CJuMjf.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">FNF SHOOTER</div>
+                <a href="fnfshooter.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.itch.zone/aW1hZ2UvMTAzMDk4MC81ODg0NzEyLmpwZw==/original/CJuMjf.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://img.itch.zone/aW1hZ2UvMTAzMDk4MC81ODg0NzEyLmpwZw==/original/CJuMjf.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://img.itch.zone/aW1hZ2UvMTAzMDk4MC81ODg0NzEyLmpwZw==/original/CJuMjf.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        FNF SHOOTER</div>
                 </a>
-                <a href="2048.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWWm1PCvTv3RGTr1MdMA5-QXDwteF32bQvw&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWWm1PCvTv3RGTr1MdMA5-QXDwteF32bQvw&s\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWWm1PCvTv3RGTr1MdMA5-QXDwteF32bQvw&s\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">ELYTRA COMING</div>
+                <a href="2048.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWWm1PCvTv3RGTr1MdMA5-QXDwteF32bQvw&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWWm1PCvTv3RGTr1MdMA5-QXDwteF32bQvw&s\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWWm1PCvTv3RGTr1MdMA5-QXDwteF32bQvw&s\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        ELYTRA COMING</div>
                 </a>
-                <a href="motobike.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/2c6d5a46cdbceada277c870ce1c389ee/moto-x3m.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/2c6d5a46cdbceada277c870ce1c389ee/moto-x3m.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/2c6d5a46cdbceada277c870ce1c389ee/moto-x3m.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">MOTOBIKE</div>
+                <a href="motobike.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/2c6d5a46cdbceada277c870ce1c389ee/moto-x3m.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/2c6d5a46cdbceada277c870ce1c389ee/moto-x3m.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/2c6d5a46cdbceada277c870ce1c389ee/moto-x3m.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        MOTOBIKE</div>
                 </a>
-                <a href="tapgoal.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEk0TcvUwygtRNJt13PyJbcLjhn0R66ZgaXA&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEk0TcvUwygtRNJt13PyJbcLjhn0R66ZgaXA&s\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEk0TcvUwygtRNJt13PyJbcLjhn0R66ZgaXA&s\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">TAP GOAL</div>
+                <a href="tapgoal.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEk0TcvUwygtRNJt13PyJbcLjhn0R66ZgaXA&s'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEk0TcvUwygtRNJt13PyJbcLjhn0R66ZgaXA&s\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEk0TcvUwygtRNJt13PyJbcLjhn0R66ZgaXA&s\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        TAP GOAL</div>
                 </a>
-                <a href="redvsblue.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/8/89/Red_vs._Blue_logo.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/8/89/Red_vs._Blue_logo.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/8/89/Red_vs._Blue_logo.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">RED VS BLUE</div>
+                <a href="redvsblue.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/8/89/Red_vs._Blue_logo.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/8/89/Red_vs._Blue_logo.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/8/89/Red_vs._Blue_logo.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        RED VS BLUE</div>
                 </a>
-                <a href="stickwar.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/shnVeqOmQc3RoIVu17SCmYr_Er0Ob4AG322NKHaAUUxuwn8yB3JTwntH07yuInKdMME=w240-h480-rw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/shnVeqOmQc3RoIVu17SCmYr_Er0Ob4AG322NKHaAUUxuwn8yB3JTwntH07yuInKdMME=w240-h480-rw\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/shnVeqOmQc3RoIVu17SCmYr_Er0Ob4AG322NKHaAUUxuwn8yB3JTwntH07yuInKdMME=w240-h480-rw\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">STICK WAR</div>
+                <a href="stickwar.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/shnVeqOmQc3RoIVu17SCmYr_Er0Ob4AG322NKHaAUUxuwn8yB3JTwntH07yuInKdMME=w240-h480-rw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/shnVeqOmQc3RoIVu17SCmYr_Er0Ob4AG322NKHaAUUxuwn8yB3JTwntH07yuInKdMME=w240-h480-rw\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/shnVeqOmQc3RoIVu17SCmYr_Er0Ob4AG322NKHaAUUxuwn8yB3JTwntH07yuInKdMME=w240-h480-rw\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        STICK WAR</div>
                 </a>
-                <a href="driftru.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.gjcdn.net/game-screenshot/400/40805142-dfeseevq-v4.webp'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://m.gjcdn.net/game-screenshot/400/40805142-dfeseevq-v4.webp\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://m.gjcdn.net/game-screenshot/400/40805142-dfeseevq-v4.webp\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">DRIFT RU</div>
+                <a href="driftru.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.gjcdn.net/game-screenshot/400/40805142-dfeseevq-v4.webp'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://m.gjcdn.net/game-screenshot/400/40805142-dfeseevq-v4.webp\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://m.gjcdn.net/game-screenshot/400/40805142-dfeseevq-v4.webp\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        DRIFT RU</div>
                 </a>
-                <a href="footballbros.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/msAcan2xRdE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCP5dURKd5g7s59uct_vQWqWCxY3A'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/msAcan2xRdE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCP5dURKd5g7s59uct_vQWqWCxY3A\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/msAcan2xRdE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCP5dURKd5g7s59uct_vQWqWCxY3A\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">FOOTBALL BROS</div>
+                <a href="footballbros.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/msAcan2xRdE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCP5dURKd5g7s59uct_vQWqWCxY3A'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/msAcan2xRdE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCP5dURKd5g7s59uct_vQWqWCxY3A\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/msAcan2xRdE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCP5dURKd5g7s59uct_vQWqWCxY3A\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        FOOTBALL BROS</div>
                 </a>
-                <a href="growagarden.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://c.files.bbci.co.uk/5ea8/live/3fab4f60-4d1c-11f0-8c47-237c2e4015f5.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://c.files.bbci.co.uk/5ea8/live/3fab4f60-4d1c-11f0-8c47-237c2e4015f5.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://c.files.bbci.co.uk/5ea8/live/3fab4f60-4d1c-11f0-8c47-237c2e4015f5.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">GROW A GARDEN</div>
+                <a href="growagarden.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://c.files.bbci.co.uk/5ea8/live/3fab4f60-4d1c-11f0-8c47-237c2e4015f5.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://c.files.bbci.co.uk/5ea8/live/3fab4f60-4d1c-11f0-8c47-237c2e4015f5.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://c.files.bbci.co.uk/5ea8/live/3fab4f60-4d1c-11f0-8c47-237c2e4015f5.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        GROW A GARDEN</div>
                 </a>
-                <a href="slowroads.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://cdn.arstechnica.net/wp-content/uploads/2022/10/snowy_sunset.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://cdn.arstechnica.net/wp-content/uploads/2022/10/snowy_sunset.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://cdn.arstechnica.net/wp-content/uploads/2022/10/snowy_sunset.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">SLOW ROADS</div>
+                <a href="slowroads.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://cdn.arstechnica.net/wp-content/uploads/2022/10/snowy_sunset.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://cdn.arstechnica.net/wp-content/uploads/2022/10/snowy_sunset.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://cdn.arstechnica.net/wp-content/uploads/2022/10/snowy_sunset.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        SLOW ROADS</div>
                 </a>
-                <a href="amongus.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.esrb.org/wp-content/uploads/2023/01/V1_ESRB_AmongUs-blog-header-01-1024x740-_1.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://www.esrb.org/wp-content/uploads/2023/01/V1_ESRB_AmongUs-blog-header-01-1024x740-_1.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://www.esrb.org/wp-content/uploads/2023/01/V1_ESRB_AmongUs-blog-header-01-1024x740-_1.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">AMONG US</div>
+                <a href="amongus.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.esrb.org/wp-content/uploads/2023/01/V1_ESRB_AmongUs-blog-header-01-1024x740-_1.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://www.esrb.org/wp-content/uploads/2023/01/V1_ESRB_AmongUs-blog-header-01-1024x740-_1.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://www.esrb.org/wp-content/uploads/2023/01/V1_ESRB_AmongUs-blog-header-01-1024x740-_1.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        AMONG US</div>
                 </a>
-                <a href="angrybirds.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/2/2d/Angry_Birds_promo_art.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/2/2d/Angry_Birds_promo_art.png\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/2/2d/Angry_Birds_promo_art.png\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">ANGRY BIRDS</div>
+                <a href="angrybirds.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/en/2/2d/Angry_Birds_promo_art.png'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://upload.wikimedia.org/wikipedia/en/2/2d/Angry_Birds_promo_art.png\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://upload.wikimedia.org/wikipedia/en/2/2d/Angry_Birds_promo_art.png\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        ANGRY BIRDS</div>
                 </a>
-                <a href="drifthunters.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/8uN37O8ncKhkSODaZ_FU7WCNs9hZihjMzzntK8E6J_4BidHUieevzbcNwU3kkL-vaYmY=w526-h296-rw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/8uN37O8ncKhkSODaZ_FU7WCNs9hZihjMzzntK8E6J_4BidHUieevzbcNwU3kkL-vaYmY=w526-h296-rw\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/8uN37O8ncKhkSODaZ_FU7WCNs9hZihjMzzntK8E6J_4BidHUieevzbcNwU3kkL-vaYmY=w526-h296-rw\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">DRIFT HUNTERS</div>
+                <a href="drifthunters.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://play-lh.googleusercontent.com/8uN37O8ncKhkSODaZ_FU7WCNs9hZihjMzzntK8E6J_4BidHUieevzbcNwU3kkL-vaYmY=w526-h296-rw'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://play-lh.googleusercontent.com/8uN37O8ncKhkSODaZ_FU7WCNs9hZihjMzzntK8E6J_4BidHUieevzbcNwU3kkL-vaYmY=w526-h296-rw\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://play-lh.googleusercontent.com/8uN37O8ncKhkSODaZ_FU7WCNs9hZihjMzzntK8E6J_4BidHUieevzbcNwU3kkL-vaYmY=w526-h296-rw\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        DRIFT HUNTERS</div>
                 </a>
-                <a href="fnaf2.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.media-amazon.com/images/M/MV5BZjczNjMxYTgtZTMxOS00MTg5LWFiMjYtYzIwMDQ5MTQ3ODU0XkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,0,500,281_.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://m.media-amazon.com/images/M/MV5BZjczNjMxYTgtZTMxOS00MTg5LWFiMjYtYzIwMDQ5MTQ3ODU0XkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,0,500,281_.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://m.media-amazon.com/images/M/MV5BZjczNjMxYTgtZTMxOS00MTg5LWFiMjYtYzIwMDQ5MTQ3ODU0XkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,0,500,281_.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">FNAF 2</div>
+                <a href="fnaf2.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.media-amazon.com/images/M/MV5BZjczNjMxYTgtZTMxOS00MTg5LWFiMjYtYzIwMDQ5MTQ3ODU0XkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,0,500,281_.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://m.media-amazon.com/images/M/MV5BZjczNjMxYTgtZTMxOS00MTg5LWFiMjYtYzIwMDQ5MTQ3ODU0XkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,0,500,281_.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://m.media-amazon.com/images/M/MV5BZjczNjMxYTgtZTMxOS00MTg5LWFiMjYtYzIwMDQ5MTQ3ODU0XkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,0,500,281_.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        FNAF 2</div>
                 </a>
-                <a href="hi.com" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.itch.zone/aW1hZ2UvMTQwOTY3Lzc0NjIyOS5naWY=/originalm/%2B25IEV.gif'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://img.itch.zone/aW1hZ2UvMTQwOTY3Lzc0NjIyOS5naWY=/originalm/%2B25IEV.gif\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://img.itch.zone/aW1hZ2UvMTQwOTY3Lzc0NjIyOS5naWY=/originalm/%2B25IEV.gif\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">DANK TOMB</div>
+                <a href="hi.com" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.itch.zone/aW1hZ2UvMTQwOTY3Lzc0NjIyOS5naWY=/originalm/%2B25IEV.gif'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://img.itch.zone/aW1hZ2UvMTQwOTY3Lzc0NjIyOS5naWY=/originalm/%2B25IEV.gif\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://img.itch.zone/aW1hZ2UvMTQwOTY3Lzc0NjIyOS5naWY=/originalm/%2B25IEV.gif\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        DANK TOMB</div>
                 </a>
-                <a href="deadestate.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1806720/header.jpg?t=1731535508'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1806720/header.jpg?t=1731535508\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1806720/header.jpg?t=1731535508\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">DEAD ESTATE</div>
+                <a href="deadestate.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1806720/header.jpg?t=1731535508'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1806720/header.jpg?t=1731535508\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1806720/header.jpg?t=1731535508\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        DEAD ESTATE</div>
                 </a>
-                <a href="doblox.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.rbxcdn.com/5348266ea6c5e67b19d6a814cbbb70f6.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://images.rbxcdn.com/5348266ea6c5e67b19d6a814cbbb70f6.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://images.rbxcdn.com/5348266ea6c5e67b19d6a814cbbb70f6.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">ROBLOX</div>
+                <a href="doblox.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.rbxcdn.com/5348266ea6c5e67b19d6a814cbbb70f6.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://images.rbxcdn.com/5348266ea6c5e67b19d6a814cbbb70f6.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://images.rbxcdn.com/5348266ea6c5e67b19d6a814cbbb70f6.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        ROBLOX</div>
                 </a>
-                <a href="mrracer.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/OiEG8RsGAu8/maxresdefault.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/OiEG8RsGAu8/maxresdefault.jpg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/OiEG8RsGAu8/maxresdefault.jpg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">MR RACER</div>
+                <a href="mrracer.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/OiEG8RsGAu8/maxresdefault.jpg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/OiEG8RsGAu8/maxresdefault.jpg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/OiEG8RsGAu8/maxresdefault.jpg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        MR RACER</div>
                 </a>
-                <a href="retrohighway.html" class="logo-box" style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/hQkxjY_dR7Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBgOZ0gvGc4UW4VtI41kmTbzwaKyg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/hQkxjY_dR7Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBgOZ0gvGc4UW4VtI41kmTbzwaKyg\')'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/hQkxjY_dR7Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBgOZ0gvGc4UW4VtI41kmTbzwaKyg\')'">
-                    <div class="logo-img-placeholder" style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">RETRO HIGHWAY</div>
+                <a href="retrohighway.html" class="logo-box"
+                    style="text-decoration: none; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ytimg.com/vi/hQkxjY_dR7Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBgOZ0gvGc4UW4VtI41kmTbzwaKyg'); background-size: cover; background-position: center; padding: 1.5rem; display: flex; align-items: center; justify-content: center; height: 100px; flex: 1 1 200px; max-width: 300px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"
+                    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'https://i.ytimg.com/vi/hQkxjY_dR7Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBgOZ0gvGc4UW4VtI41kmTbzwaKyg\')'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.backgroundImage='linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\'https://i.ytimg.com/vi/hQkxjY_dR7Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBgOZ0gvGc4UW4VtI41kmTbzwaKyg\')'">
+                    <div class="logo-img-placeholder"
+                        style="color: #fff; font-weight: 700; font-size: 1.15rem; font-family: 'Inter', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); text-align: center;">
+                        RETRO HIGHWAY</div>
                 </a>
             </div>
         </div>
     </div>
 
-<style>
-  .pagination {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1300px;
-    margin: 0 auto 4rem;
-    padding: 0 4rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
+    <style>
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1300px;
+            margin: 0 auto 4rem;
+            padding: 0 4rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-  .pagination button {
-    background: rgba(255, 255, 255, 0.03);
-    color: rgba(255, 255, 255, 0.8);
-    border: 1px dashed rgba(255,255,255,0.15);
-    padding: 12px 24px;
-    border-radius: 9999px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-  }
+        .pagination button {
+            background: rgba(255, 255, 255, 0.03);
+            color: rgba(255, 255, 255, 0.8);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
 
-  .pagination button:hover {
-    background: rgba(255, 255, 255, 0.06);
-    color: #fff;
-  }
+        .pagination button:hover {
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+        }
 
-  .pagination #pageInfo {
-    flex-grow: 1;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.8);
-  }
-</style>
+        .pagination #pageInfo {
+            flex-grow: 1;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
 
-<div id="pagination" class="pagination">
-  <button id="prevPage">&laquo; Prev</button>
-  <span id="pageInfo">1 / 2</span>
-  <button id="nextPage">Next &raquo;</button>
-</div>
+    <div id="pagination" class="pagination">
+        <button id="prevPage">&laquo; Prev</button>
+        <span id="pageInfo">1 / 2</span>
+        <button id="nextPage">Next &raquo;</button>
+    </div>
 
-<script>
-  const games = Array.from(document.querySelectorAll(".logo-box"));
-  const gamesPerPage = Math.ceil(games.length / 2);
-  const pageInfo = document.getElementById("pageInfo");
-  const prevBtn = document.getElementById("prevPage");
-  const nextBtn = document.getElementById("nextPage");
+    <script>
+        const games = Array.from(document.querySelectorAll(".logo-box"));
+        const gamesPerPage = Math.ceil(games.length / 2);
+        const pageInfo = document.getElementById("pageInfo");
+        const prevBtn = document.getElementById("prevPage");
+        const nextBtn = document.getElementById("nextPage");
 
-  let currentPage = 1;
-  const totalPages = Math.ceil(games.length / gamesPerPage);
+        let currentPage = 1;
+        const totalPages = Math.ceil(games.length / gamesPerPage);
 
-  function showPage(page) {
-    currentPage = page;
-    const start = (page - 1) * gamesPerPage;
-    const end = start + gamesPerPage;
-    games.forEach((game, index) => {
-      // Need to use 'flex' block because they were display: flex
-      game.style.display = (index >= start && index < end) ? "flex" : "none";
-    });
-    pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
-  }
+        function showPage(page) {
+            currentPage = page;
+            const start = (page - 1) * gamesPerPage;
+            const end = start + gamesPerPage;
+            games.forEach((game, index) => {
+                // Need to use 'flex' block because they were display: flex
+                game.style.display = (index >= start && index < end) ? "flex" : "none";
+            });
+            pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+        }
 
-  prevBtn.addEventListener("click", () => {
-    if (currentPage > 1) {
-      showPage(currentPage - 1);
-      window.scrollTo({ top: document.querySelector('.logo-section-container').offsetTop - 80, behavior: 'smooth' });
-    }
-  });
+        prevBtn.addEventListener("click", () => {
+            if (currentPage > 1) {
+                showPage(currentPage - 1);
+                window.scrollTo({ top: document.querySelector('.logo-section-container').offsetTop - 80, behavior: 'smooth' });
+            }
+        });
 
-  nextBtn.addEventListener("click", () => {
-    if (currentPage < totalPages) {
-      showPage(currentPage + 1);
-      window.scrollTo({ top: document.querySelector('.logo-section-container').offsetTop - 80, behavior: 'smooth' });
-    }
-  });
+        nextBtn.addEventListener("click", () => {
+            if (currentPage < totalPages) {
+                showPage(currentPage + 1);
+                window.scrollTo({ top: document.querySelector('.logo-section-container').offsetTop - 80, behavior: 'smooth' });
+            }
+        });
 
-  // Initialize first page
-  if(games.length > 0) showPage(1);
+        // Initialize first page
+        if (games.length > 0) showPage(1);
 
-  function loadGoogleSearch() {
-    const html = `<!DOCTYPE html>
+        function loadGoogleSearch() {
+            const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -855,11 +1227,12 @@
 
 </body>
 </html>`;
-    document.open();
-    document.write(html);
-    document.close();
-  }
-</script>
+            document.open();
+            document.write(html);
+            document.close();
+        }
+    </script>
 
 </body>
+
 </html>
