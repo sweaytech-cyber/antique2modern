@@ -1,275 +1,212 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antique2Modern | HTML5 Games</title>
-    <meta name="description" content="Collection of HTML5 games.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>HTML5 Games - games.og</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cream: #F5F1E8;
-            --charcoal: #2C2C2C;
-            --gold: #C9A962;
-            --gold-light: #D4B978;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--cream);
-            color: var(--charcoal);
-            overflow-x: hidden;
-        }
-        
-        .font-serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--cream);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--gold);
-            border-radius: 5px;
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(201, 169, 98, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(201, 169, 98, 0.6); }
-        }
-        
-        @keyframes slideIn {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
-        }
-        
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-        }
-        
-        .animate-fade-in-left {
-            animation: fadeInLeft 0.8s ease-out forwards;
-            opacity: 0;
-        }
-        
-        .animate-fade-in-right {
-            animation: fadeInRight 0.8s ease-out forwards;
-            opacity: 0;
-        }
-        
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-500 { animation-delay: 0.5s; }
-        
-        /* Hover Effects */
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .image-hover {
-            overflow: hidden;
-        }
-        .image-hover img {
-            transition: transform 0.6s ease;
-        }
-        .image-hover:hover img {
-            transform: scale(1.05);
-        }
-        
-        /* Gold underline animation */
-        .gold-underline {
-            position: relative;
-            display: inline-block;
-        }
-        .gold-underline::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            transition: width 0.3s ease;
-        }
-        .gold-underline:hover::after {
-            width: 100%;
-        }
-        
-        /* Parallax */
-        .parallax-bg {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        /* Navigation */
-        .nav-scrolled {
-            background: rgba(245, 241, 232, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-        }
-        
-        /* Mobile Menu */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-        }
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-        
-        /* Custom Button */
-        .btn-primary {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s ease;
-        }
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(201, 169, 98, 0.4);
-        }
-        
-        /* Game Card */
-        .game-card {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-            border-radius: 1rem;
-            padding: 1rem;
-            text-align: center;
-            color: white;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            display: block;
-        }
-        .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(201, 169, 98, 0.4);
-        }
-        
-        /* Scroll Reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Loader */
-        .page-loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--cream);
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-        .page-loader.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-        .loader-text {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            color: var(--charcoal);
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 1; }
+            --bg-color: #181714;
+            --text-main: #FFFFFF;
+            --text-muted: #8E8D8A;
+            --border-color: rgba(255, 255, 255, 0.08); /* Faint border */
         }
 
-        /* Section Divider */
-        .section-divider {
-            width: 60px;
-            height: 3px;
-            background: var(--gold);
-            margin: 1.5rem auto;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Topography Background */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bg-pattern svg {
+            width: 120%;
+            height: 120%;
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            opacity: 0.25;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 3rem;
+            z-index: 10;
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-left, .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #d8d8d8;
+            margin-right: 3rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 20px;
+            height: 20px;
+            color: #bf98ee; /* Slight purple tint as seen in screenshot */
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            background-color: #FFFFFF;
+            color: #000000;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-icon {
+            width: 12px;
+            height: 12px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .btn-lite {
+            background-color: transparent;
+        }
+
+        .btn-primary {
+            background-color: #FFFFFF;
+            color: #000000;
+            padding: 0.75rem 1.25rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 4rem 2rem 2rem;
+            z-index: 10;
+            position: relative;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            color: #f5f5f5;
+        }
+
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 1.15rem;
+            max-width: 600px;
+            line-height: 1.5;
+            margin: 0 auto 3rem;
+            font-weight: 400;
+        }
+
+        /* Games Grid */
+        .games-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .game-card {
+            background-color: #FFFFFF;
+            color: #000000;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            min-height: 60px;
+            text-align: center;
+        }
+
+        .game-card:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         /* Pagination */
@@ -279,105 +216,77 @@
             gap: 0.5rem;
             margin-top: 2rem;
         }
+
         .page-btn {
-            padding: 0.5rem 1rem;
-            background: var(--gold);
-            color: white;
+            background-color: #FFFFFF;
+            color: #000000;
             border: none;
-            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
         }
+
         .page-btn:hover, .page-btn.active {
-            background: var(--gold-light);
-            transform: translateY(-2px);
+            background-color: #f0f0f0;
+            transform: translateY(-1px);
         }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-        <div class="text-center">
-            <div class="loader-text mb-4">Antique2Modern</div>
-            <div class="w-32 h-0.5 bg-gray-200 mx-auto overflow-hidden rounded-full">
-                <div class="h-full bg-[#C9A962] animate-[slideIn_1.5s_ease-in-out_infinite]"></div>
-            </div>
-        </div>
+    <!-- Topography Background -->
+    <div class="bg-pattern">
+        <svg viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="rgba(255,255,255,0.4)" stroke-width="1" fill="none">
+                <!-- Outer lines -->
+                <path d="M-100,50 Q200,100 400,300 T1100,200"></path>
+                <path d="M-100,100 Q200,150 400,350 T1100,250"></path>
+                <path d="M-100,150 Q200,200 400,400 T1100,300"></path>
+                
+                <!-- Inner lines forming topological curves -->
+                <path d="M100,600 C200,400 400,100 800,50"></path>
+                <path d="M50,600 C150,450 400,150 850,100"></path>
+                <path d="M0,600 C100,500 400,200 900,150"></path>
+
+                <path d="M400,700 C500,500 700,400 1100,500"></path>
+                <path d="M450,700 C550,550 700,450 1100,550"></path>
+            </g>
+        </svg>
     </div>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center">
-                <a href="index.html" class="font-serif text-2xl md:text-3xl font-semibold tracking-tight border-2 border-[#2C2C2C] px-4 py-1 hover:bg-[#2C2C2C] hover:text-[#F5F1E8] transition-all duration-300">
-                    Antique<span class="text-[#C9A962]">2</span>Modern
-                </a>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#about" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">About</a>
-                    <a href="index.html#services" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">Buyouts</a>
-                    <a href="index.html#store" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">Our Store</a>
-                    <a href="index.html#testimonials" class="text-sm uppercase tracking-widest hover:text-[#C9A962] transition-colors gold-underline">Reviews</a>
-                    <a href="Html5.html" class="btn-primary px-6 py-2 rounded-full text-white text-sm font-medium">HTML5</a>
-                    <a href="index.html#contact" class="btn-primary px-6 py-2 rounded-full text-white text-sm font-medium">Contact Us</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden p-2">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+                    <path d="M3 12h18"></path>
+                    <path d="M12 3v18"></path>
+                </svg>
+                games.og
+            </a>
+            <nav>
+                <a href="Html5.html">Html 5 <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a>
+                <a href="#">IDE </a>
+                <a href="#">Contact <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a>
+                <a href="#" onclick="loadGoogleSearch(); return false;">Google <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a>
+            </nav>
         </div>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-[#F5F1E8] z-40 flex flex-col justify-center items-center space-y-8">
-        <button id="closeMenuBtn" class="absolute top-6 right-6">
-            <i data-lucide="x" class="w-8 h-8"></i>
-        </button>
-        <a href="index.html#about" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">About</a>
-        <a href="index.html#services" class="font-serif text-4xl hover:text-[#C9A962] transition-colors mobile-link">Services</a>
-        <a href="index.html#store" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">Our Store</a>
-        <a href="index.html#testimonials" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">Reviews</a>
-        <a href="Html5.html" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">HTML5</a>
-        <a href="index.html#contact" class="font-serif text-3xl hover:text-[#C9A962] transition-colors mobile-link">Free Consultation</a>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-20 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto w-full text-center">
-            <div class="space-y-8">
-                <div class="animate-fade-in-up">
-                    <span class="bg-[#2C2C2C] text-[#C9A962] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block border border-[#C9A962]">
-                        HTML5 Games Collection
-                    </span>
-                </div>
-                
-                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.9] animate-fade-in-up delay-100">
-                    Play <span class="italic text-[#C9A962]">HTML5</span> Games
-                </h1>
-                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-                    Discover a vast collection of HTML5 games. Click on any game to start playing instantly in your browser.
-                </p>
-            </div>
+        <div class="header-right">
+            <a href="#" class="btn-primary">GET PLAYING FOR FREE</a>
         </div>
-        
-        <!-- Background Pattern -->
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#C9A962]/5 to-transparent -z-10"></div>
-    </section>
+    </header>
 
-    <!-- Games Section -->
-    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-white relative">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <h2 class="font-serif text-4xl md:text-5xl mb-6">HTML5 Games</h2>
-                <div class="section-divider"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">Browse our collection of HTML5 games. Each game opens in a new tab for the best experience.</p>
-            </div>
-            
-            <div id="gamesGrid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8">
+    <!-- Main Content -->
+    <main>
+        <h1>HTML5 Games</h1>
+        <p class="subtitle">Browse our collection of HTML5 games. Click on any game to start playing instantly.</p>
+
+        <div class="games-section">
+            <div id="gamesGrid" class="games-grid">
                 <!-- Games will be populated by JavaScript -->
             </div>
             
@@ -385,7 +294,7 @@
                 <!-- Pagination buttons will be populated by JavaScript -->
             </div>
         </div>
-    </section>
+    </main>
 
     <script>
         // Game data
@@ -586,7 +495,7 @@
                 const card = document.createElement('a');
                 card.href = game.url;
                 card.target = '_blank';
-                card.className = 'game-card hover-lift';
+                card.className = 'game-card';
                 card.textContent = game.name;
                 grid.appendChild(card);
             });
@@ -614,52 +523,6 @@
         // Initialize
         renderGames(currentPage);
         renderPagination();
-
-        // Page loader
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('pageLoader').classList.add('hidden');
-            }, 500);
-        });
-
-        // Navigation scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('nav-scrolled');
-            } else {
-                navbar.classList.remove('nav-scrolled');
-            }
-        });
-
-        // Mobile menu
-        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.add('active');
-        });
-
-        document.getElementById('closeMenuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.remove('active');
-        });
-
-        // Scroll reveal
-        function revealOnScroll() {
-            const reveals = document.querySelectorAll('.reveal');
-            reveals.forEach(reveal => {
-                const windowHeight = window.innerHeight;
-                const elementTop = reveal.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < windowHeight - elementVisible) {
-                    reveal.classList.add('active');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll();
-
-        // Initialize Lucide icons
-        lucide.createIcons();
     </script>
 </body>
 </html>
