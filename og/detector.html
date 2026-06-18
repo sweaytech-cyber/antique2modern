@@ -70,7 +70,12 @@
         document.body.style.overflow='auto';
       });
       dont.addEventListener('click', ()=>{ window.location.href='blocked.html'; });
-      window.addEventListener('load', ()=>{ modal.style.visibility='visible'; document.body.style.overflow='hidden'; });
+      window.addEventListener('load', ()=>{
+        try{
+          if(!localStorage.getItem('og_terms_accepted')){ modal.style.visibility='visible'; document.body.style.overflow='hidden'; }
+          else { modal.style.visibility='hidden'; document.body.style.overflow='auto'; }
+        }catch(e){ modal.style.visibility='visible'; document.body.style.overflow='hidden'; }
+      });
     })();
 
     // Detector logic
