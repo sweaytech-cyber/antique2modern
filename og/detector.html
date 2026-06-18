@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Detector - games.og</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body{background:#181714;color:#fff;font-family:Inter, sans-serif;margin:0}
+    header{display:flex;justify-content:space-between;padding:1rem 2rem;align-items:center}
+    nav a{color:#ddd;margin-right:1rem;text-decoration:none}
+    .container{max-width:900px;margin:2rem auto;padding:1rem}
+    .card{background:rgba(255,255,255,0.03);padding:1rem;border-radius:8px}
+    textarea{width:100%;min-height:220px;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:#000;color:#fff}
+    button{padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <a href="index.html" style="color:#fff;text-decoration:none;font-weight:600">games.og</a>
+    </div>
+    <nav>
+      <a href="IDE.html">IDE</a>
+      <a href="detector.html">Detector</a>
+      <a href="humanizer.html">Humanizer</a>
+      <a href="#" onclick="loadGoogleSearch();return false;">Google</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>AI Content Detector — Strict</h2>
+    <div class="card">
+      <textarea id="detText" placeholder="Paste text to analyze"></textarea>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <button id="runBtn" style="background:#b80000;color:#fff">Run Detection</button>
+        <button id="clearBtn" style="background:#333;color:#fff">Clear</button>
+      </div>
+      <div id="result" style="margin-top:12px;color:#ddd"></div>
+    </div>
+  </div>
+
+  <!-- Terms modal (same as index) -->
+  <div id="ogTermsModal" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.8);z-index:9999;visibility:visible;">
+    <div style="background:#fff;color:#000;padding:20px;border-radius:12px;max-width:720px;width:90%;">
+      <h3 style="margin:0 0 8px 0;font-family:Inter, sans-serif;">Terms &amp; Conditions</h3>
+      <p style="margin:0 0 12px 0;">I agree that I will not use this tool for school assignments or any malicious activity.</p>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+        <input id="ogTermsCheckbox" type="checkbox" style="width:18px;height:18px;" />
+        <label for="ogTermsCheckbox">I understand</label>
+      </div>
+      <div style="display:flex;justify-content:flex-end;gap:8px;">
+        <button id="ogDontAgree" style="padding:8px 12px;border-radius:6px;border:1px solid #ccc;background:#f3f3f3;">I Don't Agree</button>
+        <button id="ogAgree" style="padding:8px 12px;border-radius:6px;background:#222;color:#fff;border:none;">I Agree</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Terms modal
+    (function(){
+      const modal = document.getElementById('ogTermsModal');
+      const agree = document.getElementById('ogAgree');
+      const dont = document.getElementById('ogDontAgree');
+      const chk = document.getElementById('ogTermsCheckbox');
+      agree.addEventListener('click', ()=>{
+        if(!chk.checked){ alert('Please check the box to confirm.'); return; }
+        try{ localStorage.setItem('og_terms_accepted','1'); }catch(e){}
+        modal.style.visibility='hidden';
+        document.body.style.overflow='auto';
+      });
+      dont.addEventListener('click', ()=>{ window.location.href='blocked.html'; });
+      window.addEventListener('load', ()=>{ modal.style.visibility='visible'; document.body.style.overflow='hidden'; });
+    })();
+
+    // Detector logic
+    (function(){
+      const btn = document.getElementById('runBtn');
+      const clr = document.getElementById('clearBtn');
+      const txt = document.getElementById('detText');
+      const out = document.getElementById('result');
+      btn.addEventListener('click', ()=>{
+        const text = (txt.value||'').trim();
+        if(!text){ out.innerText='No text provided.'; return; }
+        let score=0;
+        const words = text.split(/\s+/).filter(Boolean);
+        const unique = new Set(words.map(w=>w.toLowerCase()));
+        const uniqRatio = unique.size/(words.length||1);
+        if(uniqRatio<0.65) score+=45;
+        const punct = (text.match(/[.,!?;:]/g)||[]).length;
+        const punctRatio = punct/(words.length||1);
+        if(punctRatio<0.04) score+=35;
+        const repeated = /(\b\w+\b)(?:[\s\S]*?\1){5,}/i.test(text);
+        if(repeated) score+=30;
+        if(score>100) score=100;
+        const flagged = score>15;
+        out.innerHTML = 'Detection score: <strong>'+score+'</strong> — '+(flagged?'<span style="color:#ff7b7b">AI suspected</span>':'Likely human');
+      });
+      clr.addEventListener('click', ()=>{ txt.value=''; out.innerText=''; });
+    })();
+  </script>
+</body>
+</html>
