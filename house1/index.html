@@ -508,6 +508,7 @@
 
     .rsvp-front {
       position: relative;
+      z-index: 2;
     }
 
     .rsvp-front::before {
@@ -520,6 +521,8 @@
     }
 
     .rsvp-back {
+      position: absolute;
+      inset: 0;
       transform: rotateY(180deg);
       display: flex;
       flex-direction: column;
@@ -529,6 +532,7 @@
       min-height: 480px;
       background: radial-gradient(circle at center, #1b1c20 0%, #0d0e11 100%);
       border: 1px solid var(--gold-primary);
+      z-index: 1;
     }
 
     /* Form Fields Styling */
