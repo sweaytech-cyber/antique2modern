@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exclusive Housewarming Celebration - 14220 W North Oak Blvd</title>
   <meta name="description" content="You are cordially invited to an exclusive housewarming celebration at 14220 W North Oak Blvd. Explore the estate in our 3D room carousel and submit your RSVP.">
-  
+
   <!-- Modern Serif & Sans-Serif Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <style>
     /* Design Tokens & Theme Setup */
     :root {
@@ -1004,7 +1004,7 @@
 
   <!-- Main Mobile App Wrapper -->
   <main>
-    
+
     <!-- Hero / Welcome Intro -->
     <section class="intro-section" id="heroIntro">
       <span class="invitation-badge">VIP Invitation</span>
@@ -1014,7 +1014,7 @@
 
     <!-- Interactive 3D Rooms Gallery -->
     <section class="interactive-viewer-section" id="gallerySection">
-      
+
       <div class="viewer-title-area">
         <div class="viewer-tag">
           <svg viewBox="0 0 24 24">
@@ -1056,7 +1056,7 @@
     <!-- Event Detail Sheets Section -->
     <section class="event-details-card" id="eventCard">
       <h2 class="event-section-title">The Celebration</h2>
-      
+
       <div class="event-detail-item">
         <div class="detail-icon">
           <!-- Calendar Icon -->
@@ -1109,13 +1109,13 @@
     <!-- RSVP Interactive Block -->
     <section class="rsvp-container" id="rsvpSection">
       <div class="rsvp-card-inner" id="rsvpCardInner">
-        
+
         <!-- RSVP Front Side (The Form) -->
         <div class="rsvp-front">
           <h2 class="event-section-title">Submit Response</h2>
-          
+
           <form id="rsvpForm" onsubmit="handleRSVPSubmit(event)">
-            
+
             <div class="form-group">
               <input type="text" id="guestName" class="form-input" placeholder=" " required autocomplete="name">
               <label for="guestName" class="form-label">Your Full Name</label>
@@ -1208,12 +1208,11 @@
   <div class="modal-backdrop" id="modalBackdrop"></div>
   <div class="host-drawer" id="hostDrawer">
     <div class="host-drawer-header">
-      <h3 class="serif-font" style="font-size: 1.4rem; color: var(--gold-primary);">Guest RSVP Log</h3>
       <button class="host-drawer-close" id="hostDrawerCloseBtn" aria-label="Close Host Dashboard">
         <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
       </button>
     </div>
-    
+
     <div class="host-rsvp-table-container">
       <table class="host-rsvp-table" id="hostTable">
         <thead>
@@ -1291,7 +1290,7 @@
     const roomTitle = document.getElementById('roomTitle');
     const roomDesc = document.getElementById('roomDesc');
     const roomInfoCard = document.getElementById('roomInfoCard');
-    
+
     let activeIndex = 0;
     let cardElements = [];
     let isDragging = false;
@@ -1310,16 +1309,16 @@
       rooms.forEach((room, idx) => {
         const card = document.createElement('div');
         card.className = `carousel-card ${idx === 0 ? 'active' : ''}`;
-        
+
         // Calculate 3D rotation angles
         const yAngle = idx * angleIncrement;
         card.style.transform = `rotateY(${yAngle}deg) translateZ(${radiusZ}px)`;
-        
+
         const img = document.createElement('img');
         img.src = room.img;
         img.alt = room.title;
         img.loading = "lazy";
-        
+
         card.appendChild(img);
         spinner.appendChild(card);
         cardElements.push(card);
@@ -1340,11 +1339,11 @@
       // Find shortest path angular distance
       let currentIdx = Math.round(-currentYAngle / angleIncrement) % rooms.length;
       if (currentIdx < 0) currentIdx += rooms.length;
-      
+
       let diff = targetIdx - currentIdx;
       if (diff > rooms.length / 2) diff -= rooms.length;
       if (diff < -rooms.length / 2) diff += rooms.length;
-      
+
       activeIndex = targetIdx;
       currentYAngle = currentYAngle - (diff * angleIncrement);
       applyRotation();
@@ -1352,11 +1351,11 @@
 
     function applyRotation() {
       spinner.style.transform = `rotateY(${currentYAngle}deg)`;
-      
+
       // Update active classes on cards
       let actualIndex = Math.round(-currentYAngle / angleIncrement) % rooms.length;
       if (actualIndex < 0) actualIndex += rooms.length;
-      
+
       cardElements.forEach((card, idx) => {
         if (idx === actualIndex) {
           card.classList.add('active');
@@ -1406,7 +1405,7 @@
       if (!isDragging) return;
       currentX = e.touches[0].clientX;
       const deltaX = currentX - startX;
-      
+
       // Convert pixel drag to angular rotation (friction coefficient 0.25)
       const rotationDelta = deltaX * 0.25;
       currentYAngle = baseAngle + rotationDelta;
@@ -1416,10 +1415,10 @@
     container.addEventListener('touchend', () => {
       if (!isDragging) return;
       isDragging = false;
-      
+
       // Re-enable smooth transition easing
       spinner.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-      
+
       // Snap to nearest card increment
       const snapAngle = Math.round(currentYAngle / angleIncrement) * angleIncrement;
       currentYAngle = snapAngle;
@@ -1524,7 +1523,7 @@
 
     function handleRSVPSubmit(event) {
       event.preventDefault();
-      
+
       const guestName = document.getElementById('guestName').value;
       const guestEmail = document.getElementById('guestEmail').value;
       const attending = document.querySelector('input[name="attending"]:checked').value;
@@ -1561,7 +1560,7 @@
 
       // Flip card to back
       rsvpInner.classList.add('flipped');
-      
+
       // Stamp wax seal down with timing delay
       setTimeout(() => {
         waxSeal.classList.add('stamp');
@@ -1598,7 +1597,7 @@
       // Fetch data
       const list = JSON.parse(localStorage.getItem('rsvps')) || [];
       tableBody.innerHTML = '';
-      
+
       if (list.length === 0) {
         emptyState.style.display = 'block';
       } else {
