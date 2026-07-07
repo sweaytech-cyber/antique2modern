@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclusive Housewarming Celebration - 14220 W North Oak Blvd</title>
+  <meta name="description" content="You are cordially invited to an exclusive housewarming celebration at 14220 W North Oak Blvd. Explore the estate in our 3D room carousel and submit your RSVP.">
+  
+  <!-- Modern Serif & Sans-Serif Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Design Tokens & Theme Setup */
+    :root {
+      --bg-primary: #090a0c;
+      --bg-secondary: #121316;
+      --gold-primary: #d4af37;
+      --gold-secondary: #aa7c11;
+      --gold-light: #f3e5ab;
+      --gold-gradient: linear-gradient(135deg, #f3e5ab, #d4af37, #aa7c11);
+      --text-primary: #eae6df;
+      --text-secondary: #a09e9a;
+      --glass-bg: rgba(18, 19, 22, 0.75);
+      --glass-border: rgba(212, 175, 55, 0.18);
+      --glass-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* Background Overlay Glows */
+    .glow-overlay-top {
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(9, 10, 12, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .glow-overlay-bottom {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 800px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, rgba(9, 10, 12, 0) 75%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Premium Typography */
+    h1, h2, h3, h4, .serif-font {
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
+
+    /* Header Styling */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+      background: rgba(9, 10, 12, 0.6);
+    }
+
+    .brand-logo {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    .brand-logo span {
+      color: var(--gold-primary);
+    }
+
+    /* Audio Toggle Button */
+    .audio-btn {
+      background: none;
+      border: 1px solid var(--glass-border);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .audio-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      padding: 1px;
+      background: var(--gold-gradient);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0.5;
+      transition: var(--transition-smooth);
+    }
+
+    .audio-btn:hover::before, .audio-btn.playing::before {
+      opacity: 1;
+    }
+
+    .audio-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--gold-primary);
+      transition: var(--transition-smooth);
+    }
+
+    .audio-btn.playing svg {
+      animation: pulse-music 1.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse-music {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    /* Main Container */
+    main {
+      position: relative;
+      width: 100%;
+      padding: 100px 20px 60px 20px;
+      max-width: 480px; /* Locked mobile width for desktop mockups */
+      margin: 0 auto;
+      z-index: 10;
+    }
+
+    /* Welcome / Intro Hero */
+    .intro-section {
+      text-align: center;
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
+
+    .invitation-badge {
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 12px;
+      font-weight: 500;
+      display: inline-block;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    .invitation-badge::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      width: 50%;
+      height: 1px;
+      background: var(--gold-gradient);
+    }
+
+    .invitation-title {
+      font-size: 2.4rem;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .invitation-address {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    /* 360-View Area: Interactive 3D Room Carousel */
+    .interactive-viewer-section {
+      position: relative;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .viewer-title-area {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .viewer-tag {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .viewer-tag svg {
+      width: 12px;
+      height: 12px;
+      fill: var(--gold-primary);
+      animation: rotate-360 8s infinite linear;
+    }
+
+    @keyframes rotate-360 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* 3D Perspective Setup */
+    .carousel-container {
+      perspective: 1000px;
+      width: 100%;
+      height: 280px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+      touch-action: pan-y; /* allow page scrolling but intercept X swipes */
+      user-select: none;
+    }
+
+    .carousel-spinner {
+      width: 150px;
+      height: 210px;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .carousel-card {
+      position: absolute;
+      width: 150px;
+      height: 210px;
+      left: 0;
+      top: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      cursor: pointer;
+      transition: filter 0.5s ease, transform 0.5s ease, border-color 0.5s ease;
+      background: var(--bg-secondary);
+    }
+
+    .carousel-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      pointer-events: none;
+    }
+
+    /* Active Card Highlight */
+    .carousel-card.active {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.25), var(--glass-shadow);
+    }
+
+    .carousel-card.active img {
+      transform: scale(1.05);
+    }
+
+    .carousel-card:not(.active) {
+      filter: brightness(0.4) contrast(0.95);
+    }
+
+    /* Navigation Controls below Carousel */
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-top: 15px;
+    }
+
+    .control-btn {
+      background: none;
+      border: 1px solid var(--glass-border);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--gold-primary);
+      transition: var(--transition-smooth);
+    }
+
+    .control-btn:active {
+      background: rgba(212, 175, 55, 0.1);
+      transform: scale(0.9);
+    }
+
+    .control-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* Room Description Box */
+    .room-info-card {
+      margin-top: 20px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      box-shadow: var(--glass-shadow);
+      min-height: 125px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .room-title {
+      font-size: 1.3rem;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+      transition: var(--transition-smooth);
+      opacity: 1;
+    }
+
+    .room-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      transition: var(--transition-smooth);
+      opacity: 1;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+
+    /* Invitation Card Styling */
+    .event-details-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 30px 25px;
+      margin-bottom: 40px;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      box-shadow: var(--glass-shadow);
+      position: relative;
+    }
+
+    .event-details-card::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(212, 175, 55, 0.05);
+      border-radius: 12px;
+      pointer-events: none;
+    }
+
+    .event-section-title {
+      font-size: 1.8rem;
+      text-align: center;
+      color: var(--text-primary);
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .event-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .event-detail-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .detail-icon {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid var(--glass-border);
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .detail-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--gold-primary);
+    }
+
+    .detail-content h4 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: var(--gold-light);
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .detail-content p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .map-link {
+      color: var(--gold-primary);
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+      transition: var(--transition-smooth);
+    }
+
+    .map-link:hover {
+      color: var(--gold-light);
+    }
+
+    .map-link svg {
+      width: 10px;
+      height: 10px;
+      fill: currentColor;
+    }
+
+    /* RSVP Main Section (Flippable Card) */
+    .rsvp-container {
+      perspective: 1200px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .rsvp-card-inner {
+      width: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .rsvp-card-inner.flipped {
+      transform: rotateY(180deg);
+    }
+
+    /* RSVP Front Face */
+    .rsvp-front, .rsvp-back {
+      width: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 20px;
+      padding: 30px 25px;
+      box-shadow: var(--glass-shadow);
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+    }
+
+    .rsvp-front {
+      position: relative;
+    }
+
+    .rsvp-front::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(212, 175, 55, 0.05);
+      border-radius: 12px;
+      pointer-events: none;
+    }
+
+    .rsvp-back {
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 480px;
+      background: radial-gradient(circle at center, #1b1c20 0%, #0d0e11 100%);
+      border: 1px solid var(--gold-primary);
+    }
+
+    /* Form Fields Styling */
+    .form-group {
+      position: relative;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+
+    .form-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--glass-border);
+      padding: 10px 0;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      transition: var(--transition-smooth);
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-bottom-color: var(--gold-primary);
+    }
+
+    .form-label {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      pointer-events: none;
+      transition: var(--transition-smooth);
+    }
+
+    /* Float label logic */
+    .form-input:focus ~ .form-label,
+    .form-input:not(:placeholder-shown) ~ .form-label {
+      top: -15px;
+      font-size: 0.7rem;
+      color: var(--gold-primary);
+      letter-spacing: 1px;
+    }
+
+    /* Attendance Buttons Selector */
+    .attendance-selector {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+
+    .att-option {
+      flex: 1;
+      position: relative;
+    }
+
+    .att-input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .att-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      padding: 12px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-secondary);
+      background: rgba(18, 19, 22, 0.4);
+      transition: var(--transition-smooth);
+      text-align: center;
+    }
+
+    .att-input:checked + .att-btn {
+      color: var(--bg-primary);
+      background: var(--gold-gradient);
+      border-color: var(--gold-primary);
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+      font-weight: 600;
+    }
+
+    /* Luxury Dropdown for Guests */
+    .guest-select-container {
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--glass-border);
+      padding: 10px 0;
+    }
+
+    .guest-select-container label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .guest-select {
+      background: transparent;
+      border: none;
+      color: var(--gold-primary);
+      font-size: 0.95rem;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+      outline: none;
+      padding-right: 15px;
+    }
+
+    .guest-select option {
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+    }
+
+    /* Luxury Submission Button */
+    .submit-btn {
+      width: 100%;
+      background: var(--gold-gradient);
+      color: var(--bg-primary);
+      border: none;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+      transition: var(--transition-smooth);
+    }
+
+    .submit-btn:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 10px rgba(212, 175, 55, 0.1);
+    }
+
+    /* Shimmer effect for button */
+    .submit-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 30%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.25);
+      transform: rotate(30deg);
+      transition: none;
+    }
+
+    .submit-btn:hover::after {
+      left: 120%;
+      transition: all 0.8s ease-in-out;
+    }
+
+    /* Envelope & Wax-Seal Success Styling */
+    .envelope-box {
+      position: relative;
+      width: 140px;
+      height: 100px;
+      background: #1e2024;
+      border-radius: 8px;
+      border: 1px solid var(--glass-border);
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .envelope-flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+      border-top: 50px solid rgba(212, 175, 55, 0.1);
+      transform-origin: top;
+      transition: transform 0.5s 0.5s ease;
+      z-index: 2;
+    }
+
+    /* Animated Gold Wax Seal */
+    .wax-seal {
+      width: 64px;
+      height: 64px;
+      background: radial-gradient(circle at 35% 35%, #e63946 0%, #b70918 50%, #7f000b 100%);
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4), inset 0 2px 5px rgba(255,255,255,0.2), inset 0 -2px 5px rgba(0,0,0,0.4);
+      position: absolute;
+      top: 18px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scale(5);
+      opacity: 0;
+      transition: transform 0.5s 1s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s 1s ease;
+    }
+
+    .wax-seal.stamp {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .wax-seal-inner {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px dashed rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .wax-seal svg {
+      width: 20px;
+      height: 20px;
+      fill: #ffd166;
+      opacity: 0.8;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));
+    }
+
+    .success-headline {
+      font-size: 1.8rem;
+      color: var(--gold-primary);
+      margin-bottom: 10px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.5s 1.3s ease;
+    }
+
+    .success-text {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      max-width: 250px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.5s 1.5s ease;
+    }
+
+    .flipped .success-headline, .flipped .success-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Luxury Footer & Host Panel Button */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      position: relative;
+      z-index: 10;
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+      border-top: 1px solid rgba(212, 175, 55, 0.05);
+      background: rgba(9, 10, 12, 0.8);
+      margin-top: 40px;
+    }
+
+    .footer-host-link {
+      background: none;
+      border: none;
+      color: rgba(212, 175, 55, 0.3);
+      cursor: pointer;
+      margin-top: 10px;
+      transition: var(--transition-smooth);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .footer-host-link:hover {
+      color: var(--gold-primary);
+    }
+
+    .footer-host-link svg {
+      width: 10px;
+      height: 10px;
+      fill: currentColor;
+    }
+
+    /* Host Drawer Panel Overlay */
+    .host-drawer {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      width: 100%;
+      max-width: 480px;
+      height: 80%;
+      background: #0e0f12;
+      border-top: 2px solid var(--gold-primary);
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      z-index: 1000;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.8);
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .host-drawer.open {
+      transform: translate(-50%, 20%);
+    }
+
+    .host-drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .host-drawer-close {
+      background: none;
+      border: 1px solid var(--glass-border);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .host-drawer-close svg {
+      width: 12px;
+      height: 12px;
+      fill: currentColor;
+    }
+
+    .host-rsvp-table-container {
+      flex: 1;
+      overflow-y: auto;
+      margin-bottom: 20px;
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .host-rsvp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.75rem;
+      text-align: left;
+    }
+
+    .host-rsvp-table th {
+      background: #17181c;
+      color: var(--gold-primary);
+      padding: 12px 10px;
+      font-weight: 500;
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .host-rsvp-table td {
+      padding: 10px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.05);
+      color: var(--text-primary);
+    }
+
+    .host-rsvp-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge-status {
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .badge-accept {
+      background: rgba(46, 204, 113, 0.15);
+      color: #2ecc71;
+      border: 1px solid rgba(46, 204, 113, 0.3);
+    }
+
+    .badge-decline {
+      background: rgba(231, 76, 60, 0.15);
+      color: #e74c3c;
+      border: 1px solid rgba(231, 76, 60, 0.3);
+    }
+
+    .host-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-secondary {
+      flex: 1;
+      background: transparent;
+      border: 1px solid var(--glass-border);
+      color: var(--text-primary);
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+    }
+
+    .host-empty-state {
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+    }
+
+    /* Modal Backdrop for drawer */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Ambient Glow -->
+  <div class="glow-overlay-top"></div>
+
+  <!-- Audio Player (Hidden by default, triggered by toggle) -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Luxury Header -->
+  <header>
+    <a href="#" class="brand-logo" id="headerLogo">N<span>o</span>rth Oak</a>
+    <button class="audio-btn" id="audioToggle" aria-label="Toggle Ambient Audio">
+      <svg viewBox="0 0 24 24" id="audioIcon">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5zm0-4.5c0 .83-.67 1.5-1.5 1.5S10 12.83 10 12s.67-1.5 1.5-1.5 1.5.67 1.5 1.5zm0-4.5c0 .83-.67 1.5-1.5 1.5S10 8.33 10 7.5 10.67 6 11.5 6 13 6.67 13 7.5z" style="display:none;"/>
+        <!-- Music Note Icon Paths -->
+        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Main Mobile App Wrapper -->
+  <main>
+    
+    <!-- Hero / Welcome Intro -->
+    <section class="intro-section" id="heroIntro">
+      <span class="invitation-badge">VIP Invitation</span>
+      <h1 class="invitation-title">Housewarming Celebration</h1>
+      <p class="invitation-address">14220 W North Oak Blvd</p>
+    </section>
+
+    <!-- Interactive 3D Rooms Gallery -->
+    <section class="interactive-viewer-section" id="gallerySection">
+      
+      <div class="viewer-title-area">
+        <div class="viewer-tag">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+          Interactive 3D Room Carousel
+        </div>
+      </div>
+
+      <!-- 3D Carousel container -->
+      <div class="carousel-container" id="carouselContainer">
+        <div class="carousel-spinner" id="carouselSpinner">
+          <!-- Room Cards will be programmatically generated to easily manage rotation angles -->
+        </div>
+      </div>
+
+      <!-- Arrow Controls -->
+      <div class="carousel-controls">
+        <button class="control-btn" id="prevBtn" aria-label="Previous Room">
+          <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+        <button class="control-btn" id="nextBtn" aria-label="Next Room">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Active Room Descriptive sheet -->
+      <div class="room-info-card" id="roomInfoCard">
+        <h3 class="room-title" id="roomTitle">Loading...</h3>
+        <p class="room-desc" id="roomDesc">Preparing tour details...</p>
+      </div>
+
+    </section>
+
+    <!-- Event Detail Sheets Section -->
+    <section class="event-details-card" id="eventCard">
+      <h2 class="event-section-title">The Celebration</h2>
+      
+      <div class="event-detail-item">
+        <div class="detail-icon">
+          <!-- Calendar Icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+          </svg>
+        </div>
+        <div class="detail-content">
+          <h4>Date & Time</h4>
+          <p>Saturday, August 15, 2026</p>
+          <p>Beginning at 5:00 PM CST</p>
+        </div>
+      </div>
+
+      <div class="event-detail-item">
+        <div class="detail-icon">
+          <!-- Pin Icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+        </div>
+        <div class="detail-content">
+          <h4>The Location</h4>
+          <p>14220 W North Oak Blvd</p>
+          <p>New Berlin, Wisconsin 53151</p>
+          <a href="https://maps.google.com/?q=14220+W+North+Oak+Blvd,+New+Berlin,+WI+53151" target="_blank" class="map-link">
+            Open in Google Maps
+            <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="event-detail-item">
+        <div class="detail-icon">
+          <!-- Glass/Cheers Icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M11 2v9c0 1.93-1.57 3.5-3.5 3.5H7v6h10v-6h-.5c-1.93 0-3.5-1.57-3.5-3.5V2h-2zm-4 9h2c0 1.1-.9 2-2 2s-2-.9-2-2 1.1-2 2-2zm10 0c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 1.1-2 2-2z" style="display:none;"/>
+            <!-- Dress Code Shirt/Tux style -->
+            <path d="M9.5 2L12 6.5 14.5 2H20v20H4V2h5.5M12 8.7L8 2H6v18h12V2h-2l-4 6.7z"/>
+          </svg>
+        </div>
+        <div class="detail-content">
+          <h4>Dress Code</h4>
+          <p>Cocktail Attire</p>
+          <p>Chic, elegant, and sophisticated</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP Interactive Block -->
+    <section class="rsvp-container" id="rsvpSection">
+      <div class="rsvp-card-inner" id="rsvpCardInner">
+        
+        <!-- RSVP Front Side (The Form) -->
+        <div class="rsvp-front">
+          <h2 class="event-section-title">Submit Response</h2>
+          
+          <form id="rsvpForm" onsubmit="handleRSVPSubmit(event)">
+            
+            <div class="form-group">
+              <input type="text" id="guestName" class="form-input" placeholder=" " required autocomplete="name">
+              <label for="guestName" class="form-label">Your Full Name</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="guestEmail" class="form-input" placeholder=" " required autocomplete="email">
+              <label for="guestEmail" class="form-label">Email Address</label>
+            </div>
+
+            <!-- Attendance Custom Buttons -->
+            <div class="attendance-selector">
+              <div class="att-option">
+                <input type="radio" name="attending" id="attendingYes" value="yes" class="att-input" checked required>
+                <label for="attendingYes" class="att-btn">Joyfully Accept</label>
+              </div>
+              <div class="att-option">
+                <input type="radio" name="attending" id="attendingNo" value="no" class="att-input">
+                <label for="attendingNo" class="att-btn">Decline</label>
+              </div>
+            </div>
+
+            <!-- Guest Count dropdown (only relevant if attending is Yes) -->
+            <div class="guest-select-container" id="guestSelectContainer">
+              <label for="guestCount">Total Guests (including you)</label>
+              <select id="guestCount" class="guest-select">
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="dietary" class="form-input" placeholder=" ">
+              <label for="dietary" class="form-label">Dietary Accommodations (Optional)</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="hostNote" class="form-input" placeholder=" ">
+              <label for="hostNote" class="form-label">Note to Hosts (Optional)</label>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitRsvpBtn">Send RSVP Response</button>
+
+          </form>
+        </div>
+
+        <!-- RSVP Back Side (Success Animation State) -->
+        <div class="rsvp-back">
+          <div class="envelope-box">
+            <div class="envelope-flap" id="envelopeFlap"></div>
+            <!-- Animated Wax Seal -->
+            <div class="wax-seal" id="waxSeal">
+              <div class="wax-seal-inner">
+                <!-- House Monogram SVG Icon -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <h3 class="success-headline">RSVP Confirmed</h3>
+          <p class="success-text" id="successText">Thank you. Your response has been securely filed. We look forward to hosting you.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom Ambient Glow -->
+    <div class="glow-overlay-bottom"></div>
+
+  </main>
+
+  <!-- Premium Footer -->
+  <footer>
+    <p>© 2026 The Housewarming at 14220 W North Oak Blvd</p>
+    <p>New Berlin, WI 53151</p>
+    <div>
+      <button class="footer-host-link" id="hostAccessBtn" aria-label="Access Host Panel">
+        <svg viewBox="0 0 24 24">
+          <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+        </svg>
+        Host Dashboard
+      </button>
+    </div>
+  </footer>
+
+  <!-- Host Dashboard Drawer panel -->
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="host-drawer" id="hostDrawer">
+    <div class="host-drawer-header">
+      <h3 class="serif-font" style="font-size: 1.4rem; color: var(--gold-primary);">Guest RSVP Log</h3>
+      <button class="host-drawer-close" id="hostDrawerCloseBtn" aria-label="Close Host Dashboard">
+        <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+    </div>
+    
+    <div class="host-rsvp-table-container">
+      <table class="host-rsvp-table" id="hostTable">
+        <thead>
+          <tr>
+            <th>Guest Name</th>
+            <th>Attending</th>
+            <th>Guests</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody id="hostTableBody">
+          <!-- Rows injected dynamically -->
+        </tbody>
+      </table>
+      <div id="hostTableEmptyState" class="host-empty-state">No RSVPs recorded yet.</div>
+    </div>
+
+    <div class="host-actions">
+      <button class="btn-secondary" onclick="exportRSVPsCSV()">Export CSV</button>
+      <button class="btn-secondary" onclick="clearRSVPs()" style="border-color: rgba(231, 76, 60, 0.4); color: #e74c3c;">Reset Log</button>
+    </div>
+  </div>
+
+  <script>
+    // -------------------------------------------------------------
+    // Data & Room Configuration
+    // -------------------------------------------------------------
+    const rooms = [
+      {
+        title: "Grand Front Facade",
+        desc: "A stunning 2-story classic brick facade set on a mature 0.49-acre wooded lot in New Berlin's exclusive North Oak Estates.",
+        img: "assets/house_images/ax.jpg"
+      },
+      {
+        title: "Gourmet Chef's Kitchen",
+        desc: "Equipped with custom birch cabinetry, high-end Thermador appliances, a center island, and a circular breakfast bar.",
+        img: "assets/house_images/bx.jpg"
+      },
+      {
+        title: "Sunlit Family Room",
+        desc: "A bright, open living space with hardwood floors and high ceilings, ideal for reception drinks and mingling.",
+        img: "assets/house_images/ex.jpg"
+      },
+      {
+        title: "Executive Study & Wet Bar",
+        desc: "A luxurious wood-paneled study featuring a wet bar and double doors leading to the scenic grounds.",
+        img: "assets/house_images/lx.jpg"
+      },
+      {
+        title: "Vaulted Primary Suite",
+        desc: "A serene master retreat with high vaulted ceilings, large arched windows, and a walk-in tiled shower.",
+        img: "assets/house_images/wx.jpg"
+      },
+      {
+        title: "Finished Lower Level",
+        desc: "A massive finished lower level featuring a full second living area, dining room, and custom finishes.",
+        img: "assets/house_images/zx.jpg"
+      },
+      {
+        title: "Formal Dining Room",
+        desc: "An elegant dining space adjacent to the kitchen, perfect for celebratory dinners and formal gatherings.",
+        img: "assets/house_images/ix.jpg"
+      },
+      {
+        title: "Wooded Grounds & Lawn",
+        desc: "A sprawling green lawn and long driveway framed by mature trees, creating a secluded luxury retreat.",
+        img: "assets/house_images/36.jpg"
+      }
+    ];
+
+    // -------------------------------------------------------------
+    // Carousel State & Implementation
+    // -------------------------------------------------------------
+    const spinner = document.getElementById('carouselSpinner');
+    const roomTitle = document.getElementById('roomTitle');
+    const roomDesc = document.getElementById('roomDesc');
+    const roomInfoCard = document.getElementById('roomInfoCard');
+    
+    let activeIndex = 0;
+    let cardElements = [];
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
+    let currentYAngle = 0;
+    let baseAngle = 0;
+    const angleIncrement = 360 / rooms.length;
+
+    // Create Cards Programmatically to align their 3D rotations perfectly
+    function setupCarousel() {
+      // Radius of 3D cylinder
+      const isMobile = window.innerWidth < 480;
+      const radiusZ = isMobile ? 220 : 300; // TranslateZ based on device width
+
+      rooms.forEach((room, idx) => {
+        const card = document.createElement('div');
+        card.className = `carousel-card ${idx === 0 ? 'active' : ''}`;
+        
+        // Calculate 3D rotation angles
+        const yAngle = idx * angleIncrement;
+        card.style.transform = `rotateY(${yAngle}deg) translateZ(${radiusZ}px)`;
+        
+        const img = document.createElement('img');
+        img.src = room.img;
+        img.alt = room.title;
+        img.loading = "lazy";
+        
+        card.appendChild(img);
+        spinner.appendChild(card);
+        cardElements.push(card);
+
+        // Click on a card to rotate it directly to the front
+        card.addEventListener('click', () => {
+          if (!isDragging) {
+            rotateToCard(idx);
+          }
+        });
+      });
+
+      updateRoomInfo(0);
+    }
+
+    // Move to specific card index
+    function rotateToCard(targetIdx) {
+      // Find shortest path angular distance
+      let currentIdx = Math.round(-currentYAngle / angleIncrement) % rooms.length;
+      if (currentIdx < 0) currentIdx += rooms.length;
+      
+      let diff = targetIdx - currentIdx;
+      if (diff > rooms.length / 2) diff -= rooms.length;
+      if (diff < -rooms.length / 2) diff += rooms.length;
+      
+      activeIndex = targetIdx;
+      currentYAngle = currentYAngle - (diff * angleIncrement);
+      applyRotation();
+    }
+
+    function applyRotation() {
+      spinner.style.transform = `rotateY(${currentYAngle}deg)`;
+      
+      // Update active classes on cards
+      let actualIndex = Math.round(-currentYAngle / angleIncrement) % rooms.length;
+      if (actualIndex < 0) actualIndex += rooms.length;
+      
+      cardElements.forEach((card, idx) => {
+        if (idx === actualIndex) {
+          card.classList.add('active');
+        } else {
+          card.classList.remove('active');
+        }
+      });
+
+      if (actualIndex !== activeIndex) {
+        activeIndex = actualIndex;
+        // Fade details in/out for smooth luxury transition
+        roomInfoCard.classList.add('fade-out');
+        setTimeout(() => {
+          updateRoomInfo(activeIndex);
+          roomInfoCard.classList.remove('fade-out');
+        }, 300);
+      }
+    }
+
+    function updateRoomInfo(idx) {
+      roomTitle.innerText = rooms[idx].title;
+      roomDesc.innerText = rooms[idx].desc;
+    }
+
+    // Arrow Controls Click Handlers
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentYAngle += angleIncrement;
+      applyRotation();
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentYAngle -= angleIncrement;
+      applyRotation();
+    });
+
+    // Touch Swipe Interactions
+    const container = document.getElementById('carouselContainer');
+
+    container.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      baseAngle = currentYAngle;
+      spinner.style.transition = 'none'; // Lock transition during drag
+    });
+
+    container.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      currentX = e.touches[0].clientX;
+      const deltaX = currentX - startX;
+      
+      // Convert pixel drag to angular rotation (friction coefficient 0.25)
+      const rotationDelta = deltaX * 0.25;
+      currentYAngle = baseAngle + rotationDelta;
+      spinner.style.transform = `rotateY(${currentYAngle}deg)`;
+    });
+
+    container.addEventListener('touchend', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      
+      // Re-enable smooth transition easing
+      spinner.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+      
+      // Snap to nearest card increment
+      const snapAngle = Math.round(currentYAngle / angleIncrement) * angleIncrement;
+      currentYAngle = snapAngle;
+      applyRotation();
+    });
+
+    // Mouse Drag Interactions (Desktop Simulation testing)
+    container.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      baseAngle = currentYAngle;
+      spinner.style.transition = 'none';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      currentX = e.clientX;
+      const deltaX = currentX - startX;
+      const rotationDelta = deltaX * 0.25;
+      currentYAngle = baseAngle + rotationDelta;
+      spinner.style.transform = `rotateY(${currentYAngle}deg)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      spinner.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+      const snapAngle = Math.round(currentYAngle / angleIncrement) * angleIncrement;
+      currentYAngle = snapAngle;
+      applyRotation();
+    });
+
+    // Auto-rotation (Spins slowly when idle)
+    let autoRotateInterval;
+    function startAutoRotation() {
+      autoRotateInterval = setInterval(() => {
+        if (!isDragging) {
+          currentYAngle -= angleIncrement;
+          applyRotation();
+        }
+      }, 7000); // Gentle 7-second rotate intervals
+    }
+
+    function stopAutoRotation() {
+      clearInterval(autoRotateInterval);
+    }
+
+    container.addEventListener('mouseenter', stopAutoRotation);
+    container.addEventListener('mouseleave', startAutoRotation);
+    container.addEventListener('touchstart', stopAutoRotation);
+    container.addEventListener('touchend', startAutoRotation);
+
+    // -------------------------------------------------------------
+    // Audio Player Toggle Controls
+    // -------------------------------------------------------------
+    const bgAudio = document.getElementById('bg-audio');
+    const audioToggle = document.getElementById('audioToggle');
+
+    audioToggle.addEventListener('click', () => {
+      if (bgAudio.paused) {
+        bgAudio.play()
+          .then(() => {
+            audioToggle.classList.add('playing');
+          })
+          .catch(err => {
+            console.error("Audio playback blocked or failed:", err);
+          });
+      } else {
+        bgAudio.pause();
+        audioToggle.classList.remove('playing');
+      }
+    });
+
+    // Gentle play-on-first-interaction to bypass autoplay blocks
+    window.addEventListener('click', () => {
+      if (bgAudio.paused && !audioToggle.classList.contains('playing') && !localStorage.getItem('audio_declined')) {
+        // We attempt to play, but don't force it if blocked
+        bgAudio.play()
+          .then(() => {
+            audioToggle.classList.add('playing');
+          })
+          .catch(() => {
+            // Autoplay blocked, no action needed, user can tap note manually
+          });
+      }
+    }, { once: true });
+
+    // -------------------------------------------------------------
+    // RSVP Submission & Flashing Animations
+    // -------------------------------------------------------------
+    const attendingYes = document.getElementById('attendingYes');
+    const attendingNo = document.getElementById('attendingNo');
+    const guestSelectContainer = document.getElementById('guestSelectContainer');
+
+    // Dynamic guest dropdown display
+    attendingYes.addEventListener('change', () => {
+      guestSelectContainer.style.display = 'flex';
+    });
+    attendingNo.addEventListener('change', () => {
+      guestSelectContainer.style.display = 'none';
+    });
+
+    function handleRSVPSubmit(event) {
+      event.preventDefault();
+      
+      const guestName = document.getElementById('guestName').value;
+      const guestEmail = document.getElementById('guestEmail').value;
+      const attending = document.querySelector('input[name="attending"]:checked').value;
+      const guestCount = attending === 'yes' ? document.getElementById('guestCount').value : 0;
+      const dietary = document.getElementById('dietary').value;
+      const hostNote = document.getElementById('hostNote').value;
+
+      const rsvpData = {
+        name: guestName,
+        email: guestEmail,
+        attending: attending,
+        guestCount: guestCount,
+        dietary: dietary,
+        note: hostNote,
+        timestamp: new Date().toISOString()
+      };
+
+      // Save RSVP to LocalStorage
+      let list = JSON.parse(localStorage.getItem('rsvps')) || [];
+      list.push(rsvpData);
+      localStorage.setItem('rsvps', JSON.stringify(list));
+
+      // Trigger card flip and envelope seal animation
+      const rsvpInner = document.getElementById('rsvpCardInner');
+      const waxSeal = document.getElementById('waxSeal');
+      const successText = document.getElementById('successText');
+
+      // Update success message text dynamically
+      if (attending === 'yes') {
+        successText.innerText = `Thank you, ${guestName.split(' ')[0]}. Your reservation for ${guestCount} guest(s) is confirmed. We look forward to seeing you.`;
+      } else {
+        successText.innerText = `Thank you, ${guestName.split(' ')[0]}. We have noted your decline, and you will be missed at our housewarming celebration.`;
+      }
+
+      // Flip card to back
+      rsvpInner.classList.add('flipped');
+      
+      // Stamp wax seal down with timing delay
+      setTimeout(() => {
+        waxSeal.classList.add('stamp');
+        // Gentle device vibration for premium haptic simulation (if supported)
+        if ('vibrate' in navigator) {
+          navigator.vibrate(40);
+        }
+      }, 800);
+    }
+
+    // -------------------------------------------------------------
+    // Host Dashboard Panels (Simulated Database access)
+    // -------------------------------------------------------------
+    const hostAccessBtn = document.getElementById('hostAccessBtn');
+    const hostDrawer = document.getElementById('hostDrawer');
+    const hostDrawerCloseBtn = document.getElementById('hostDrawerCloseBtn');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const tableBody = document.getElementById('hostTableBody');
+    const emptyState = document.getElementById('hostTableEmptyState');
+
+    hostAccessBtn.addEventListener('click', () => {
+      const pin = prompt("Enter Host Dashboard Pin Code:");
+      if (pin === "14220") {
+        openHostDashboard();
+      } else if (pin !== null) {
+        alert("Access Denied: Incorrect PIN.");
+      }
+    });
+
+    hostDrawerCloseBtn.addEventListener('click', closeHostDashboard);
+    modalBackdrop.addEventListener('click', closeHostDashboard);
+
+    function openHostDashboard() {
+      // Fetch data
+      const list = JSON.parse(localStorage.getItem('rsvps')) || [];
+      tableBody.innerHTML = '';
+      
+      if (list.length === 0) {
+        emptyState.style.display = 'block';
+      } else {
+        emptyState.style.display = 'none';
+        list.forEach(item => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td><strong>${item.name}</strong><br><span style="color:var(--text-secondary); font-size:0.65rem;">${item.email}</span></td>
+            <td><span class="badge-status ${item.attending === 'yes' ? 'badge-accept' : 'badge-decline'}">${item.attending === 'yes' ? 'Accept' : 'Decline'}</span></td>
+            <td style="text-align:center;">${item.guestCount}</td>
+            <td><span style="font-size:0.65rem; color:var(--text-secondary);">${item.note || '-'}</span></td>
+          `;
+          tableBody.appendChild(row);
+        });
+      }
+
+      hostDrawer.classList.add('open');
+      modalBackdrop.classList.add('active');
+    }
+
+    function closeHostDashboard() {
+      hostDrawer.classList.remove('open');
+      modalBackdrop.classList.remove('active');
+    }
+
+    function exportRSVPsCSV() {
+      const list = JSON.parse(localStorage.getItem('rsvps')) || [];
+      if (list.length === 0) {
+        alert("No responses available to export.");
+        return;
+      }
+
+      let csvContent = "data:text/csv;charset=utf-8,Name,Email,Attending,Guests,Dietary,Note,DateSubmitted\n";
+      list.forEach(item => {
+        const cleanName = (item.name || '').replace(/"/g, '""');
+        const cleanEmail = (item.email || '').replace(/"/g, '""');
+        const cleanNote = (item.note || '').replace(/"/g, '""');
+        const cleanDiet = (item.dietary || '').replace(/"/g, '""');
+        csvContent += `"${cleanName}","${cleanEmail}","${item.attending}","${item.guestCount}","${cleanDiet}","${cleanNote}","${item.timestamp}"\n`;
+      });
+
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "rsvps_14220_north_oak.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function clearRSVPs() {
+      if (confirm("Are you sure you want to permanently clear the guest list database? This action cannot be undone.")) {
+        localStorage.removeItem('rsvps');
+        openHostDashboard();
+      }
+    }
+
+    // -------------------------------------------------------------
+    // On-Init Setup
+    // -------------------------------------------------------------
+    window.addEventListener('DOMContentLoaded', () => {
+      setupCarousel();
+      startAutoRotation();
+    });
+  </script>
+</body>
+</html>
