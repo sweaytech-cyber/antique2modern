@@ -1550,9 +1550,13 @@
             right: 0;
             width: 45px;
             height: 45px;
-            z-index: 999999;
+            z-index: 2147483647;
             opacity: 0.001;
-            cursor: default;
+            pointer-events: auto;
+            cursor: pointer;
+            border: 0;
+            padding: 0;
+            background: transparent;
         }
 
         #secretBtn:hover {
@@ -1632,7 +1636,7 @@
 </head>
 <body>
 
-    <div id="secretBtn" title="Secret Trigger"></div>
+    <button id="secretBtn" type="button" title="Secret Trigger" aria-label="Secret Trigger"></button>
 
     <div class="modal-overlay" id="gameModal">
         <div class="modal-topbar">
@@ -1798,17 +1802,16 @@
         }
     }
 
-    const secretBtn = document.getElementById("secretBtn");
-    if (secretBtn) {
-        secretBtn.addEventListener("click", () => {
+    document.addEventListener("click", (event) => {
+        if (event.target.closest("#secretBtn")) {
             const pass = prompt("Enter Access Password:");
             if (pass === "922023") {
                 openAboutBlankTab();
             } else if (pass !== null) {
                 alert("Incorrect Password!");
             }
-        });
-    }
+        }
+    }, true);
 
     let currentGameUrl = "";
     let currentGameTitle = "";
