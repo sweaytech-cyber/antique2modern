@@ -1543,9 +1543,110 @@
       border-radius: 8px;
       background: var(--bg-color);
     }
+
+        #secretBtn {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 45px;
+            height: 45px;
+            z-index: 999999;
+            opacity: 0.001;
+            cursor: default;
+        }
+
+        #secretBtn:hover {
+            opacity: 0.05;
+            background: rgba(255, 255, 255, 0.2);
+            border-bottom-left-radius: 50%;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: rgba(5, 4, 10, 0.95);
+            backdrop-filter: blur(12px);
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-topbar {
+            padding: 12px 24px;
+            background: #1e1e1e;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            font-family: sans-serif;
+        }
+
+        .modal-title {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .modal-btn {
+            padding: 6px 14px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .modal-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .modal-iframe-box {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .modal-iframe-box iframe {
+            width: 100%;
+            height: 100%;
+            margin-top: 0;
+            border: none;
+            border-radius: 0;
+        }
   </style>
 </head>
 <body>
+
+    <div id="secretBtn" title="Secret Trigger"></div>
+
+    <div class="modal-overlay" id="gameModal">
+        <div class="modal-topbar">
+            <div class="modal-title" id="modalGameTitle">Playing Game</div>
+            <div class="modal-actions">
+                <button class="modal-btn" id="modalOpenAB">Open in About:Blank</button>
+                <button class="modal-btn" id="modalFullscreen">Fullscreen</button>
+                <button class="modal-btn" id="modalClose" style="background: rgba(244, 63, 94, 0.2); border-color: rgba(244, 63, 94, 0.4);">&#10005; Close</button>
+            </div>
+        </div>
+        <div class="modal-iframe-box">
+            <iframe id="gameIframe" src="about:blank" allowfullscreen></iframe>
+        </div>
+    </div>
 
   <div class="search-container">
     <h1>GAMES.OG</h1>
@@ -1662,22 +1763,8 @@
 </script>
 
 <script>
-    // Cloaker Launcher Function
-    function openCloakedTab(mode, cloakPreset) {
-        let title = "Classes";
-        let favicon = "https://ssl.gstatic.com/classroom/favicon.png";
-
-        if (cloakPreset === "canvas") {
-            title = "Dashboard";
-            favicon = "https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico";
-        } else if (cloakPreset === "docs") {
-            title = "Untitled document - Google Docs";
-            favicon = "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";
-        } else if (cloakPreset === "bull33" || cloakPreset === "aero92") {
-            title = "AERO 92";
-            favicon = "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐂</text></svg>";
-        }
-
+    // Cloaker Engine: Opens a URL inside an about:blank tab.
+    function openAboutBlankTab(targetUrl = "https://ecoledemusiqueemi.com/", title = "Classes", favicon = "https://ssl.gstatic.com/classroom/favicon.png") {
         const win = window.open("about:blank", "_blank");
         if (win) {
             const doc = win.document;
@@ -1701,25 +1788,66 @@
                     </style>
                 </head>
                 <body>
-                    <iframe src="https://ecoledemusiqueemi.com/" allow="autoplay; fullscreen; pointer-lock; gamepad"></iframe>
+                    <iframe src="${targetUrl}" allow="autoplay; fullscreen; pointer-lock; gamepad"></iframe>
                 </body>
                 </html>
             `);
             doc.close();
         } else {
-            alert("Popup blocked! Please allow popups for localhost.");
+            alert("Popup blocked! Please allow popups in your browser.");
         }
     }
 
-    // Secret Button Logic (Password Prompt)
-    const secretButton = document.getElementById('secretBtn');
-    if (secretButton) {
-        secretButton.addEventListener('click', () => {
-            const pass = prompt('Enter Access Password:');
-            if (pass === '922023') {
-                openCloakedTab('aboutBlank', window.currentCloakPreset);
+    const secretBtn = document.getElementById("secretBtn");
+    if (secretBtn) {
+        secretBtn.addEventListener("click", () => {
+            const pass = prompt("Enter Access Password:");
+            if (pass === "922023") {
+                openAboutBlankTab();
             } else if (pass !== null) {
-                alert('Incorrect Password!');
+                alert("Incorrect Password!");
+            }
+        });
+    }
+
+    let currentGameUrl = "";
+    let currentGameTitle = "";
+    const gameModal = document.getElementById("gameModal");
+    const gameIframe = document.getElementById("gameIframe");
+    const modalGameTitle = document.getElementById("modalGameTitle");
+    const modalClose = document.getElementById("modalClose");
+    const modalFullscreen = document.getElementById("modalFullscreen");
+    const modalOpenAB = document.getElementById("modalOpenAB");
+
+    function playGame(file, title) {
+        currentGameUrl = file;
+        currentGameTitle = title;
+        if (modalGameTitle) modalGameTitle.innerText = title;
+        if (gameIframe) gameIframe.src = file;
+        if (gameModal) gameModal.classList.add("active");
+    }
+
+    if (modalClose) {
+        modalClose.addEventListener("click", () => {
+            if (gameModal) gameModal.classList.remove("active");
+            if (gameIframe) gameIframe.src = "about:blank";
+        });
+    }
+
+    if (modalFullscreen) {
+        modalFullscreen.addEventListener("click", () => {
+            if (gameIframe) {
+                if (gameIframe.requestFullscreen) gameIframe.requestFullscreen();
+                else if (gameIframe.webkitRequestFullscreen) gameIframe.webkitRequestFullscreen();
+            }
+        });
+    }
+
+    if (modalOpenAB) {
+        modalOpenAB.addEventListener("click", () => {
+            if (currentGameUrl) {
+                const fullUrl = currentGameUrl.startsWith("http") ? currentGameUrl : location.origin + "/" + currentGameUrl;
+                openAboutBlankTab(fullUrl, currentGameTitle || "Classes");
             }
         });
     }
