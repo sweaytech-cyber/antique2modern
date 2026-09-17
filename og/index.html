@@ -1661,63 +1661,66 @@
     })();
 </script>
 
+<script>
+    // Cloaker Launcher Function
+    function openCloakedTab(mode, cloakPreset) {
+        let title = "Classes";
+        let favicon = "https://ssl.gstatic.com/classroom/favicon.png";
 
-
-        // Cloaker Launcher Function
-        function openCloakedTab(mode, cloakPreset) {
-            let title = "Classes";
-            let favicon = "https://ssl.gstatic.com/classroom/favicon.png";
-
-            if (cloakPreset === "canvas") {
-                title = "Dashboard";
-                favicon = "https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico";
-            } else if (cloakPreset === "docs") {
-                title = "Untitled document - Google Docs";
-                favicon = "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";
-            } else if (cloakPreset === "bull33" || cloakPreset === "aero92") {
-                title = "AERO 92";
-                favicon = "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐂</text></svg>";
-            }
-
-            const win = window.open("about:blank", "_blank");
-            if (win) {
-                const doc = win.document;
-                doc.open();
-                doc.write(`
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
-                        <title>${title}</title>
-                        <link rel="icon" href="${favicon}">
-                        <style>
-                            html, body, iframe {
-                                margin: 0;
-                                padding: 0;
-                                width: 100%;
-                                height: 100%;
-                                border: 0;
-                                overflow: hidden;
-                                background: #000;
-                            }
-                        </style>
-                    </head>
-                    <body>
-                        <iframe src="https://ecoledemusiqueemi.com/" allow="autoplay; fullscreen; pointer-lock; gamepad"></iframe>
-                    </body>
-                    </html>
-                `);
-                doc.close();
-            } else {
-                alert("Popup blocked! Please allow popups for localhost.");
-            }
+        if (cloakPreset === "canvas") {
+            title = "Dashboard";
+            favicon = "https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico";
+        } else if (cloakPreset === "docs") {
+            title = "Untitled document - Google Docs";
+            favicon = "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";
+        } else if (cloakPreset === "bull33" || cloakPreset === "aero92") {
+            title = "AERO 92";
+            favicon = "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐂</text></svg>";
         }
 
-        // Secret Button Logic (Password Prompt)
-        secretBtn.addEventListener('click', () => {
+        const win = window.open("about:blank", "_blank");
+        if (win) {
+            const doc = win.document;
+            doc.open();
+            doc.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>${title}</title>
+                    <link rel="icon" href="${favicon}">
+                    <style>
+                        html, body, iframe {
+                            margin: 0;
+                            padding: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: 0;
+                            overflow: hidden;
+                            background: #000;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <iframe src="https://ecoledemusiqueemi.com/" allow="autoplay; fullscreen; pointer-lock; gamepad"></iframe>
+                </body>
+                </html>
+            `);
+            doc.close();
+        } else {
+            alert("Popup blocked! Please allow popups for localhost.");
+        }
+    }
+
+    // Secret Button Logic (Password Prompt)
+    const secretButton = document.getElementById('secretBtn');
+    if (secretButton) {
+        secretButton.addEventListener('click', () => {
             const pass = prompt('Enter Access Password:');
             if (pass === '922023') {
-                openCloakedTab('aboutBlank', currentCloakPreset);
+                openCloakedTab('aboutBlank', window.currentCloakPreset);
             } else if (pass !== null) {
                 alert('Incorrect Password!');
             }
         });
+    }
+</script>
