@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eaglercraft | OG SMP</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    #game_frame {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Absolute UI kill */
+    button,
+    .serverListButton,
+    .addServer,
+    .editServer,
+    .deleteServer {
+      display: none !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/gh/bubbls/loltheygotbannedfromjsdelivr@38f40924ae70b843f3d4d0a5dc3d6ba13ca3a461/classes.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/bubbls/loltheygotbannedfromjsdelivr@38f40924ae70b843f3d4d0a5dc3d6ba13ca3a461/fix-webm-duration.js"></script>
+
+  <script>
+    const LOCKED_SERVERS = [
+      {
+        addr: "wss://ogsmp.eagler.host",
+        name: "OG-SMP | OFFICIAL SERVER"
+      }
+    ];
+
+    // HARD OVERRIDE STORAGE
+    const lockStorage = () => {
+      const data = JSON.stringify(LOCKED_SERVERS);
+
+      localStorage.setItem("eaglercraft.servers", data);
+      localStorage.setItem("servers", data);
+
+      Object.defineProperty(localStorage, "setItem", {
+        value: () => {},
+        writable: false
+      });
+    };
+
+    // KILL ALL SERVER EDIT FUNCTIONS
+    const killServerAPIs = () => {
+      const blocked = () => {};
+
+      [
+        "openAddServer",
+        "openEditServer",
+        "deleteServer",
+        "addServer",
+        "editServer"
+      ].forEach(fn => {
+        Object.defineProperty(window, fn, {
+          value: blocked,
+          writable: false
+        });
+      });
+    };
+
+    // NUCLEAR UI CLEANER
+    const observer = new MutationObserver(() => {
+      document.querySelectorAll("button").forEach(b => b.remove());
+    });
+
+    window.addEventListener("load", () => {
+      window.eaglercraftXOpts = {
+        container: "game_frame",
+        assetsURI: "https://cdn.jsdelivr.net/gh/bubbls/loltheygotbannedfromjsdelivr@38f40924ae70b843f3d4d0a5dc3d6ba13ca3a461/assets.epk",
+        localesURI: "lang/",
+        servers: LOCKED_SERVERS,
+        allowCustomServers: false
+      };
+
+      lockStorage();
+      killServerAPIs();
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+
+      main();
+    });
+  </script>
+</head>
+
+<body>
+  <div id="game_frame"></div>
+  <div class="_eaglercraftX_wrapper_element"></div>
+  <div id="_eaglercraftX_crashReason" style="display:none;"></div>
+  <div id="_eaglercraftX_crashUserAgent" style="display:none;"></div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google.com</title>
+    
+    <!-- External styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amazing6ox/okimfine@main/TemplateData/style.css" />
+    
+    <!-- Inline styles -->
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        #gameContainer {
+            width: 100vw;
+            height: 100vh;
+            background: black;
+        }
+        #button {
+            display: none;
+        }
+        .imgb_vis {
+            animation: imgb-animation 7s linear;
+        }
+        @keyframes imgb-animation {
+            10% { transform: translateX(0); }
+            20% { transform: translateX(100px); }
+            90% { transform: translateX(100px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+    
+    <!-- Unity scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/amazing6ox/okimfine@main/TemplateData/UnityProgress.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/amazing6ox/okimfine@main/Build/UnityLoader.js"></script>
+</head>
+<body>
+    <div id="gameContainer"></div>
+    
+    <script>
+        // Instantiate the Unity game
+        var gameInstance = UnityLoader.instantiate(
+            "gameContainer",
+            "https://cdn.jsdelivr.net/gh/amazing6ox/okimfine@main/Build/death_run_wasm_v1.json",
+            {
+                onProgress: UnityProgress,
+                Module: {
+                    onRuntimeInitialized: function () {
+                        UnityProgress(gameInstance, "complete");
+                    }
+                }
+            }
+        );
+    </script>
+
+    <!-- Additional API script -->
+    <script src="https://cdn.jsdelivr.net/gh/amazing6ox/okimfine@main/api.js"></script>
+</body>
+</html>

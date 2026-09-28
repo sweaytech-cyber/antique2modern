@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OJAS GAMBHEERA MOVIES</title>
+  <base target="_blank">
+
+  <!-- Caveat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #ff0000;
+      font-family: 'Caveat', cursive;
+      overflow-x: hidden;
+    }
+
+    /* Top Nav */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #111;
+      gap: 20px;
+    }
+
+    .top-nav .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff0000;
+      letter-spacing: 2px;
+    }
+
+    .top-nav .links a {
+      margin-right: 20px;
+      color: #ff0000;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border: 2px solid #ff0000;
+      border-radius: 8px;
+      transition: 0.3s all ease;
+    }
+
+    .top-nav .links a:hover {
+      box-shadow: 0 0 15px #ff0000;
+      color: #fff;
+      border-color: #ff0000;
+    }
+
+    .top-nav .search-box {
+      margin-left: auto;
+    }
+
+    .top-nav .search-box input {
+      padding: 6px 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 5px;
+    }
+
+    .top-nav .search-box button {
+      padding: 6px 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      background-color: #ff0000;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Movie Grid */
+    #movie-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      justify-items: center;
+    }
+
+    .movie-card {
+      text-align: center;
+    }
+
+    .movie-card a {
+      display: block;
+      width: 110px;
+      height: 160px;
+    }
+
+    .movie-card img {
+      width: 110px;
+      height: 160px;
+      border-radius: 10px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .movie-card img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #ff0000;
+    }
+
+    .movie-title {
+      color: #ff0000;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Nav -->
+  <div class="top-nav">
+    <div class="logo">OJAS GAMBHEERA MOVIES</div>
+    <div class="links" style="margin-left:30px;">
+      <a href="index.html" target="_self">Games</a>
+      <a href="movies.html" target="_self">Movies</a>
+      <a href="chatbot.html" target="_self">Chatbot</a>
+    </div>
+    <div class="search-box">
+      <input type="text" id="movieSearch" placeholder="Search for movies...">
+      <button onclick="searchMovies()">Search</button>
+    </div>
+  </div>
+
+  <div id="movie-container">
+
+    <!-- Movie Cards -->
+    <div class="movie-card">
+      <a href="https://drive.google.com/drive/folders/1y7t_DUetRveLBX2372YREdH4Zys6AvN2">
+        <img src="https://via.placeholder.com/110x160.png?text=Naruto+Manga" alt="Naruto Manga">
+      </a>
+      <div class="movie-title">Naruto Manga</div>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://drive.google.com/drive/folders/1xewFLZCNhjF5DtQDM5VxDic7ClprMjal">
+        <img src="https://via.placeholder.com/110x160.png?text=Invincible" alt="Invincible">
+      </a>
+      <div class="movie-title">Invincible</div>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://drive.google.com/file/d/1Te2pRMPEu19R1ytg3psW46islpyprvkW/preview">
+        <img src="https://via.placeholder.com/110x160.png?text=Minecraft+Movie" alt="Minecraft Movie">
+      </a>
+      <div class="movie-title">Minecraft Movie</div>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://drive.google.com/file/d/1mIHsA4xZt4KRWnzJr6CPNtuOXDhr9NH/preview">
+        <img src="https://via.placeholder.com/110x160.png?text=Spider-Man+Into+The+Spider-Verse" alt="Spider-Man Into The Spider-Verse">
+      </a>
+      <div class="movie-title">Spider-Man Into The Spider-Verse</div>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://drive.google.com/file/d/1sy0E41GNhba6yPMdC62cvjaTl_VtjJaz/preview">
+        <img src="https://via.placeholder.com/110x160.png?text=Dog+Man" alt="Dog Man Movie">
+      </a>
+      <div class="movie-title">Dog Man Movie</div>
+    </div>
+    
+    <div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B-APzLVMZBGCV0c3VjhEem9VWHM/preview?resourcekey=0-dAcdqTkWHhhGWmB58gO2JA">
+    <img src="https://via.placeholder.com/110x160.png?text=Jaws" alt="Jaws">
+  </a>
+  <div class="movie-title">Jaws</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1AstKQ5KLX94k7RFIlsu2St9um8sS_w_M/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Ant-Man+and+The+Wasp" alt="Ant-Man and The Wasp">
+  </a>
+  <div class="movie-title">Ant-Man and The Wasp</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0ByGZCW_Oqf3YNFdib1VqS3ppREU/preview?resourcekey=0-CvshWMvfH92y63m43dUrvw">
+    <img src="https://via.placeholder.com/110x160.png?text=We+Are+Still+Here" alt="We Are Still Here">
+  </a>
+  <div class="movie-title">We Are Still Here</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B7TEzdS9mvQ4NTk1d0h6T09uSnc/view?resourcekey=0-z-ltZWeTua2q0JH5so9g4w">
+    <img src="https://via.placeholder.com/110x160.png?text=Attack+on+Titan" alt="Attack on Titan">
+  </a>
+  <div class="movie-title">Attack on Titan</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1fWLc7dARUH-sggIpIxxlulaNZ9bYmUth/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Despicable+Me+1" alt="Despicable Me 1">
+  </a>
+  <div class="movie-title">Despicable Me 1</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1TFuVuAmPxz5h2IeSKAYc3z-SHaGbP2h8/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Good+Fellas" alt="Good Fellas">
+  </a>
+  <div class="movie-title">Good Fellas</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1HekOZRHvF71IuBlk8b8Ls8xs0FIFP2fn/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Hacksaw+Ridge" alt="Hacksaw Ridge">
+  </a>
+  <div class="movie-title">Hacksaw Ridge</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1GdMksUpH7ghCBF1j4sEmJU9hmZ3pPpkn/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Black+Panther" alt="Black Panther">
+  </a>
+  <div class="movie-title">Black Panther</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B9bClj7Xxd8_Ym1VMEdKMTBBU28/preview?resourcekey=0-t5VcHgdOEV2FUX6B8IkOWA">
+    <img src="https://via.placeholder.com/110x160.png?text=Fast+and+Furious" alt="The Fast and The Furious">
+  </a>
+  <div class="movie-title">The Fast and The Furious</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/u/0/d/1xaL53A12aSBzTsi1wwFfKTiJHxXsTcL2/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Despicable+Me+2" alt="Despicable Me 2">
+  </a>
+  <div class="movie-title">Despicable Me 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1x1n5I0VBqx0d-0U15_F7FKk_7-XWGF-T/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Daddy+Daycare" alt="Daddy Daycare">
+  </a>
+  <div class="movie-title">Daddy Daycare</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0BzwUxV-uoLDKWU4xM09LV1NsRUk/preview?resourcekey=0-RLAxqlBTvq6RPb3wrvgIXQ">
+    <img src="https://via.placeholder.com/110x160.png?text=Bad+Boys" alt="Bad Boys">
+  </a>
+  <div class="movie-title">Bad Boys</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1_qJqk2Ss1f45puz3xGQcdD1NxM3ipupj/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Ant-Man" alt="Ant-Man">
+  </a>
+  <div class="movie-title">Ant-Man</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B5x37PXPwtwiaUtsTWtGZmxMbFE/preview?resourcekey=0-7Py1XMWuO1WJHNqGmbb_cw">
+    <img src="https://via.placeholder.com/110x160.png?text=Ride+Along" alt="Ride Along">
+  </a>
+  <div class="movie-title">Ride Along</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/1RUZj9WQzdEBYYLeKhD_Y9GRcZbNZMSEy?usp=sharing">
+    <img src="https://via.placeholder.com/110x160.png?text=Everybody+Hates+Chris" alt="Everybody Hates Chris">
+  </a>
+  <div class="movie-title">Everybody Hates Chris</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1cfOb4RnxLg04RPR7T7exgPqiZC15s_0q/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Kung+Fu+Panda" alt="Kung Fu Panda">
+  </a>
+  <div class="movie-title">Kung Fu Panda</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0BxdacDAQkGT4QzBWSDBPanV4UVE/preview?resourcekey=0-8A4yN8wIxejSJXQIEWu3tQ">
+    <img src="https://via.placeholder.com/110x160.png?text=Percy+Jackson+Sea+of+Monsters" alt="Percy Jackson: Sea of Monsters">
+  </a>
+  <div class="movie-title">Percy Jackson: Sea of Monsters</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B1NibQe1vz3LVDFDVjk3VWtGUjA/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Bad+Boys+2" alt="Bad Boys 2">
+  </a>
+  <div class="movie-title">Bad Boys 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1HfyVEE2oFq1X8dHMWr5xJmMyHo79l7iG/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Scream+4" alt="Scream 4">
+  </a>
+  <div class="movie-title">Scream 4</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/u/1/d/0Bw77r9ybKERMcG1vREJQUnhyQVE/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Dukes+of+Hazzard" alt="The Dukes of Hazzard">
+  </a>
+  <div class="movie-title">The Dukes of Hazzard</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B4aPDxdbXvz7ZWgxUEhSVm50T0U/preview?resourcekey=0-6f8LbaCPmAn17TlDTSoxKw">
+    <img src="https://via.placeholder.com/110x160.png?text=Ghostbusters" alt="Ghostbusters">
+  </a>
+  <div class="movie-title">Ghostbusters</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B8hMCZDfMkRvcW9fSWV1aHZ3Vzg/preview?resourcekey=0-waVn8rxbIkeCjvxGxFBd6Q">
+    <img src="https://via.placeholder.com/110x160.png?text=Kung+Fu+Panda+2" alt="Kung Fu Panda 2">
+  </a>
+  <div class="movie-title">Kung Fu Panda 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1kdUJ_u1YZTv5SqCI47G4YibJf0TDhGUg/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Matrix" alt="The Matrix">
+  </a>
+  <div class="movie-title">The Matrix</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/1hidcOByg7VoKMjh03iuPSw2FOK8jGKde">
+    <img src="https://via.placeholder.com/110x160.png?text=Infinity+Train" alt="Infinity Train">
+  </a>
+  <div class="movie-title">Infinity Train</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1qn_05UyQoxfrYstZvOFa2s8SYu-JMxT1/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Halloween+2" alt="Halloween 2">
+  </a>
+  <div class="movie-title">Halloween 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B6-olief8MOSWV9ZV2toazR2bkE/preview?resourcekey=0-fEjohXGWF8ypArrt2tS7Hw">
+    <img src="https://via.placeholder.com/110x160.png?text=Red+Dragon" alt="Red Dragon">
+  </a>
+  <div class="movie-title">Red Dragon</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/1IY6qairkXpK2RXE0UVtqwm5ZjeiGYk3N">
+    <img src="https://via.placeholder.com/110x160.png?text=Breaking+Bad" alt="Breaking Bad">
+  </a>
+  <div class="movie-title">Breaking Bad</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/11zJofD5xdf-jkXTE0jzVgehctEQpyKmy/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Toy+Story" alt="Toy Story">
+  </a>
+  <div class="movie-title">Toy Story</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1yoKQ7l5DeXZuDsXyUkZ09fQWuUmUFkd4/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Alvin+and+The+Chipmunks+The+Squeakquel" alt="Alvin and The Chipmunks: The Squeakquel">
+  </a>
+  <div class="movie-title">Alvin and The Chipmunks: The Squeakquel</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1-yAWU4K837ZYVdAFLINAAFR09K_OMKqJ/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Donnie+Darko" alt="Donnie Darko">
+  </a>
+  <div class="movie-title">Donnie Darko</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/1ssFFWleiHIA6v-RAc9Fwd9GCeXa-tKQc">
+    <img src="https://via.placeholder.com/110x160.png?text=The+O.C.+S1" alt="The O.C. S1">
+  </a>
+  <div class="movie-title">The O.C. S1</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0ByPTAwmgiWp5T2hMbjJCUnJIdE0/preview?resourcekey=0-ZhWklDYYS-y6xiy4qgvMfw">
+    <img src="https://via.placeholder.com/110x160.png?text=Jarhead" alt="Jarhead">
+  </a>
+  <div class="movie-title">Jarhead</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1WKcmkcQ52UBsN8WcWUEnwasMOA_1J0VK/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Titanic" alt="Titanic">
+  </a>
+  <div class="movie-title">Titanic</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/126Cdq7Z8bBMLPNyVNmxIa9uNnmQhLR8l/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Toy+Story+2" alt="Toy Story 2">
+  </a>
+  <div class="movie-title">Toy Story 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1pCdLWoRD4ndoPU3FbZvCDX1TpoJWhlp6/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Alvin+and+The+Chipmunks+Chip+Wrecked" alt="Alvin and The Chipmunks: Chip Wrecked">
+  </a>
+  <div class="movie-title">Alvin and The Chipmunks: Chip Wrecked</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1UcRHoWc7OX7vqcjKtuG7ugTceBsHPf4/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Seven" alt="Seven">
+  </a>
+  <div class="movie-title">Seven</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/1acSZccT1QLnTzR-t779CjDxZth8b5p5l">
+    <img src="https://via.placeholder.com/110x160.png?text=The+O.C.+S2" alt="The O.C. S2">
+  </a>
+  <div class="movie-title">The O.C. S2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0BzLWluNZlHyzX2RlclhZQ0U2V1k/preview?resourcekey=0-FwUylbbeRdfJO2rxKa8F_Q">
+    <img src="https://via.placeholder.com/110x160.png?text=Karate+Kid" alt="Karate Kid">
+  </a>
+  <div class="movie-title">Karate Kid</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/12OyWGGokKPPKQLtjsLXB42q6acvLV7qt/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Toy+Story+3" alt="Toy Story 3">
+  </a>
+  <div class="movie-title">Toy Story 3</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B-GcyEAXTY-cX213M1BuUGIyQ0U/preview?resourcekey=0-QM7PG7ieei3PwEihPh4Edw">
+    <img src="https://via.placeholder.com/110x160.png?text=Percy+Jackson+The+Lightning+Thief" alt="Percy Jackson: The Lightning Thief">
+  </a>
+  <div class="movie-title">Percy Jackson: The Lightning Thief</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/15F_kmmvpDBlrf_KY6Ks_bFQnNm10qk2R/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Pulp+Fiction" alt="Pulp Fiction">
+  </a>
+  <div class="movie-title">Pulp Fiction</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/1S4CsGVsTH5mcG7SQYD_G2bJ7BK0ci0z8">
+    <img src="https://via.placeholder.com/110x160.png?text=The+O.C.+S3" alt="The O.C. S3">
+  </a>
+  <div class="movie-title">The O.C. S3</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1Cr4UA6m_ozjiauM9sOwK87sac5Xf1gYo/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Sharkboy+and+Lavagirl" alt="Sharkboy & Lavagirl">
+  </a>
+  <div class="movie-title">Sharkboy & Lavagirl</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1xMRDhscsmtcrECXXuOsqpAADTHJ0FxGS/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Garfield+The+Movie" alt="Garfield The Movie">
+  </a>
+  <div class="movie-title">Garfield The Movie</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1-3BhV5qghqkqn2-xvlawSEvFNLvejMpn/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Toy+Story+4" alt="Toy Story 4">
+  </a>
+  <div class="movie-title">Toy Story 4</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B-WdEPHInr8rU1AwN3YwR0lGZTg/preview?resourcekey=0--DqOWMjyK3y4r0udE6Nmfg">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Mechanic" alt="The Mechanic">
+  </a>
+  <div class="movie-title">The Mechanic</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1rF8JjTHLpH7UxAG_Ko7IZvLOdd7Edy2A/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Shining" alt="The Shining">
+  </a>
+  <div class="movie-title">The Shining</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/1nrzgWUu_4v4-7iJeodime8yhzHKuOQ-p">
+    <img src="https://via.placeholder.com/110x160.png?text=The+O.C.+S4" alt="The O.C. S4">
+  </a>
+  <div class="movie-title">The O.C. S4</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/u/1/d/0B6fv-OkwXRTzZ090UHlWcHY2dkk/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Diary+of+A+Wimpy+Kid+Dog+Days" alt="Diary of A Wimpy Kid: Dog Days">
+  </a>
+  <div class="movie-title">Diary of A Wimpy Kid: Dog Days</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/1LMTt7FupplMrBsKhivRqnGMh0sft1dNK">
+    <img src="https://via.placeholder.com/110x160.png?text=IPPO" alt="IPPO">
+  </a>
+  <div class="movie-title">IPPO</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/u/0/d/16nP21GFh_p9LNNW59oX2pMmTznKV43K4/view">
+    <img src="https://via.placeholder.com/110x160.png?text=Spider-Man+Homecoming" alt="Spider-Man: Homecoming">
+  </a>
+  <div class="movie-title">Spider-Man: Homecoming</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B9sQ0zbs-KjDNkN3eVhfQjFZODA/preview?resourcekey=0-Ko_IW3b-6AJMr1CdsqQYiw">
+    <img src="https://via.placeholder.com/110x160.png?text=Dumb+and+Dumber" alt="Dumb and Dumber">
+  </a>
+  <div class="movie-title">Dumb and Dumber</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1drXS4b8XjDqgQ6tIjbS7RCN1Yq8CjDLZ/view">
+    <img src="https://via.placeholder.com/110x160.png?text=Deadpool" alt="Deadpool">
+  </a>
+  <div class="movie-title">Deadpool</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B2ImhGIzHAjubXRDa3J6N1pWbDQ/preview?resourcekey=0-Bd3TCuoY7bpaPcbxE0-MjQ">
+    <img src="https://via.placeholder.com/110x160.png?text=Matilda" alt="Matilda">
+  </a>
+  <div class="movie-title">Matilda</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B9mSeqTCe8dqM3BxTVNxWmtnWDQ/preview?resourcekey=0-PCRwc5K39J9Ms2Cea6bMfA">
+    <img src="https://via.placeholder.com/110x160.png?text=Pirates+of+the+Caribbean+Dead+Man's+Chest" alt="Pirates of the Caribbean: Dead Man’s Chest">
+  </a>
+  <div class="movie-title">Pirates of the Caribbean: Dead Man’s Chest</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/u/0/d/1C9wYpItHEFo8nKOzYb1I_Q1EgUre04Jz/view">
+    <img src="https://via.placeholder.com/110x160.png?text=Avengers+Infinity+War" alt="Avengers: Infinity War">
+  </a>
+  <div class="movie-title">Avengers: Infinity War</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B8l-1IBp9hVsd0hzcGt1eE13SDQ/preview?resourcekey=0-e98SP81x-HB-vAHeI6YaGg">
+    <img src="https://via.placeholder.com/110x160.png?text=Batman+v+Superman" alt="Batman v Superman: Dawn of Justice">
+  </a>
+  <div class="movie-title">Batman v Superman: Dawn of Justice</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1EMTjbbbBCnF6SoQNLPQ_IoLwqdO9NcJV/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Super+Mario+Bros+Movie" alt="The Super Mario Bros Movie">
+  </a>
+  <div class="movie-title">The Super Mario Bros Movie</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B02hHeLq70bFakxqMzQxQWZCbVE/preview?resourcekey=0-RA81SvZ1w0IFZe1_6_fWHA">
+    <img src="https://via.placeholder.com/110x160.png?text=Ramona+and+Beezus" alt="Ramona and Beezus">
+  </a>
+  <div class="movie-title">Ramona and Beezus</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0BxzNManoO9tBdENqRXpxNFNsQjg/preview?resourcekey=0-FTLcPrnf9jumiAu0zjp9zw">
+    <img src="https://via.placeholder.com/110x160.png?text=Pirates+of+the+Caribbean+Stranger+Tides" alt="Pirates of the Caribbean: Stranger Tides">
+  </a>
+  <div class="movie-title">Pirates of the Caribbean: Stranger Tides</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/u/0/d/1UsxNtlBxGFp955GwEB-s8wYJCA6bXt7e/view">
+    <img src="https://via.placeholder.com/110x160.png?text=Avengers+Endgame" alt="Avengers: End Game">
+  </a>
+  <div class="movie-title">Avengers: End Game</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0BxQj8ME_yXtQN1NreXAxNFBmZEE/preview?resourcekey=0-kPPZ5qoMqAjNA3JNr9duGw">
+    <img src="https://via.placeholder.com/110x160.png?text=Die+Hard+2" alt="Die Hard 2">
+  </a>
+  <div class="movie-title">Die Hard 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B-uFeCO4yCFIZXNnLUg3cVdiU3M/preview?resourcekey=0-s1hwC6vvc_w-Q2CRrpP08g">
+    <img src="https://via.placeholder.com/110x160.png?text=Guardians+of+The+Galaxy+Part+2" alt="Guardians of The Galaxy Part 2">
+  </a>
+  <div class="movie-title">Guardians of The Galaxy Part 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/1CNzZv0ea8YmUfWklw_OuVd2g26eylHdi">
+    <img src="https://via.placeholder.com/110x160.png?text=Looking+For+Alaska" alt="Looking For Alaska">
+  </a>
+  <div class="movie-title">Looking For Alaska</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B_1RJ5X5ZOeESnNNeDNtNXR2d1k/preview?resourcekey=0-lGkguujy-UoibasOOMqZjA">
+    <img src="https://via.placeholder.com/110x160.png?text=Judy+Moody+Movie" alt="Judy Moody Movie">
+  </a>
+  <div class="movie-title">Judy Moody Movie</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1CLmyYYBJlvVHumaTCVyZvO3KYRmEKLEZ/view">
+    <img src="https://via.placeholder.com/110x160.png?text=Sonic+3" alt="Sonic 3">
+  </a>
+  <div class="movie-title">Sonic 3</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B85CS0yo_f2bNUdlZ0lTbWV6dWs/preview?resourcekey=0-foH1gVHluFkRyJcl-_iuRw">
+    <img src="https://via.placeholder.com/110x160.png?text=Tomb+Raider" alt="Tomb Raider">
+  </a>
+  <div class="movie-title">Tomb Raider</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B5X6-QPsPegbSkFyaktkdDZLMVE/preview?resourcekey=0-8dxXadC9CpeN-GVa666QQg">
+    <img src="https://via.placeholder.com/110x160.png?text=Boiler+Room" alt="Boiler Room">
+  </a>
+  <div class="movie-title">Boiler Room</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/u/1/folders/0BwkTUU_aAD4VT1NKTTNkY2hVZTQ?resourcekey=0-fxoUkArz7P8Yg8NjbDeGaA">
+    <img src="https://via.placeholder.com/110x160.png?text=Star+vs+The+Forces+of+Evil" alt="Star vs. The Forces of Evil">
+  </a>
+  <div class="movie-title">Star vs. The Forces of Evil</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1B9y-414Ub4pRFks4IP5MohK5uGQZZABw/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Scream" alt="Scream">
+  </a>
+  <div class="movie-title">Scream</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1A_nTgPKWRyT1eTcZ9BoPxYTQyG6d_ZEE/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Home+Alone" alt="Home Alone">
+  </a>
+  <div class="movie-title">Home Alone</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B3Ofxlf0CWbgV3VOSzdCX3NkR2M/preview?resourcekey=0-CkbW9YXANAMh4MgImEHhig">
+    <img src="https://via.placeholder.com/110x160.png?text=Terminator+3+Rise+of+The+Machines" alt="Terminator 3: Rise of The Machines">
+  </a>
+  <div class="movie-title">Terminator 3: Rise of The Machines</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/15UAJC_CmtiwxRdp-8wn89GoeEf7-EYam/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Thirteen" alt="Thirteen">
+  </a>
+  <div class="movie-title">Thirteen</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0Bwf1JfvX7l9SRkh3aVJaWEtBalE/preview?resourcekey=0-yh3G5Fk3Ke6bB07LlDx0NQ">
+    <img src="https://via.placeholder.com/110x160.png?text=How+High" alt="How High">
+  </a>
+  <div class="movie-title">How High</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/u/1/folders/0B2lfcnXrxDFsckJrN2dBeklnNlU?resourcekey=0-lnOqP5uI6zrqwP1d-D7IQA">
+    <img src="https://via.placeholder.com/110x160.png?text=Dan+Vs" alt="Dan Vs.">
+  </a>
+  <div class="movie-title">Dan Vs.</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1Pb1c8lzP0PnwTVcjNe4KDe1qiFkMW3Xo/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Requiem+For+A+Dream" alt="Requiem For A Dream">
+  </a>
+  <div class="movie-title">Requiem For A Dream</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1-4M0OT7lpvxc4BdoFp9rEcBiV6zXL_Gl/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Ratatouille" alt="Ratatouille">
+  </a>
+  <div class="movie-title">Ratatouille</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B93Yw95OzPW-Vkp1b0x1MndnT2M/preview?resourcekey=0-pLKCARbZTyldw9QwI9FHhg">
+    <img src="https://via.placeholder.com/110x160.png?text=High+School+Musical+2" alt="High School Musical 2">
+  </a>
+  <div class="movie-title">High School Musical 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/1-Eybs653p-lN7TZ6IgGx357cdhjb37gZ">
+    <img src="https://via.placeholder.com/110x160.png?text=Mid+90s" alt="Mid 90s">
+  </a>
+  <div class="movie-title">Mid 90s</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B0F-7C9b-Iu_a0dVNzdMbUVVMWc/preview?resourcekey=0-c6JI557O_ODarlPgiwVzEA">
+    <img src="https://via.placeholder.com/110x160.png?text=Prometheus" alt="Prometheus">
+  </a>
+  <div class="movie-title">Prometheus</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1McioeAleeMq2eEa5wp5vmZtUZcG9TT16/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Iron+Man" alt="Iron Man">
+  </a>
+  <div class="movie-title">Iron Man</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B1j88lrqI04beE5Wa0Y3OVBFMUU/preview?resourcekey=0-GszVvGJigG07BTSjUsAWig">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Polar+Express" alt="The Polar Express">
+  </a>
+  <div class="movie-title">The Polar Express</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1H34GQ1J6R0rijZ300uauVRn5po_BM3XG/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Bodies+Bodies+Bodies" alt="Bodies Bodies Bodies">
+  </a>
+  <div class="movie-title">Bodies Bodies Bodies</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0Bxpj_oRibJ5kZTlmNTIzRjU4ekU/preview?resourcekey=0-kBSIucVemO3llLrafH-XRQ">
+    <img src="https://via.placeholder.com/110x160.png?text=Alien+vs+Predator" alt="Alien vs. Predator">
+  </a>
+  <div class="movie-title">Alien vs. Predator</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0BwmGVCswF7NyYnRYejUtbmY1Uzg/preview?resourcekey=0-9Z2ieMUUq2HmRLxZDGJ1Gw">
+    <img src="https://via.placeholder.com/110x160.png?text=MST3K+Deadly+Bees" alt="MST3K: Deadly Bees">
+  </a>
+  <div class="movie-title">MST3K: Deadly Bees</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1IlNvqs8A-sePJNOBeVXJOdQAB0hYHqM2/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Star+Wars+The+Last+Jedi" alt="Star Wars: The Last Jedi">
+  </a>
+  <div class="movie-title">Star Wars: The Last Jedi</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1GD7dmbbwf0tgmc_0Bt6Rq4qXV7KSTCMD/view">
+    <img src="https://via.placeholder.com/110x160.png?text=Wednesday" alt="Wednesday">
+  </a>
+  <div class="movie-title">Wednesday</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B5Ybx1P-UPs1UnBvVEY1TjQ5djA/preview?resourcekey=0-VV_vcgjBLbf3IYCEUBGexQ">
+    <img src="https://via.placeholder.com/110x160.png?text=Barber+Shop" alt="Barber Shop">
+  </a>
+  <div class="movie-title">Barber Shop</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1D7A1jATb2B8Ml-y0mAQQ98ML2nKebyhJ/preview?usp=drive_link">
+    <img src="https://via.placeholder.com/110x160.png?text=American+Psycho" alt="American Psycho">
+  </a>
+  <div class="movie-title">American Psycho</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B88-HSjFvW5oU0I4bS1MZzdsbXM/preview?resourcekey=0-nIIY6nDRFsDaOChMXTtSdA">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Crazies" alt="The Crazies">
+  </a>
+  <div class="movie-title">The Crazies</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B9konOTuvSYRQTl2Nmp6NkpjSG8/view?resourcekey=0-gT34eT_Bn7WLDxwX3U41fw">
+    <img src="https://via.placeholder.com/110x160.png?text=Wall-E" alt="Wall-E">
+  </a>
+  <div class="movie-title">Wall-E</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1NbY6tDtvyhv9kjxgZSibnmlRholsQOi3/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Star+Wars+The+Force+Awakens" alt="Star Wars: The Force Awakens">
+  </a>
+  <div class="movie-title">Star Wars: The Force Awakens</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B3B3M4Atq6YeS0V6TllaRE52VkE/preview?resourcekey=0-kPucRT2pb9EBNYuWMegd_Q">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Dark+Knight" alt="The Dark Knight">
+  </a>
+  <div class="movie-title">The Dark Knight</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1Uz-jsl2EYJUNc4Tw9FYgF-GQol71pGJ6/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Astroboy" alt="Astroboy">
+  </a>
+  <div class="movie-title">Astroboy</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1zs2JXhwwFB8QXgigGkRWD-v98bHXdjJM/preview?usp=drive_link">
+    <img src="https://via.placeholder.com/110x160.png?text=Black+Adam" alt="Black Adam">
+  </a>
+  <div class="movie-title">Black Adam</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0Bxgg5vzyz3BPRk9MZFhiODdnY2c/preview?resourcekey=0-LsmPT2xQLNw0YjEl9KkF6A">
+    <img src="https://via.placeholder.com/110x160.png?text=Scarface" alt="Scarface">
+  </a>
+  <div class="movie-title">Scarface</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1w8-u8wz_-PKFN4_9QWorzaEoOeY9EsEl/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Inside+Out+2" alt="Inside Out 2">
+  </a>
+  <div class="movie-title">Inside Out 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1xFkm_w1vUDfgnhlBpA5VMVaZEs-C2RGw/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Grand+Budapest+Hotel" alt="The Grand Budapest Hotel">
+  </a>
+  <div class="movie-title">The Grand Budapest Hotel</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1mC_eyvPWJ3Tuu1i5ZqqbY02gBrIULFdX/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Blair+Witch+Project" alt="The Blair Witch Project">
+  </a>
+  <div class="movie-title">The Blair Witch Project</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1B3PldgPZ-htrrO11x0AFOt1NmWfq-y0V/view">
+    <img src="https://via.placeholder.com/110x160.png?text=Fantastic+Beasts+The+Crimes+of+Grindelwald" alt="Fantastic Beasts The Crimes of Grindelwald">
+  </a>
+  <div class="movie-title">Fantastic Beasts: The Crimes of Grindelwald</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1s2_xsXrnzJXV2Xv9QNptiF8eyJOtdDqI/preview?usp=drive_link">
+    <img src="https://via.placeholder.com/110x160.png?text=Minions+The+Rise+of+Gru" alt="Minions: The Rise of Gru">
+  </a>
+  <div class="movie-title">Minions: The Rise of Gru</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B-pxQwOjtZ8gMzJRRWxQWnAxTTA/preview?resourcekey=0-Wit7dQgZtlIjc4x1aQTVRg">
+    <img src="https://via.placeholder.com/110x160.png?text=Final+Destination" alt="Final Destination">
+  </a>
+  <div class="movie-title">Final Destination</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1-UkRil6WGa4UBmT21IrCwYzAUE9ADwj1/preview?usp=drive_link">
+    <img src="https://via.placeholder.com/110x160.png?text=Puss+In+Boots+The+Last+Wish" alt="Puss In Boots: The Last Wish">
+  </a>
+  <div class="movie-title">Puss In Boots: The Last Wish</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1bh14OKHF2j9FQ_ccvNluYfgGGH5fPB17/preview?usp=drive_link">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Simpsons+Movie" alt="The Simpsons Movie">
+  </a>
+  <div class="movie-title">The Simpsons Movie</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0BxcTq_YS9XNRODRVUzVsTmhEdDA/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Blade" alt="Blade">
+  </a>
+  <div class="movie-title">Blade</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1B04UaUyL4uif5hbPrGjDMT_97TgtHDk0/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Mega+Mind" alt="Mega Mind">
+  </a>
+  <div class="movie-title">Mega Mind</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://docs.google.com/file/d/0B8IyK8LqnXjocjJQUlRaYVRQbFE/preview?resourcekey=0-QYzBFBW3_ziEhUkiNH2huQ">
+    <img src="https://via.placeholder.com/110x160.png?text=REC+4+Apocalypse" alt="REC 4 Apocalypse">
+  </a>
+  <div class="movie-title">REC 4 Apocalypse</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/1QdpD5omI08lLERfUwxHw4SF_2SU-LhDU">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Boondocks" alt="The Boondocks">
+  </a>
+  <div class="movie-title">The Boondocks</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/12KFF1gwSSMWfsmQfAojeVwXOL5IEy-U0/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Captain+Underpants+Movie" alt="Captain Underpants Movie">
+  </a>
+  <div class="movie-title">Captain Underpants Movie</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0Bw2qWaOFI6AITzRrS0M3NUl4MHM/preview?resourcekey=0-iwduv0tpQv_gwE5r8qYyVw">
+    <img src="https://via.placeholder.com/110x160.png?text=Wreck-it+Ralph" alt="Wreck-it Ralph">
+  </a>
+  <div class="movie-title">Wreck-it Ralph</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/0B-THZ1LLnEP2dTlrcUF2MTkycm8/view?resourcekey=0-l0spS2CjzKBwh-3HrYA6ZA">
+    <img src="https://via.placeholder.com/110x160.png?text=Hotel+Transylvania" alt="Hotel Transylvania">
+  </a>
+  <div class="movie-title">Hotel Transylvania</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1e0OdhlzTKWie6TDXNDOKjKYXbfYfmz6t/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Inside+Out" alt="Inside Out">
+  </a>
+  <div class="movie-title">Inside Out</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1W0OfyIS_7f0DKjC6x1bVLI4WBFabZXis/view">
+    <img src="https://via.placeholder.com/110x160.png?text=Garfield+Movie+Animated" alt="Garfield Movie Animated">
+  </a>
+  <div class="movie-title">Garfield Movie Animated</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1cAMiqz_kTN-cNncpEOPqAAraH-0_Kavc/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Thor+The+Dark+World" alt="Thor: The Dark World">
+  </a>
+  <div class="movie-title">Thor: The Dark World</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1XoN0B1rsNKDDRphmI8bM606r4wRQ6JUH/preview?t=3">
+    <img src="https://via.placeholder.com/110x160.png?text=Venom" alt="Venom">
+  </a>
+  <div class="movie-title">Venom</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1EsX8k7nfYQrzC6apqJqnyfH7HLAHl31G/preview?t=2870">
+    <img src="https://via.placeholder.com/110x160.png?text=Moana" alt="Moana">
+  </a>
+  <div class="movie-title">Moana</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1Kl4ieKALPoEYbllsRy7V8AYiPtJATg7W/preview?t=1">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Lorax" alt="The Lorax">
+  </a>
+  <div class="movie-title">The Lorax</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1tIYagSwn7-CNF520taNmeIxf11ygEmjw/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Avengers" alt="Avengers">
+  </a>
+  <div class="movie-title">Avengers</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/13d5gq3Kx3koobcfRTVyH9Hhum3s8Fxag/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Venom+Let+There+Be+Carnage" alt="Venom: Let There Be Carnage">
+  </a>
+  <div class="movie-title">Venom: Let There Be Carnage</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/13YPdlfR1BTzXfqwmfbzfiuPycjQsh0Yb/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Sonic+The+Hedgehog+2" alt="Sonic The Hedgehog 2">
+  </a>
+  <div class="movie-title">Sonic The Hedgehog 2</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1HYeIrbf8A-vfvJsvYP59AQzG9l8nt03h/view?t=1">
+    <img src="https://via.placeholder.com/110x160.png?text=Zootopia" alt="Zootopia">
+  </a>
+  <div class="movie-title">Zootopia</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1sEjroTW8OjQVQCIpVneSu8LA9kPKgrkI/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Thor" alt="Thor">
+  </a>
+  <div class="movie-title">Thor</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1q-uFYlyE36n1OWjDX8eCkkOxZZRqFJj1/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Avengers+Age+of+Ultron" alt="Avengers: Age of Ultron">
+  </a>
+  <div class="movie-title">Avengers: Age of Ultron</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1C6aUcmJeLpm8ysdYwnt7HRZFAT6k0oQs/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Venom+The+Last+Dance" alt="Venom: The Last Dance">
+  </a>
+  <div class="movie-title">Venom: The Last Dance</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1cD5AaH1qXrA3CdlyD6lEJIfspu4FDOD-/preview">
+    <img src="https://via.placeholder.com/110x160.png?text=Transformers+One" alt="Transformers One">
+  </a>
+  <div class="movie-title">Transformers One</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/file/d/1XZ0pSe4bccOpJeF_VkXhkOhxQ3Tzp8RB/view">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Incredibles" alt="The Incredibles">
+  </a>
+  <div class="movie-title">The Incredibles</div>
+</div>
+
+<div class="movie-card">
+  <a href="https://drive.google.com/drive/folders/12hjbl3XZmVF1WFsjWuiCMJ9USmenFV3L?usp=share_link">
+    <img src="https://via.placeholder.com/110x160.png?text=The+Last+of+Us" alt="The Last of Us">
+  </a>
+  <div class="movie-title">The Last of Us</div>
+</div>
+
+
+   
+  </div>
+
+  <script>
+    function searchMovies() {
+      const input = document.getElementById("movieSearch").value.toLowerCase();
+      const movies = document.querySelectorAll("#movie-container .movie-card");
+      movies.forEach(movie => {
+        const title = movie.querySelector(".movie-title").textContent.toLowerCase();
+        movie.style.display = title.includes(input) ? "" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
