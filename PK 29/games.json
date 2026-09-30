@@ -4,7 +4,7 @@
     "file": "1v1lol.html",
     "name": "1V1.LOL",
     "category": "Action",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #4776E6 0%, #8E54E9 100%)",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwXHTvZUKdHLxQwcyFaD-Y3eI0IWbRqWGFX6Efj7QY2G3LihhMivHWqSO246F1Dg_27OM2vQ&s=10"
   },
@@ -13,7 +13,7 @@
     "file": "2048.html",
     "name": "2048",
     "category": "Puzzle & Idle",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWWm1PCvTv3RGTr1MdMA5-QXDwteF32bQvw&s"
   },
@@ -22,7 +22,7 @@
     "file": "8ballpool.html",
     "name": "8 BALL POOL",
     "category": "Sports",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #FF6B6B 0%, #556270 100%)",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrM3JmfheVZUxQzpn0s-0SDkvUnhZUMGuI97LEjgS9yEnx2cMhRUPCFF5tmO5-cdRZbR_t&s=10"
   },
@@ -157,7 +157,7 @@
     "file": "amongus.html",
     "name": "Among Us",
     "category": "Arcade & Casual",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #02AAB0 0%, #00CDAC 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Among%20Us%20game"
   },
@@ -184,7 +184,7 @@
     "file": "angrybirds.html",
     "name": "Angry Birds",
     "category": "Arcade & Casual",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #FF6B6B 0%, #556270 100%)",
     "image": "https://tse2.mm.bing.net/th?q=ANGRY%20BIRDS%20game"
   },
@@ -364,7 +364,7 @@
     "file": "baldisbasics.html",
     "name": "Baldi's Basics Classic",
     "category": "Action",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #614385 0%, #516395 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Baldi's%20Basics%20Classic%20game"
   },
@@ -490,7 +490,7 @@
     "file": "basketbros.html",
     "name": "Basket Bros",
     "category": "Sports",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #614385 0%, #516395 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Basket%20Bros%20game"
   },
@@ -526,7 +526,7 @@
     "file": "basketballstars.html",
     "name": "Basketball Stars",
     "category": "Sports",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #02AAB0 0%, #00CDAC 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Basketball%20Stars%20game"
   },
@@ -670,7 +670,7 @@
     "file": "bitlife.html",
     "name": "BITLIFE",
     "category": "Arcade & Casual",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #4776E6 0%, #8E54E9 100%)",
     "image": "https://tse2.mm.bing.net/th?q=BitLife%20game"
   },
@@ -949,7 +949,7 @@
     "file": "brawlstars.html",
     "name": "BRAWL STARS",
     "category": "Action",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDlytiE178sfY8uXNj7aIesE2rM7gGOwjFCmb9VVEWJ7JAoUDaNYQZxuRG5iFNXAxvJRJAA&s=10"
   },
@@ -1084,7 +1084,7 @@
     "file": "catmario.html",
     "name": "Cat Mario (Syobon Action)",
     "category": "Platformer",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #43C6AC 0%, #F8FFAE 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Cat%20Mario%20game"
   },
@@ -1129,7 +1129,7 @@
     "file": "celeste.html",
     "name": "Celeste Classic",
     "category": "Platformer",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #FF6B6B 0%, #556270 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Celeste%20game"
   },
@@ -1264,7 +1264,7 @@
     "file": "cookieclicker.html",
     "name": "COOKIE CLICKER",
     "category": "Puzzle & Idle",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1iqHgjXkjQZWLtYaYP6n4eZ7cHPYE56_i3g&s"
   },
@@ -1300,7 +1300,7 @@
     "file": "cs16.html",
     "name": "Counter-Strike 1.6 Web",
     "category": "Action",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #e1eec3 0%, #f05053 100%)",
     "image": "https://tse2.mm.bing.net/th?q=CS%201.6%20game"
   },
@@ -1381,7 +1381,7 @@
     "file": "crossyroad.html",
     "name": "Crossy Road",
     "category": "Racing",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #e1eec3 0%, #f05053 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Crossy%20Road%20game"
   },
@@ -1399,7 +1399,7 @@
     "file": "cuttherope.html",
     "name": "Cut The Rope",
     "category": "Puzzle & Idle",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Cut%20The%20Rope%20game"
   },
@@ -1615,7 +1615,7 @@
     "file": "doomemscripten.html",
     "name": "DOOM (1993)",
     "category": "Action",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Doom%20Emscripten%20game"
   },
@@ -1687,7 +1687,7 @@
     "file": "drifthunters.html",
     "name": "Drift Hunters",
     "category": "Racing",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #02AAB0 0%, #00CDAC 100%)",
     "image": "https://tse2.mm.bing.net/th?q=DRIFT%20HUNTERS%20game"
   },
@@ -1714,7 +1714,7 @@
     "file": "drivemad.html",
     "name": "DRIVE MAD",
     "category": "Racing",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #614385 0%, #516395 100%)",
     "image": "https://play-lh.googleusercontent.com/7l3WAPbei9MXrxnCzImpXi2VxjEBtgDl0htwvTnA-YqpJAuQJPpSiby1oB8LZMgD0IAy"
   },
@@ -1975,7 +1975,7 @@
     "file": "escaperoad.html",
     "name": "Escape Road",
     "category": "Racing",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #4776E6 0%, #8E54E9 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Escape%20Road%20game"
   },
@@ -2038,7 +2038,7 @@
     "file": "fallguys.html",
     "name": "Fall Guys",
     "category": "Platformer",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #FF512F 0%, #DD2476 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Fall%20Guys%20game"
   },
@@ -2137,7 +2137,7 @@
     "file": "fnaf2.html",
     "name": "Five Nights at Freddy's 2",
     "category": "Horror",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #e1eec3 0%, #f05053 100%)",
     "image": "https://tse2.mm.bing.net/th?q=FNAF%202%20game"
   },
@@ -2182,7 +2182,7 @@
     "file": "fnaf.html",
     "name": "FNAF",
     "category": "Horror",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #4776E6 0%, #8E54E9 100%)",
     "image": "https://tse2.mm.bing.net/th?q=FNAF%20game"
   },
@@ -3640,7 +3640,7 @@
     "file": "eaglercraft112.html",
     "name": "Minecraft 1.12 (Eaglercraft)",
     "category": "Sandbox",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #614385 0%, #516395 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Eaglercraft%201.12%20game"
   },
@@ -3658,7 +3658,7 @@
     "file": "eaglercraftx188u29.html",
     "name": "MINECRAFT 1.8.8",
     "category": "Sandbox",
-    "featured": true,
+    "featured": false,
     "bgGradient": "linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Eaglercraft%20X%201.8.8%20U29%20game"
   },
