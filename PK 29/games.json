@@ -76,7 +76,7 @@
     "file": "adventurecapitalist.html",
     "name": "Adventure Capitalist",
     "category": "Arcade & Casual",
-    "featured": false,
+    "featured": true,
     "bgGradient": "linear-gradient(135deg, #614385 0%, #516395 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Adventure%20Capitalist%20game"
   },
@@ -319,7 +319,7 @@
     "file": "backrooms2d.html",
     "name": "Backrooms 2D",
     "category": "Horror",
-    "featured": false,
+    "featured": true,
     "bgGradient": "linear-gradient(135deg, #FF512F 0%, #DD2476 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Backrooms%202D%20game"
   },
@@ -760,7 +760,7 @@
     "file": "blockpost.html",
     "name": "Blockpost 3D",
     "category": "Sandbox",
-    "featured": false,
+    "featured": true,
     "bgGradient": "linear-gradient(135deg, #e1eec3 0%, #f05053 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Block%20Post%20game"
   },
@@ -1336,7 +1336,7 @@
     "file": "crazycars.html",
     "name": "Crazycars",
     "category": "Racing",
-    "featured": false,
+    "featured": true,
     "bgGradient": "linear-gradient(135deg, #02AAB0 0%, #00CDAC 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Crazy%20Cars%20game"
   },
@@ -2353,7 +2353,7 @@
     "file": "funnyshooter.html",
     "name": "Funnyshooter",
     "category": "Action",
-    "featured": false,
+    "featured": true,
     "bgGradient": "linear-gradient(135deg, #FF4E50 0%, #F9D423 100%)",
     "image": "https://m.media-amazon.com/images/I/61hKgo4Kx3L.png"
   },
@@ -2407,7 +2407,7 @@
     "file": "geometrydash.html",
     "name": "Geometrydash",
     "category": "Arcade & Casual",
-    "featured": false,
+    "featured": true,
     "bgGradient": "linear-gradient(135deg, #43C6AC 0%, #F8FFAE 100%)",
     "image": "https://m.media-amazon.com/images/I/61mVIP6Oo1L.png"
   },
@@ -3091,7 +3091,7 @@
     "file": "indiantrucksim.html",
     "name": "Indiantrucksim",
     "category": "Racing",
-    "featured": false,
+    "featured": true,
     "bgGradient": "linear-gradient(135deg, #FF6B6B 0%, #556270 100%)",
     "image": "https://play-lh.googleusercontent.com/gsIRdQb2iqwK0JVoE9m4pDaiEiiuUTai2eZkjnhNjuDQ1q0a_huvYqwZ1aO8C7NMmbo"
   },
@@ -5692,7 +5692,7 @@
     "file": "strangeropepolice.html",
     "name": "Strangeropepolice",
     "category": "Puzzle & Idle",
-    "featured": false,
+    "featured": true,
     "bgGradient": "linear-gradient(135deg, #02AAB0 0%, #00CDAC 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Strange%20Rope%20Police%20game"
   },
@@ -5710,7 +5710,7 @@
     "file": "subwaysurfers.html",
     "name": "Subwaysurfers",
     "category": "Arcade & Casual",
-    "featured": false,
+    "featured": true,
     "bgGradient": "linear-gradient(135deg, #e1eec3 0%, #f05053 100%)",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmos4KeDIDVVSbwcBxhpF2FKYSsXNbavROA&s"
   },
@@ -6394,7 +6394,7 @@
     "file": "trafficjam3d.html",
     "name": "Trafficjam 3D",
     "category": "Arcade & Casual",
-    "featured": false,
+    "featured": true,
     "bgGradient": "linear-gradient(135deg, #7F00FF 0%, #E100FF 100%)",
     "image": "https://tse2.mm.bing.net/th?q=Traffic%20Jam%203D%20game"
   },
