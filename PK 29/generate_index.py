@@ -1188,7 +1188,11 @@ html_content = f"""<!DOCTYPE html>
 
       document.getElementById('modalTitle').textContent = g.name;
       document.getElementById('modalCategory').textContent = g.category;
-      document.getElementById('gameIframe').src = g.file;
+      const gameIframe = document.getElementById('gameIframe');
+      gameIframe.allow = ['1v1lol', '2048'].includes(g.id)
+        ? 'autoplay; fullscreen; gamepad; pointer-lock'
+        : 'fullscreen';
+      gameIframe.src = g.file;
       document.getElementById('gameModal').classList.add('active');
     }}
 

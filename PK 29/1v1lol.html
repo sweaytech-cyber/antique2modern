@@ -1,8 +1,34 @@
 <!-- Ultimate Game Stash file--> 
 <!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>1v1.LOL</title>
+  <style>
+    html, body, .webgl-content, #gameContainer {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
 
-</style></head><body dir="ltr"><script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/UnityProgress.js"></script><script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/2.7.js"></script><script type="text/javascript">
+    body, #gameContainer {
+      background: #000;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/UnityProgress.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/2.7.js"></script>
+  <script>
       var gameInstance;
 
       window.onload = function () {
@@ -15,11 +41,15 @@
           },
         });
       };
-    </script>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; position: relative; background: rgb(0, 0, 0);"><canvas id="#canvas" style="width: 100%; height: 100%; cursor: default;" width="1018" height="926"></canvas><div class="logo Dark" style="display: none;"></div><div class="progress Dark" style="display: none;"><div class="empty" style="width: 0%;"></div><div class="full" style="width: 100%;"></div></div></div>
+  </script>
+</head>
+<body>
+  <div class="webgl-content">
+    <div id="gameContainer" style="position: relative;">
+      <canvas id="#canvas"></canvas>
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-app.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-app.js"></script>
 
     <!-- Add Firebase products that you want to use -->
     <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-auth.js"></script>
@@ -47,11 +77,5 @@
         }
       }
     </script>
-  
-
-
-
-
-
-
-</script><script src="blob:https://gotlgsogl-opensocial.googleusercontent.com/43fddd1c-53cc-4d6d-88c5-93762d972e03" id="a96bf7f9ec45ce9224c9b5b9b42b17b2"></script></body></html>
+  </body>
+  </html>
